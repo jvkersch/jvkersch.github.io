@@ -68,7 +68,8 @@ function render(data, ctx){
             x0, -curve(data.A, x0), x1, -curve(data.A, x1), {
                 "affects": ["A"],
                 "stroke-width": 4,
-                "stroke-linecap": "round"
+                "stroke-linecap": "round",
+                "stroke": "steelblue"
             });
     }
 
