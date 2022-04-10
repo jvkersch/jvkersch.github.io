@@ -62,6 +62,7 @@ function render(data, ctx){
     }
 
     // Plot fitted curve
+    const color = cmap(data.A);
     for (let x0 = -150; x0 < 150; x0 += 5) {
         const x1 = x0 + 5;
         ctx.line(
@@ -69,12 +70,11 @@ function render(data, ctx){
                 "affects": ["A"],
                 "stroke-width": 4,
                 "stroke-linecap": "round",
-                "stroke": "steelblue"
+                "stroke": color.bg
             });
     }
 
     // Post updated value
-    const color = cmap(data.A);
     updateDOM("parameter-A", data.A.toFixed(2), color);
     updateDOM("parameter-RSS", computeRSS(data.A).toFixed(0), color);
 }         
