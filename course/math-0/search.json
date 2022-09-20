@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "02-coordinate-geometry.html#contents",
+    "href": "02-coordinate-geometry.html#contents",
+    "title": "Coordinate Geometry",
+    "section": "Contents",
+    "text": "Contents\n\nCoordinate geometry\nLocus of points\nEquations of circles\nEquations of lines\nExercise"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#what-is-coordinate-geometry",
+    "href": "02-coordinate-geometry.html#what-is-coordinate-geometry",
+    "title": "Coordinate Geometry",
+    "section": "What is coordinate geometry?",
+    "text": "What is coordinate geometry?\nStudying geometry through coordinate calculations."
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#example-distance-between-two-points",
+    "href": "02-coordinate-geometry.html#example-distance-between-two-points",
+    "title": "Coordinate Geometry",
+    "section": "Example: distance between two points",
+    "text": "Example: distance between two points\n\n\nDistance between \\(P\\) and \\(Q\\):\n\\[\n    d(P, Q) = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\n\\]"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#example-midpoint-between-two-points",
+    "href": "02-coordinate-geometry.html#example-midpoint-between-two-points",
+    "title": "Coordinate Geometry",
+    "section": "Example: midpoint between two points",
+    "text": "Example: midpoint between two points\n\n\nCoordinates of midpoint between \\(P\\) and \\(Q\\):\n\\[\n  M = \\left( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2} \\right).\n\\]"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#locus-of-points",
+    "href": "02-coordinate-geometry.html#locus-of-points",
+    "title": "Coordinate Geometry",
+    "section": "Locus of points",
+    "text": "Locus of points\n“Locus” = Set of points satisfying some condition.\n\nCircle: All points at given distance from a fixed center.\nEllipse: All points for which the sum of distances to two fixed points (focal points) is constant\nParabola: All points that are at equal distance from a fixed point and a given line (directrix)"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#example",
+    "href": "02-coordinate-geometry.html#example",
+    "title": "Coordinate Geometry",
+    "section": "Example",
+    "text": "Example\nFind the locus of points for which the distance to the \\(x\\)-axis is equal to the distance to the point \\((0, 1)\\)."
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#circles",
+    "href": "02-coordinate-geometry.html#circles",
+    "title": "Coordinate Geometry",
+    "section": "Circles",
+    "text": "Circles\nLocus of points \\(P(x, y)\\) at distance \\(R\\) from center \\(C(h, k)\\).\n\n\nWe have \\(d(P, C) = R\\) so that\n\\[\n  \\sqrt{(x - h)^2 + (y - k)^2} = R,\n\\]\nand by squaring\n\\[\n  \\boxed{(x - h)^2 + (y - k)^2 = R^2}\n\\]"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#example-1",
+    "href": "02-coordinate-geometry.html#example-1",
+    "title": "Coordinate Geometry",
+    "section": "Example",
+    "text": "Example\nFind the equation of the circle that has the points \\((1, 1)\\) and \\((7, 9)\\) as end points of a diameter."
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#example-2",
+    "href": "02-coordinate-geometry.html#example-2",
+    "title": "Coordinate Geometry",
+    "section": "Example",
+    "text": "Example\nFind the center and radius of the circle given by \\(x^2 + y^2 - 6x + 2y + 8 = 0\\)."
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#lines",
+    "href": "02-coordinate-geometry.html#lines",
+    "title": "Coordinate Geometry",
+    "section": "Lines",
+    "text": "Lines\n\n\nLine not parallel to the \\(y\\)-axis:\n\\[\n  \\boxed{y = mx + q}\n\\]\nwith\n\n\\(m\\): the slope\n\\(q\\): the intercept"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#lines-1",
+    "href": "02-coordinate-geometry.html#lines-1",
+    "title": "Coordinate Geometry",
+    "section": "Lines",
+    "text": "Lines\n\n\nLine parallel to the \\(y\\)-axis:\n\\[\n  \\boxed{x = a}\n\\]\nwith\n\n\\(a\\): where the line intersects the \\(x\\)-axis"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#finding-the-slope-of-a-line",
+    "href": "02-coordinate-geometry.html#finding-the-slope-of-a-line",
+    "title": "Coordinate Geometry",
+    "section": "Finding the slope of a line",
+    "text": "Finding the slope of a line\n\n\nTake\n\n\\(\\Delta x = x_2 - x_1\\)\n\\(\\Delta y = y_2 - y_1\\)\n\nThen\n\\[\n  \\boxed{m = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2 - y_1}{x_2 - x_1}}\n\\]\n“\\(\\Delta x\\) steps to the right, \\(\\Delta y\\) steps up/down.”"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#example-3",
+    "href": "02-coordinate-geometry.html#example-3",
+    "title": "Coordinate Geometry",
+    "section": "Example",
+    "text": "Example\nFind the equation for the line through \\((1, 5)\\) and \\((2, 7)\\)."
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#properties",
+    "href": "02-coordinate-geometry.html#properties",
+    "title": "Coordinate Geometry",
+    "section": "Properties",
+    "text": "Properties\nEquation for the line through \\((x_0, y_0)\\) with slope \\(m\\):\n\\[\n  y - y_0 = m(x - x_0)\n\\]\nEquation for the line through the points \\((x_1, y_1)\\) and \\((x_2, y_2)\\):\n\\[\n  y - y_1 = \\frac{y_2 - y_1}{x_2 - x_1}(x - x_1).\n\\]"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#parallelperpendicular-lines",
+    "href": "02-coordinate-geometry.html#parallelperpendicular-lines",
+    "title": "Coordinate Geometry",
+    "section": "Parallel/perpendicular lines",
+    "text": "Parallel/perpendicular lines\n\nTwo lines are parallel if their slopes are the same: \\(\\boxed{m_1 = m_2}\\)\nTwo lines are perpendicular if their slopes satisfy: \\(\\boxed{m_1 m_2 = -1}\\)"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#example-4",
+    "href": "02-coordinate-geometry.html#example-4",
+    "title": "Coordinate Geometry",
+    "section": "Example",
+    "text": "Example\nGiven two lines \\(L_1: x + 2y - 3 = 0\\) and \\(L_2: kx + y - 5 = 0\\), for which value of \\(k\\) are \\(L_1\\) and \\(L_2\\) …\n\nParallel?\nPerpendicular?"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#distance-of-a-point-to-a-line",
+    "href": "02-coordinate-geometry.html#distance-of-a-point-to-a-line",
+    "title": "Coordinate Geometry",
+    "section": "Distance of a point to a line",
+    "text": "Distance of a point to a line\n\n\nDistance between point \\(P(x_0, y_0)\\) and line \\(L: ax + by + c = 0\\):\n\\[\n  D = \\frac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}}.\n\\]"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#different-representations-of-lines",
+    "href": "02-coordinate-geometry.html#different-representations-of-lines",
+    "title": "Coordinate Geometry",
+    "section": "Different representations of lines",
+    "text": "Different representations of lines\n\nSlope/intercept:\n\n\\(y = mx + q\\) (not parallel to \\(y\\)-axis)\n\\(x = a\\) (parallel)\n\nLinear representation: \\(ax + by + c = 0\\)\nPolar representation:\n\n\\[\n   r = \\frac{q}{\\sin \\theta - m \\cos \\theta}\n\\]"
+  },
+  {
+    "objectID": "02-coordinate-geometry.html#exercise",
+    "href": "02-coordinate-geometry.html#exercise",
+    "title": "Coordinate Geometry",
+    "section": "Exercise",
+    "text": "Exercise\nFind the equation of the common tangent line between two touching circles given by \\[\\begin{align*}\n  C_1: & \\  x^2 + y^2 - 6x - 12y + 37 = 0 \\\\\n  C_2: & \\  x^2 + y^2 - 6y + 7 - 0.\n\\end{align*}\\]"
+  }
+]
