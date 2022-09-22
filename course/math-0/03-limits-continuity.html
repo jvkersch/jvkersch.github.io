@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.0.37">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
-  <title>Limits and Continuity</title>
+  <title>Limits and Continuity (1/2)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -320,11 +320,22 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Limits and Continuity</h1>
+  <h1 class="title">Limits and Continuity (1/2)</h1>
   <p class="subtitle">Introduction to Engineering Mathematics</p>
   <p class="author">Prof.&nbsp;Joris Vankerschaver</p>
 </section>
 
+<section id="contents" class="slide level2">
+<h2>Contents</h2>
+<ol type="1">
+<li>Limits</li>
+<li>One-sided limits</li>
+<li>Examples</li>
+<li>Limit laws</li>
+<li>Polynomial/rational functions</li>
+<li>The squeeze theorem</li>
+</ol>
+</section>
 <section id="motivation" class="slide level2">
 <h2>Motivation</h2>
 <div class="columns v-center-container">
@@ -491,7 +502,16 @@
 </section>
 <section id="the-squeeze-theorem" class="slide level2">
 <h2>The squeeze theorem</h2>
-<p>Lets you compute the limit of a difficult function “squeezed” between two simple functions.</p>
+<p>Lets you compute the limit of a difficult function <span class="math inline">\(g(x)\)</span> “squeezed” between two simple functions <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(h(x)\)</span>.</p>
+<p>Suppose</p>
+<ol type="1">
+<li><span class="math inline">\(f(x) \le g(x) \le h(x)\)</span> for some <span class="math inline">\(x\)</span> near <span class="math inline">\(a\)</span></li>
+<li><span class="math inline">\(\lim_{x \to a}f(x) = \lim_{x \to a} h(x) = L\)</span>.</li>
+</ol>
+<p>Then</p>
+<p><span class="math display">\[
+\lim_{x \to a} h(x) = L.
+\]</span></p>
 
 <div class="footer footer-default">
 
