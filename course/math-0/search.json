@@ -1,5 +1,89 @@
 [
   {
+    "objectID": "03-limits-continuity.html#motivation",
+    "href": "03-limits-continuity.html#motivation",
+    "title": "Limits and Continuity",
+    "section": "Motivation",
+    "text": "Motivation\n\n\nCompute the tangent line to the parabola \\(y = x^2 + 1\\) at the point \\(P(1, 2)\\).\n\nTake another point \\(Q\\) on the parabola\nCompute the line through \\(P\\) and \\(Q\\)\nLet \\(Q\\) “move towards” \\(P\\)\n\nWhat is the slope of the line when \\(Q\\) gets “infinitely close” to \\(P\\)?"
+  },
+  {
+    "objectID": "03-limits-continuity.html#definition-of-limit",
+    "href": "03-limits-continuity.html#definition-of-limit",
+    "title": "Limits and Continuity",
+    "section": "Definition of limit",
+    "text": "Definition of limit\n\n\nWe write:\n\n\\[\n    \\lim_{x \\to a}f(x) = L\n\\]\n\nWe say: “The limit of \\(f(x)\\) as \\(x\\) goes to \\(a\\) is \\(L\\)”.\nWe mean:\n\n\\(f(x)\\) is defined for all \\(x\\) near \\(a\\) (possibly not \\(a\\) itself)\nAs \\(x\\) gets closer to \\(a\\), \\(f(x)\\) gets closer and closer to \\(L\\)"
+  },
+  {
+    "objectID": "03-limits-continuity.html#examples",
+    "href": "03-limits-continuity.html#examples",
+    "title": "Limits and Continuity",
+    "section": "Examples",
+    "text": "Examples\nCompute \\(\\displaystyle \\lim_{x \\to 2} f(x)\\), with \\(f(x)\\) given by\n\n\\(f(x) = x - 1\\) when \\(x \\ne 2\\)\n\\(f(x) = 2\\) otherwise."
+  },
+  {
+    "objectID": "03-limits-continuity.html#examples-1",
+    "href": "03-limits-continuity.html#examples-1",
+    "title": "Limits and Continuity",
+    "section": "Examples",
+    "text": "Examples\n\n\\(\\displaystyle \\lim_{x\\to -2} \\frac{x^2 + x - 2}{x^2 + 5x + 6}\\)\n\\(\\displaystyle \\lim_{x \\to 0} \\frac{x}{\\sqrt{3 + x} - \\sqrt{3 - x}}\\)"
+  },
+  {
+    "objectID": "03-limits-continuity.html#one-sided-limits",
+    "href": "03-limits-continuity.html#one-sided-limits",
+    "title": "Limits and Continuity",
+    "section": "One-sided limits",
+    "text": "One-sided limits\nSometimes the limit exists on “one side” of the function.\n\n\n\\[\n  \\lim_{x\\to \\pi/2} \\tan x = ?\n\\]\n\n\\(+\\infty\\) when \\(x \\to 0\\) from right\n\\(-\\infty\\) when \\(x \\to 0\\) from left"
+  },
+  {
+    "objectID": "03-limits-continuity.html#definition",
+    "href": "03-limits-continuity.html#definition",
+    "title": "Limits and Continuity",
+    "section": "Definition",
+    "text": "Definition\n\n\nLeft Limit:\n\\[\n    \\lim_{x \\to a-}f(x) = L\n\\]\n\n\\(f(x)\\) defined to the left of \\(a\\)\n\\(f(x) \\to L\\) as \\(x \\to a\\) from the left\n\n\n\n\n\n\n\n\n\nRight Limit:\n\\[\n    \\lim_{x \\to a+}f(x) = M\n\\]\n\n\\(f(x)\\) defined to the right of \\(a\\)\n\\(f(x) \\to M\\) as \\(x \\to a\\) from the right"
+  },
+  {
+    "objectID": "03-limits-continuity.html#relation-with-two-sided-limit",
+    "href": "03-limits-continuity.html#relation-with-two-sided-limit",
+    "title": "Limits and Continuity",
+    "section": "Relation with two-sided limit",
+    "text": "Relation with two-sided limit\nThe two-sided limit exists,\n\\[\n    \\lim_{x \\to a} f(x) = L,\n\\]\nif and only if both one-sided limits exist and are equal:\n\\[\n    \\lim_{x \\to a+} f(x) = L \\quad \\text{and} \\quad \\lim_{x \\to a-} f(x) = L\n\\]"
+  },
+  {
+    "objectID": "03-limits-continuity.html#examples-2",
+    "href": "03-limits-continuity.html#examples-2",
+    "title": "Limits and Continuity",
+    "section": "Examples",
+    "text": "Examples\n\n\\(\\displaystyle \\lim_{x\\to 0+} \\sqrt{x}\\)\n\\(\\displaystyle \\lim_{x \\to 0} \\frac{|x|}{x}\\)\n\\(\\displaystyle \\lim_{x \\to 2} \\frac{|x-2|}{x^2 + x - 6}\\)\n\\(\\displaystyle \\lim_{x\\to\\pi}f(x)\\), where \\(f(x) = \\sin x\\) when \\(x < \\pi\\) and \\(f(x) = \\sqrt{x - \\pi}\\) otherwise."
+  },
+  {
+    "objectID": "03-limits-continuity.html#limit-laws",
+    "href": "03-limits-continuity.html#limit-laws",
+    "title": "Limits and Continuity",
+    "section": "Limit laws",
+    "text": "Limit laws\n\n\\(\\lim_{x \\to a} x = a\\)\n\\(\\lim_{x \\to a} c = c\\)\n\\(\\lim_{x \\to a} (f(x) + g(x)) = \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)\\)\n\\(\\lim_{x \\to a} (c(f(x))) = c \\lim_{x \\to a} f(x)\\)\n\\(\\lim_{x \\to a}(f(x)g(x)) = \\lim_{x \\to a}f(x) \\lim_{x \\to a}g(x)\\)\n\\(\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\frac{\\lim_{x \\to a}f(x)}{\\lim_{x \\to a}g(x)}\\) if \\(\\lim_{x \\to a} g(x) \\ne 0\\)\n\\(\\lim_{x \\to a}\\left(f(x)^{m/n}\\right) = \\left( \\lim_{x \\to a}f(x) \\right)^{m/n}\\),\n\nIf \\(n\\) even: \\(L\\) must be positive\nIf \\(m < 0\\): \\(L\\) must be different from 0."
+  },
+  {
+    "objectID": "03-limits-continuity.html#limit-laws-1",
+    "href": "03-limits-continuity.html#limit-laws-1",
+    "title": "Limits and Continuity",
+    "section": "Limit laws",
+    "text": "Limit laws\n\nIf \\(f(x) = g(x)\\) for all \\(x \\ne a\\) close to \\(a\\), then \\(\\lim_{x \\to a} f(x) = \\lim_{x \\to a}g(x)\\).\nIf \\(f(x) \\le g(x)\\) for all \\(x \\ne a\\) close to \\(a\\), then \\(\\lim_{x \\to a} f(x) \\le \\lim_{x \\to a}g(x)\\).\n\nThese laws also hold for one-sided limits, with appropriate modifications."
+  },
+  {
+    "objectID": "03-limits-continuity.html#limits-of-polynomials-and-rational-functions",
+    "href": "03-limits-continuity.html#limits-of-polynomials-and-rational-functions",
+    "title": "Limits and Continuity",
+    "section": "Limits of polynomials and rational functions",
+    "text": "Limits of polynomials and rational functions\n\nPolynomial: \\(P(x) = a_0 + a_1 x + a_2 x^2 + \\cdots + a_n x^n\\) \\[\n    \\lim_{x \\to a} P(x) = P(a).\n\\]\nRational function: \\(F(x) = \\frac{P(x)}{Q(x)}\\), with \\(P(x)\\), \\(Q(x)\\) polynomials \\[\n    \\lim_{x \\to a} F(x) = \\frac{\\lim_{x \\to a} P(x)}{\\lim_{x \\to a} Q(x)} = \\frac{P(a)}{Q(a)}\n    \\quad \\text{if $Q(a) \\ne 0$}.\n\\]"
+  },
+  {
+    "objectID": "03-limits-continuity.html#the-squeeze-theorem",
+    "href": "03-limits-continuity.html#the-squeeze-theorem",
+    "title": "Limits and Continuity",
+    "section": "The squeeze theorem",
+    "text": "The squeeze theorem\nLets you compute the limit of a difficult function “squeezed” between two simple functions."
+  },
+  {
     "objectID": "02-coordinate-geometry.html#contents",
     "href": "02-coordinate-geometry.html#contents",
     "title": "Coordinate Geometry",
@@ -130,6 +214,6 @@
     "href": "02-coordinate-geometry.html#exercise",
     "title": "Coordinate Geometry",
     "section": "Exercise",
-    "text": "Exercise\nFind the equation of the common tangent line between two touching circles given by \\[\\begin{align*}\n  C_1: & \\  x^2 + y^2 - 6x - 12y + 37 = 0 \\\\\n  C_2: & \\  x^2 + y^2 - 6y + 7 - 0.\n\\end{align*}\\]"
+    "text": "Exercise\nFind the equation of the common tangent line between two touching circles given by \\[\\begin{align*}\n  C_1: & \\  x^2 + y^2 - 6x - 12y + 37 = 0 \\\\\n  C_2: & \\  x^2 + y^2 - 6y + 7 = 0.\n\\end{align*}\\]"
   }
 ]
