@@ -116,7 +116,63 @@
     "href": "03b-limits-continuity.html#summary-of-limit-techniques",
     "title": "Limits and Continuity (2/2)",
     "section": "Summary of limit techniques",
-    "text": "Summary of limit techniques\n\nTry “just substituting” \\(\\pm\\infty\\)\nUse common manipulations:\n\nSimplify\nHighest powers\nConjugate\n…\n\n\nSpecial cases (to know by heart):\n\\[\n    \\lim_{h \\to 0}\\frac{\\sin h}{h}  = 1 \\quad \\text{and} \\quad\n    \\lim_{h \\to 0}\\frac{\\cos h - 1}{h}  = 0.\n\\]"
+    "text": "Summary of limit techniques\n\nTry “just substituting” \\(\\pm\\infty\\)\nUse common manipulations:\n\nSimplify\nHighest powers\nConjugate\n…\n\n\nSpecial cases (to memorize):\n\\[\n    \\lim_{h \\to 0}\\frac{\\sin h}{h}  = 1 \\quad \\text{and} \\quad\n    \\lim_{h \\to 0}\\frac{\\cos h - 1}{h}  = 0.\n\\]"
+  },
+  {
+    "objectID": "03b-limits-continuity.html#continuity",
+    "href": "03b-limits-continuity.html#continuity",
+    "title": "Limits and Continuity (2/2)",
+    "section": "Continuity",
+    "text": "Continuity\n\nIntuitively, continuity \\(=\\) “no jumps”\nMathematically, \\(f(x)\\) is continuous at an interior point \\(x = a\\) of its domain if\n\n\\[\n  \\lim_{x \\to a} f(x) = f(a).\n\\]\nExample: \\(\\displaystyle f(x) = \\frac{x^2 - x - 3}{x - 2}\\) is not continuous at \\(x = 2\\)."
+  },
+  {
+    "objectID": "03b-limits-continuity.html#examples-6",
+    "href": "03b-limits-continuity.html#examples-6",
+    "title": "Limits and Continuity (2/2)",
+    "section": "Examples",
+    "text": "Examples\nDefine \\(f(x) = \\frac{x^2 - x - 2}{x - 2}\\) when \\(x \\ne 2\\) and \\(f(x) = 1\\) otherwise (i.e. \\(f(2) = 1\\)).\nIs \\(f(x)\\) continuous at \\(x = 2\\)?"
+  },
+  {
+    "objectID": "03b-limits-continuity.html#leftright-continuity",
+    "href": "03b-limits-continuity.html#leftright-continuity",
+    "title": "Limits and Continuity (2/2)",
+    "section": "Left/right continuity",
+    "text": "Left/right continuity\nAt \\(x = a\\), \\(f(x)\\) is …\n\nRight continuous if \\(\\displaystyle \\lim_{x\\to a+} f(x) = f(a)\\)\nLeft continuous if \\(\\displaystyle \\lim_{x\\to a-} f(x) = f(a)\\).\n\nExample: the Heaviside function is defined by \\(H(x) = 0\\) when \\(x < 0\\) and \\(H(x) = 1\\) when \\(x \\ge 0\\). Is \\(H(x)\\) right or left continuous at \\(x = 0\\)?"
+  },
+  {
+    "objectID": "03b-limits-continuity.html#continuity-on-an-interval",
+    "href": "03b-limits-continuity.html#continuity-on-an-interval",
+    "title": "Limits and Continuity (2/2)",
+    "section": "Continuity on an interval",
+    "text": "Continuity on an interval\nThe function \\(f(x)\\) is continuous on an interval \\([a, b]\\) if …\n\n\\(f(x)\\) is continuous at every \\(x \\in (a, b)\\)\n\\(f(x)\\) is right-continuous in \\(a\\)\n\\(f(x)\\) is left-continuous in \\(b\\).\n\nExample: Show that \\(f(x) = 1 - \\sqrt{1 - x^2}\\) is continuous on \\([-1, 1]\\)."
+  },
+  {
+    "objectID": "03b-limits-continuity.html#making-new-continuous-functions-out-of-old-ones",
+    "href": "03b-limits-continuity.html#making-new-continuous-functions-out-of-old-ones",
+    "title": "Limits and Continuity (2/2)",
+    "section": "Making new continuous functions out of old ones",
+    "text": "Making new continuous functions out of old ones\nIf \\(f(x), g(x)\\) are continuous at \\(x = a\\), and \\(c\\) is a constant, then the following are also continuous at \\(x = a\\):\n\n\\(f + g\\)\n\\(f - g\\)\n\\(cf\\)\n\\(fg\\)\n\\(f/g\\) (if \\(g(a) \\ne 0\\))"
+  },
+  {
+    "objectID": "03b-limits-continuity.html#which-functions-are-continuous",
+    "href": "03b-limits-continuity.html#which-functions-are-continuous",
+    "title": "Limits and Continuity (2/2)",
+    "section": "Which functions are continuous?",
+    "text": "Which functions are continuous?\nContinuous on their domain:\n\nPolynomials\nRational functions\nTrigonometric functions + inverse trigonometric functions\nSquare roots, \\(n\\)th roots\n\\(\\log\\), \\(\\exp\\)\n\nIn particular:\n\nPolynomials are continuous for all \\(x \\in \\mathbb{R}\\)\nRational functions \\(P(x)/Q(x)\\) are continuous for all \\(x\\) so that \\(Q(x) \\ne 0\\)."
+  },
+  {
+    "objectID": "03b-limits-continuity.html#composition-of-functions",
+    "href": "03b-limits-continuity.html#composition-of-functions",
+    "title": "Limits and Continuity (2/2)",
+    "section": "Composition of functions",
+    "text": "Composition of functions\nIf \\(f(x)\\) is continuous and \\(\\lim_{x \\to a} g(x) = b\\), then\n\\[\n    \\lim_{x \\to a} f(g(x)) = f(b) = f\\left( \\lim_{x \\to b} g(x) \\right).\n\\]\nExample: \\(\\displaystyle \\lim_{x \\to 2} \\sin\\left( \\frac{2-x}{4-x^2}\\pi\\right)\\)"
+  },
+  {
+    "objectID": "03b-limits-continuity.html#corollary",
+    "href": "03b-limits-continuity.html#corollary",
+    "title": "Limits and Continuity (2/2)",
+    "section": "Corollary",
+    "text": "Corollary\nIf \\(g\\) is continuous at \\(x = a\\) and \\(f\\) is continuous at \\(y = g(a)\\), then \\(f \\circ g\\) is continuous at \\(x = a\\).\nExamples: Where are the following functions continuous?\n\n\\(\\displaystyle h(x) = \\sin x^2\\)\n\\(\\displaystyle h(x) = \\ln(1 + \\cos x)\\)"
   },
   {
     "objectID": "02-coordinate-geometry.html#contents",

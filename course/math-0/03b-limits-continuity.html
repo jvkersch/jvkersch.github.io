@@ -491,11 +491,90 @@
 <li>…</li>
 </ul></li>
 </ol>
-<p>Special cases (to know by heart):</p>
+<p>Special cases (to memorize):</p>
 <p><span class="math display">\[
     \lim_{h \to 0}\frac{\sin h}{h}  = 1 \quad \text{and} \quad
     \lim_{h \to 0}\frac{\cos h - 1}{h}  = 0.
 \]</span></p>
+</section>
+<section id="continuity" class="slide level2">
+<h2>Continuity</h2>
+<ul>
+<li>Intuitively, continuity <span class="math inline">\(=\)</span> “no jumps”</li>
+<li>Mathematically, <span class="math inline">\(f(x)\)</span> is <strong>continuous</strong> at an interior point <span class="math inline">\(x = a\)</span> of its domain if</li>
+</ul>
+<p><span class="math display">\[
+  \lim_{x \to a} f(x) = f(a).
+\]</span></p>
+<p>Example: <span class="math inline">\(\displaystyle f(x) = \frac{x^2 - x - 3}{x - 2}\)</span> is not continuous at <span class="math inline">\(x = 2\)</span>.</p>
+</section>
+<section id="examples-6" class="slide level2">
+<h2>Examples</h2>
+<p>Define <span class="math inline">\(f(x) = \frac{x^2 - x - 2}{x - 2}\)</span> when <span class="math inline">\(x \ne 2\)</span> and <span class="math inline">\(f(x) = 1\)</span> otherwise (i.e.&nbsp;<span class="math inline">\(f(2) = 1\)</span>).</p>
+<p>Is <span class="math inline">\(f(x)\)</span> continuous at <span class="math inline">\(x = 2\)</span>?</p>
+</section>
+<section id="leftright-continuity" class="slide level2">
+<h2>Left/right continuity</h2>
+<p>At <span class="math inline">\(x = a\)</span>, <span class="math inline">\(f(x)\)</span> is …</p>
+<ul>
+<li><strong>Right continuous</strong> if <span class="math inline">\(\displaystyle \lim_{x\to a+} f(x) = f(a)\)</span></li>
+<li><strong>Left continuous</strong> if <span class="math inline">\(\displaystyle \lim_{x\to a-} f(x) = f(a)\)</span>.</li>
+</ul>
+<p>Example: the Heaviside function is defined by <span class="math inline">\(H(x) = 0\)</span> when <span class="math inline">\(x &lt; 0\)</span> and <span class="math inline">\(H(x) = 1\)</span> when <span class="math inline">\(x \ge 0\)</span>. Is <span class="math inline">\(H(x)\)</span> right or left continuous at <span class="math inline">\(x = 0\)</span>?</p>
+</section>
+<section id="continuity-on-an-interval" class="slide level2">
+<h2>Continuity on an interval</h2>
+<p>The function <span class="math inline">\(f(x)\)</span> is continuous on an interval <span class="math inline">\([a, b]\)</span> if …</p>
+<ul>
+<li><span class="math inline">\(f(x)\)</span> is continuous at every <span class="math inline">\(x \in (a, b)\)</span></li>
+<li><span class="math inline">\(f(x)\)</span> is right-continuous in <span class="math inline">\(a\)</span></li>
+<li><span class="math inline">\(f(x)\)</span> is left-continuous in <span class="math inline">\(b\)</span>.</li>
+</ul>
+<p>Example: Show that <span class="math inline">\(f(x) = 1 - \sqrt{1 - x^2}\)</span> is continuous on <span class="math inline">\([-1, 1]\)</span>.</p>
+</section>
+<section id="making-new-continuous-functions-out-of-old-ones" class="slide level2">
+<h2>Making new continuous functions out of old ones</h2>
+<p>If <span class="math inline">\(f(x), g(x)\)</span> are continuous at <span class="math inline">\(x = a\)</span>, and <span class="math inline">\(c\)</span> is a constant, then the following are also continuous at <span class="math inline">\(x = a\)</span>:</p>
+<ul>
+<li><span class="math inline">\(f + g\)</span></li>
+<li><span class="math inline">\(f - g\)</span></li>
+<li><span class="math inline">\(cf\)</span></li>
+<li><span class="math inline">\(fg\)</span></li>
+<li><span class="math inline">\(f/g\)</span> (if <span class="math inline">\(g(a) \ne 0\)</span>)</li>
+</ul>
+</section>
+<section id="which-functions-are-continuous" class="slide level2">
+<h2>Which functions are continuous?</h2>
+<p>Continuous <strong>on their domain</strong>:</p>
+<ul>
+<li>Polynomials</li>
+<li>Rational functions</li>
+<li>Trigonometric functions + inverse trigonometric functions</li>
+<li>Square roots, <span class="math inline">\(n\)</span>th roots</li>
+<li><span class="math inline">\(\log\)</span>, <span class="math inline">\(\exp\)</span></li>
+</ul>
+<p>In particular:</p>
+<ul>
+<li>Polynomials are continuous for all <span class="math inline">\(x \in \mathbb{R}\)</span></li>
+<li>Rational functions <span class="math inline">\(P(x)/Q(x)\)</span> are continuous for all <span class="math inline">\(x\)</span> so that <span class="math inline">\(Q(x) \ne 0\)</span>.</li>
+</ul>
+</section>
+<section id="composition-of-functions" class="slide level2">
+<h2>Composition of functions</h2>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous and <span class="math inline">\(\lim_{x \to a} g(x) = b\)</span>, then</p>
+<p><span class="math display">\[
+    \lim_{x \to a} f(g(x)) = f(b) = f\left( \lim_{x \to b} g(x) \right).
+\]</span></p>
+<p>Example: <span class="math inline">\(\displaystyle \lim_{x \to 2} \sin\left( \frac{2-x}{4-x^2}\pi\right)\)</span></p>
+</section>
+<section id="corollary" class="slide level2">
+<h2>Corollary</h2>
+<p>If <span class="math inline">\(g\)</span> is continuous at <span class="math inline">\(x = a\)</span> and <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(y = g(a)\)</span>, then <span class="math inline">\(f \circ g\)</span> is continuous at <span class="math inline">\(x = a\)</span>.</p>
+<p>Examples: Where are the following functions continuous?</p>
+<ul>
+<li><span class="math inline">\(\displaystyle h(x) = \sin x^2\)</span></li>
+<li><span class="math inline">\(\displaystyle h(x) = \ln(1 + \cos x)\)</span></li>
+</ul>
 
 <div class="footer footer-default">
 
