@@ -32,7 +32,7 @@
     "href": "03b-limits-continuity.html#limits-at-infinity-intuition",
     "title": "Limits and Continuity (2/2)",
     "section": "Limits at infinity (intuition)",
-    "text": "Limits at infinity (intuition)\nWhat happens to \\(f(x)\\) when \\(x\\) becomes very large (positive/negative)?\nExamples:\n\n\\(\\displaystyle f(x) = \\frac{x^2 - 1}{x^2 + 1}\\)\n\\(\\displaystyle \\lim_{x \\to +\\infty}e^{-x}\\)"
+    "text": "Limits at infinity (intuition)\nWhat happens to \\(f(x)\\) when \\(x\\) becomes very large (positive/negative)?\nExamples:\n\n\\(\\displaystyle \\lim_{x \\to \\pm \\infty} \\frac{x^2 - 1}{x^2 + 1}\\)\n\\(\\displaystyle \\lim_{x \\to +\\infty}e^{-x}\\)"
   },
   {
     "objectID": "03b-limits-continuity.html#limits-at-infinity-definition",
@@ -46,7 +46,7 @@
     "href": "03b-limits-continuity.html#horizontal-asymptotes",
     "title": "Limits and Continuity (2/2)",
     "section": "Horizontal asymptotes",
-    "text": "Horizontal asymptotes\nThe line \\(y = L\\) is a horizontal asymptote of \\(f(x)\\) if at least one of the following is true:\n\\[\n    \\lim_{x \\to +\\infty}f(x) = L \\quad \\text{or} \\lim_{x \\to -\\infty}f(x) = L.\n\\]\nExamples:\n\n\\(\\displaystyle y = \\frac{x^2 - 1}{x^2 + 1}\\)\n\\(\\displaystyle y = e^{-x}\\)\n\\(\\displaystyle y = \\frac{e^x - e^{-x}}{e^x + e^{-x}}\\)"
+    "text": "Horizontal asymptotes\nThe line \\(y = L\\) is a horizontal asymptote of \\(f(x)\\) if at least one of the following is true:\n\\[\n    \\lim_{x \\to +\\infty}f(x) = L \\quad \\text{or} \\lim_{x \\to -\\infty}f(x) = L.\n\\]\nExamples: Find the horizontal asymptotes of\n\n\\(\\displaystyle y = \\frac{x^2 - 1}{x^2 + 1}\\)\n\\(\\displaystyle y = e^{-x}\\)\n\\(\\displaystyle y = \\frac{e^x - e^{-x}}{e^x + e^{-x}}\\)"
   },
   {
     "objectID": "03b-limits-continuity.html#limit-laws",
@@ -116,7 +116,7 @@
     "href": "03b-limits-continuity.html#summary-of-limit-techniques",
     "title": "Limits and Continuity (2/2)",
     "section": "Summary of limit techniques",
-    "text": "Summary of limit techniques\n\nTry “just substituting” \\(\\pm\\infty\\)\nUse common manipulations:\n\nSimplify\nHighest powers\nConjugate\n…\n\n\nSpecial cases (to memorize):\n\\[\n    \\lim_{h \\to 0}\\frac{\\sin h}{h}  = 1 \\quad \\text{and} \\quad\n    \\lim_{h \\to 0}\\frac{\\cos h - 1}{h}  = 0.\n\\]"
+    "text": "Summary of limit techniques\n\nTry “just substituting” \\(\\pm\\infty\\)\nUse common manipulations:\n\nSimplify\nHighest powers\nConjugate\n…\n\nSpecial cases (to memorize):\n\n\\[\n    \\lim_{h \\to 0}\\frac{\\sin h}{h}  = 1 \\quad \\text{and} \\quad\n    \\lim_{h \\to 0}\\frac{\\cos h - 1}{h}  = 0.\n\\]"
   },
   {
     "objectID": "03b-limits-continuity.html#continuity",
@@ -130,7 +130,7 @@
     "href": "03b-limits-continuity.html#examples-6",
     "title": "Limits and Continuity (2/2)",
     "section": "Examples",
-    "text": "Examples\nDefine \\(f(x) = \\frac{x^2 - x - 2}{x - 2}\\) when \\(x \\ne 2\\) and \\(f(x) = 1\\) otherwise (i.e. \\(f(2) = 1\\)).\nIs \\(f(x)\\) continuous at \\(x = 2\\)?"
+    "text": "Examples\nDefine \\(f(x) = \\frac{x^2 - x - 2}{x - 2}\\) when \\(x \\ne 2\\) and \\(f(x) = 1\\) otherwise (i.e. \\(f(2) = 1\\)). Is \\(f(x)\\) continuous at \\(x = 2\\)?"
   },
   {
     "objectID": "03b-limits-continuity.html#leftright-continuity",
@@ -375,7 +375,7 @@
     "href": "03a-limits-continuity.html#limit-laws",
     "title": "Limits and Continuity (1/2)",
     "section": "Limit laws",
-    "text": "Limit laws\n\n\\(\\lim_{x \\to a} x = a\\)\n\\(\\lim_{x \\to a} c = c\\)\n\\(\\lim_{x \\to a} (f(x) + g(x)) = \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)\\)\n\\(\\lim_{x \\to a} (c(f(x))) = c \\lim_{x \\to a} f(x)\\)\n\\(\\lim_{x \\to a}(f(x)g(x)) = \\lim_{x \\to a}f(x) \\lim_{x \\to a}g(x)\\)\n\\(\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\frac{\\lim_{x \\to a}f(x)}{\\lim_{x \\to a}g(x)}\\) if \\(\\lim_{x \\to a} g(x) \\ne 0\\)\n\\(\\lim_{x \\to a}\\left(f(x)^{m/n}\\right) = \\left( \\lim_{x \\to a}f(x) \\right)^{m/n}\\),\n\nIf \\(n\\) even: \\(L\\) must be positive\nIf \\(m < 0\\): \\(L\\) must be different from 0."
+    "text": "Limit laws\n\n\\(\\lim_{x \\to a} x = a\\)\n\\(\\lim_{x \\to a} c = c\\)\n\\(\\lim_{x \\to a} (f(x) + g(x)) = \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)\\)\n\\(\\lim_{x \\to a} (c(f(x))) = c \\lim_{x \\to a} f(x)\\)\n\\(\\lim_{x \\to a}(f(x)g(x)) = \\lim_{x \\to a}f(x) \\lim_{x \\to a}g(x)\\)\n\\(\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\frac{\\lim_{x \\to a}f(x)}{\\lim_{x \\to a}g(x)}\\) if \\(\\lim_{x \\to a} g(x) \\ne 0\\)\n\\(\\lim_{x \\to a}\\left(f(x)^{m/n}\\right) = \\left( \\lim_{x \\to a}f(x) \\right)^{m/n} = L^{m/n}\\),\n\nIf \\(n\\) even: \\(L\\) must be positive\nIf \\(m < 0\\): \\(L\\) must be different from 0."
   },
   {
     "objectID": "03a-limits-continuity.html#limit-laws-1",
