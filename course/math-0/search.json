@@ -53,14 +53,14 @@
     "href": "03b-limits-continuity.html#limit-laws",
     "title": "Limits and Continuity (2/2)",
     "section": "Limit laws",
-    "text": "Limit laws\n\n\\(\\lim_{x \\to \\infty} x = \\infty\\)\n\\(\\lim_{x \\to \\infty} c = c\\) (for \\(c\\) a constant)\n\\(\\lim_{x \\to \\infty}(f(x) + g(x)) = \\lim_{x \\to \\infty} f(x) + \\lim_{x \\to \\infty} g(x)\\)\n\\(\\lim_{x \\to \\infty} (cf(x)) = c\\lim_{x \\to \\infty} f(x)\\)\n\\(\\lim_{x \\to \\infty}(f(x)g(x)) = \\lim_{x \\to \\infty} f(x) \\lim_{x \\to \\infty} g(x)\\)\n\\(\\lim_{x \\to \\infty} \\frac{f(x)}{g(x)} = \\frac{\\lim_{x \\to \\infty} f(x)}{\\lim_{x \\to \\infty} g(x)}\\), if the denominator is not zero\n\\(\\lim_{x \\to \\infty} f(x)^{m/n} = \\left(\\lim_{x \\to \\infty} f(x) \\right)^{m/n} = L^{m/n}\\), if\n\n\\(L \\ge 0\\) for \\(n\\) even\n\\(L \\ne 0\\) for \\(m\\) negative"
+    "text": "Limit laws\n\n\\(\\lim_{x \\to \\infty} x = \\infty\\)\n\\(\\lim_{x \\to \\infty} c = c\\) (for \\(c\\) a constant)\n\\(\\lim_{x \\to \\infty}(f(x) + g(x)) = \\lim_{x \\to \\infty} f(x) + \\lim_{x \\to \\infty} g(x)\\)\n\\(\\lim_{x \\to \\infty} (cf(x)) = c\\lim_{x \\to \\infty} f(x)\\)\n\\(\\lim_{x \\to \\infty}(f(x)g(x)) = \\lim_{x \\to \\infty} f(x) \\lim_{x \\to \\infty} g(x)\\)\n\\(\\lim_{x \\to \\infty} \\frac{f(x)}{g(x)} = \\frac{\\lim_{x \\to \\infty} f(x)}{\\lim_{x \\to \\infty} g(x)}\\), if the denominator is not zero"
   },
   {
     "objectID": "03b-limits-continuity.html#limit-laws-continued",
     "href": "03b-limits-continuity.html#limit-laws-continued",
     "title": "Limits and Continuity (2/2)",
     "section": "Limit laws (continued)",
-    "text": "Limit laws (continued)\n\nIf \\(f(x) \\le g(x)\\), then \\(\\lim_{x \\to \\infty} f(x) \\le \\lim_{x \\to \\infty} g(x)\\)\n\\(\\lim_{x \\to \\infty} 1/x^n = 0\\), if \\(n > 0\\)\n\\(\\lim_{x \\to \\infty} g(f(x)) = \\lim_{y \\to x} g(y)\\), where \\(c = \\lim_{x\\to \\infty}f(x)\\), if\n\n\\(c\\) is constant (not equal to \\(\\pm \\infty\\))\n\\(f\\) is continuous (see later)"
+    "text": "Limit laws (continued)\n\n\\(\\lim_{x \\to \\infty} f(x)^{m/n} = \\left(\\lim_{x \\to \\infty} f(x) \\right)^{m/n} = L^{m/n}\\), if\n\n\\(L \\ge 0\\) for \\(n\\) even\n\\(L \\ne 0\\) for \\(m\\) negative\n\nIf \\(f(x) \\le g(x)\\), then \\(\\lim_{x \\to \\infty} f(x) \\le \\lim_{x \\to \\infty} g(x)\\)\n\\(\\lim_{x \\to \\infty} 1/x^n = 0\\), if \\(n > 0\\)\n\\(\\lim_{x \\to \\infty} g(f(x)) = \\lim_{y \\to x} g(y)\\), where \\(c = \\lim_{x\\to \\infty}f(x)\\), if\n\n\\(c\\) is constant (not equal to \\(\\pm \\infty\\))\n\\(f\\) is continuous (see later)"
   },
   {
     "objectID": "03b-limits-continuity.html#examples",
@@ -116,7 +116,7 @@
     "href": "03b-limits-continuity.html#summary-of-limit-techniques",
     "title": "Limits and Continuity (2/2)",
     "section": "Summary of limit techniques",
-    "text": "Summary of limit techniques\n\nTry “just substituting” \\(\\pm\\infty\\)\nUse common manipulations:\n\nSimplify\nHighest powers\nConjugate\n…\n\nSpecial cases (to memorize):\n\n\\[\n    \\lim_{h \\to 0}\\frac{\\sin h}{h}  = 1 \\quad \\text{and} \\quad\n    \\lim_{h \\to 0}\\frac{\\cos h - 1}{h}  = 0.\n\\]"
+    "text": "Summary of limit techniques\n\nTry “just substituting” \\(\\pm\\infty\\)\nUse common manipulations:\n\nSimplify\nHighest powers\nConjugate\n… ## Special cases (to memorize):\n\n\n\\[\n    \\lim_{h \\to 0}\\frac{\\sin h}{h}  = 1 \\quad \\text{and} \\quad\n    \\lim_{h \\to 0}\\frac{\\cos h - 1}{h}  = 0.\n\\]"
   },
   {
     "objectID": "03b-limits-continuity.html#continuity",
