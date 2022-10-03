@@ -60,7 +60,7 @@
     "href": "03b-limits-continuity.html#limit-laws-continued",
     "title": "Limits and Continuity (2/2)",
     "section": "Limit laws (continued)",
-    "text": "Limit laws (continued)\n\n\\(\\lim_{x \\to \\infty} f(x)^{m/n} = \\left(\\lim_{x \\to \\infty} f(x) \\right)^{m/n} = L^{m/n}\\), if\n\n\\(L \\ge 0\\) for \\(n\\) even\n\\(L \\ne 0\\) for \\(m\\) negative\n\nIf \\(f(x) \\le g(x)\\), then \\(\\lim_{x \\to \\infty} f(x) \\le \\lim_{x \\to \\infty} g(x)\\)\n\\(\\lim_{x \\to \\infty} 1/x^n = 0\\), if \\(n > 0\\)\n\\(\\lim_{x \\to \\infty} g(f(x)) = \\lim_{y \\to x} g(y)\\), where \\(c = \\lim_{x\\to \\infty}f(x)\\), if\n\n\\(c\\) is constant (not equal to \\(\\pm \\infty\\))\n\\(f\\) is continuous (see later)"
+    "text": "Limit laws (continued)\n\n\\(\\lim_{x \\to \\infty} f(x)^{m/n} = \\left(\\lim_{x \\to \\infty} f(x) \\right)^{m/n} = L^{m/n}\\), if\n\n\\(L \\ge 0\\) for \\(n\\) even\n\\(L \\ne 0\\) for \\(m\\) negative\n\nIf \\(f(x) \\le g(x)\\), then \\(\\lim_{x \\to \\infty} f(x) \\le \\lim_{x \\to \\infty} g(x)\\)\n\\(\\lim_{x \\to \\infty} 1/x^n = 0\\), if \\(n > 0\\)\n\\(\\lim_{x \\to \\infty} g(f(x)) = \\lim_{y \\to c} g(y)\\), where \\(c = \\lim_{x\\to \\infty}f(x)\\), if\n\n\\(c\\) is constant (not equal to \\(\\pm \\infty\\))\n\\(f\\) is continuous (see later)"
   },
   {
     "objectID": "03b-limits-continuity.html#examples",
@@ -116,7 +116,7 @@
     "href": "03b-limits-continuity.html#summary-of-limit-techniques",
     "title": "Limits and Continuity (2/2)",
     "section": "Summary of limit techniques",
-    "text": "Summary of limit techniques\n\nTry “just substituting” \\(\\pm\\infty\\)\nUse common manipulations:\n\nSimplify\nHighest powers\nConjugate\n… ## Special cases (to memorize):\n\n\n\\[\n    \\lim_{h \\to 0}\\frac{\\sin h}{h}  = 1 \\quad \\text{and} \\quad\n    \\lim_{h \\to 0}\\frac{\\cos h - 1}{h}  = 0.\n\\]"
+    "text": "Summary of limit techniques\n\nTry “just substituting” \\(\\pm\\infty\\)\nUse common manipulations:\n\nSimplify\nHighest powers\nConjugate\n…"
   },
   {
     "objectID": "03b-limits-continuity.html#continuity",
@@ -397,5 +397,12 @@
     "title": "Limits and Continuity (1/2)",
     "section": "The squeeze theorem",
     "text": "The squeeze theorem\nLets you compute the limit of a difficult function \\(g(x)\\) “squeezed” between two simple functions \\(f(x)\\) and \\(h(x)\\).\nSuppose\n\n\\(f(x) \\le g(x) \\le h(x)\\) for some \\(x\\) near \\(a\\)\n\\(\\lim_{x \\to a}f(x) = \\lim_{x \\to a} h(x) = L\\).\n\nThen\n\\[\n\\lim_{x \\to a} h(x) = L.\n\\]"
+  },
+  {
+    "objectID": "03b-limits-continuity.html#special-cases-to-memorize",
+    "href": "03b-limits-continuity.html#special-cases-to-memorize",
+    "title": "Limits and Continuity (2/2)",
+    "section": "Special cases (to memorize):",
+    "text": "Special cases (to memorize):\n\\[\n    \\lim_{h \\to 0}\\frac{\\sin h}{h}  = 1 \\quad \\text{and} \\quad\n    \\lim_{h \\to 0}\\frac{\\cos h - 1}{h}  = 0.\n\\]"
   }
 ]
