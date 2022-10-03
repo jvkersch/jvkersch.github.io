@@ -449,6 +449,13 @@ div.csl-indent {
     x_\text{ext} \approx \pm \pi^2\left(\frac{1}{2} + k\right)^2,
 \]</span></p>
 <p>valid when <span class="math inline">\(k\)</span> is large. This follows easily from the fixed-point equation: for <span class="math inline">\(k\)</span> large, <span class="math inline">\(\arctan\left( \frac{z + k \pi}{2} \right)\)</span> tends to <span class="math inline">\(-\pi/2\)</span>, so that <span class="math inline">\(z_\text{ext} \approx \pi/2\)</span>, and the approximation for <span class="math inline">\(x_\text{ext}\)</span> follows.</p>
+<p>Unfortunately, this approximation is not very accurate for the range that we’re interested. For example, for <span class="math inline">\(k = 7\)</span> we get that <span class="math inline">\(x_\text{ext} \approx (7.5 \pi)^2 = 555.165\)</span>, which is nowhere near the true value. We need to take <span class="math inline">\(k = 201\)</span> before we get something that is 1% accurate.</p>
+<p>A better approximation can be obtained by expanding <span class="math inline">\(\arctan x\)</span> around <span class="math inline">\(x = \infty\)</span> to first order as <span class="math inline">\(\arctan x = \pi/2 + 1/x + O(x^{-3})\)</span>. Using this approximation in the fixed-point equation and solving the resulting quadratic equation gives</p>
+<p><span class="math display">\[
+    x_\text{ext} \approx \pm \frac{1}{16}\left(
+        (2k-1)\pi + \sqrt{32 + (2k-1)^2 \pi^2} \right)^2.
+\]</span></p>
+<p>For <span class="math inline">\(k = 7\)</span>, this gives <span class="math inline">\(x_\text{ext} \approx 420.9813\)</span>, which is indeed quite close.</p>
 
 
 
