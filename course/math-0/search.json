@@ -368,7 +368,7 @@
     "href": "04a-derivatives.html#properties-of-differentiable-functions",
     "title": "Derivatives (1/2)",
     "section": "Properties of differentiable functions",
-    "text": "Properties of differentiable functions\nWe say that \\(y = f(x)\\) is differentiable on an interval \\([a, b]\\) if\n\n\\(f'(x)\\) exists for each \\(x \\in (a, b)\\)\nAt \\(x = a\\), the right derivative exists: \\[f'(a) = \\lim_{h \\to 0+}\\frac{f(a + h) - f(a)}{h}.\\]\nAt \\(x = b\\), the right derivative exists: \\[f'(b) = \\lim_{h \\to 0-}\\frac{f(b + h) - f(b)}{h}.\\]"
+    "text": "Properties of differentiable functions\nWe say that \\(y = f(x)\\) is differentiable on an interval \\([a, b]\\) if\n\n\\(f'(x)\\) exists for each \\(x \\in (a, b)\\)\nAt \\(x = a\\), the right derivative exists: \\[f'(a) = \\lim_{h \\to 0+}\\frac{f(a + h) - f(a)}{h}.\\]\nAt \\(x = b\\), the left derivative exists: \\[f'(b) = \\lim_{h \\to 0-}\\frac{f(b + h) - f(b)}{h}.\\]"
   },
   {
     "objectID": "04a-derivatives.html#link-between-differentiability-and-continuity",
@@ -389,7 +389,7 @@
     "href": "04a-derivatives.html#derivative-of-a-polynomial-basic-rules",
     "title": "Derivatives (1/2)",
     "section": "Derivative of a polynomial: basic rules",
-    "text": "Derivative of a polynomial: basic rules\n\n\\(\\displaystyle \\frac{d}{dx} c = 0\\)\n\\(\\displaystyle \\frac{d x^n}{dx^n} = nx^{n-1}\\) for \\(n \\ne 0\\)."
+    "text": "Derivative of a polynomial: basic rules\n\n\\(\\displaystyle \\frac{d}{dx} c = 0\\)\n\\(\\displaystyle \\frac{d x^n}{dx} = nx^{n-1}\\) for \\(n \\ne 0\\)."
   },
   {
     "objectID": "04a-derivatives.html#derivative-of-a-polynomial-basic-rules-1",
