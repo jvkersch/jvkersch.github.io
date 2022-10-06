@@ -182,6 +182,83 @@
     "text": "Corollary\nIf \\(g\\) is continuous at \\(x = a\\) and \\(f\\) is continuous at \\(y = g(a)\\), then \\(f \\circ g\\) is continuous at \\(x = a\\).\nExamples: Where are the following functions continuous?\n\n\\(\\displaystyle h(x) = \\sin x^2\\)\n\\(\\displaystyle h(x) = \\ln(1 + \\cos x)\\)"
   },
   {
+    "objectID": "04b-derivatives.html#contents",
+    "href": "04b-derivatives.html#contents",
+    "title": "Derivatives (2/2): Applications",
+    "section": "Contents",
+    "text": "Contents\n\nImplicit differentiation\nVelocity and acceleration"
+  },
+  {
+    "objectID": "04b-derivatives.html#implicit-differentiation",
+    "href": "04b-derivatives.html#implicit-differentiation",
+    "title": "Derivatives (2/2): Applications",
+    "section": "Implicit differentiation",
+    "text": "Implicit differentiation\n\nWe now know how to compute the derivative of a function \\(y = f(x)\\).\nBut what if we can’t write \\(y\\) as a function of \\(x\\)?\n\nExample: Find \\(y'(x)\\) if \\(x\\) and \\(y\\) are related by \\(x^2 + y^2 = 1\\).\nTwo ways of solving:\n\nThe direct way (hard): find \\(y(x)\\) and differentiate\nVia implicit differentiation (easy): differentiate both sides"
+  },
+  {
+    "objectID": "04b-derivatives.html#example",
+    "href": "04b-derivatives.html#example",
+    "title": "Derivatives (2/2): Applications",
+    "section": "Example",
+    "text": "Example\nFind an equation for the tangent line to the curve defined by \\(x^2 + xy + 2y^3 = 4\\) at the point \\(P(-2, 1)\\)."
+  },
+  {
+    "objectID": "04b-derivatives.html#section",
+    "href": "04b-derivatives.html#section",
+    "title": "Derivatives (2/2): Applications",
+    "section": "",
+    "text": "Figure made with Wolfram Alpha."
+  },
+  {
+    "objectID": "04b-derivatives.html#velocity-and-acceleration",
+    "href": "04b-derivatives.html#velocity-and-acceleration",
+    "title": "Derivatives (2/2): Applications",
+    "section": "Velocity and acceleration",
+    "text": "Velocity and acceleration\nWe will consider only objects moving along a straight line (one-dimensional motion)\n\nPosition \\(x(t)\\)\nVelocity \\(v(t)\\)\n\nRecall from physics 1: \\(v(t)\\) is the first derivative of \\(x(t)\\). Why?"
+  },
+  {
+    "objectID": "04b-derivatives.html#average-and-instantaneous-velocity-speed",
+    "href": "04b-derivatives.html#average-and-instantaneous-velocity-speed",
+    "title": "Derivatives (2/2): Applications",
+    "section": "Average and instantaneous velocity, speed",
+    "text": "Average and instantaneous velocity, speed\n\nThe average velocity \\(v_\\text{avg}(t)\\) over an interval \\([t, t+h]\\) is the change in distance divided by the change in time:\n\n\\[\n    v_{\\text{avg}}(t) = \\frac{\\Delta x}{\\Delta t} = \\frac{x(t+h) - x(t)}{h}.\n\\]\n\nThe instantaneous velocity \\(v(t)\\) is the limit as \\(h \\to 0\\):\n\n\\[\n    v(t) = \\lim_{h \\to 0} \\frac{x(t+h) - x(t)}{h} = \\frac{dx}{dt} = \\dot{x}(t).\n\\]\n\nThe speed \\(s(t)\\) is the magnitude of the velocity: \\(s(t) = |v(t)|\\)."
+  },
+  {
+    "objectID": "04b-derivatives.html#characteristics-of-velocity",
+    "href": "04b-derivatives.html#characteristics-of-velocity",
+    "title": "Derivatives (2/2): Applications",
+    "section": "Characteristics of velocity",
+    "text": "Characteristics of velocity\n\n\\(v(t) > 0\\): moving to the right (\\(x(t)\\) increases)\n\\(v(t) < 0\\): moving to the left (\\(x(t)\\) decreases)\n\\(v(t) = 0\\): instantaneously at rest"
+  },
+  {
+    "objectID": "04b-derivatives.html#acceleration",
+    "href": "04b-derivatives.html#acceleration",
+    "title": "Derivatives (2/2): Applications",
+    "section": "Acceleration",
+    "text": "Acceleration\nThe acceleration \\(a(t)\\) is the rate of change of the velocity:\n\\[\n    a(t) = \\dot{v}(t) = \\ddot{x}(t).\n\\]\nCharacteristics:\n\n\\(a(t) > 0\\): \\(v(t)\\) increases\n\\(a(t) < 0\\): \\(v(t)\\) decreases\n\nSpeeding up and slowing down:\n\n\\(a(t) \\cdot v(t) > 0\\): speeding up\n\\(a(t) \\cdot v(t) < 0\\): slowing down"
+  },
+  {
+    "objectID": "04b-derivatives.html#example-1",
+    "href": "04b-derivatives.html#example-1",
+    "title": "Derivatives (2/2): Applications",
+    "section": "Example",
+    "text": "Example\nA particle \\(P\\) moves along the \\(x\\)-axis with position given by \\(x(t) = 2 t^3 - 15 t^2 + 24t\\).\n\nFind \\(v(t)\\) and \\(a(t)\\).\nIn which direction is \\(P\\) moving at \\(t = 2\\)? Is \\(P\\) speeding up or slowing down?\nWhen is \\(P\\) instantaneously at rest? When does its velocity instantaneously not change?"
+  },
+  {
+    "objectID": "04b-derivatives.html#example-continued",
+    "href": "04b-derivatives.html#example-continued",
+    "title": "Derivatives (2/2): Applications",
+    "section": "Example (continued)",
+    "text": "Example (continued)\n\nWhen is \\(P\\) moving to the left/right?\nWhen is \\(P\\) speeding up/slowing down?"
+  },
+  {
+    "objectID": "04b-derivatives.html#example-continued-1",
+    "href": "04b-derivatives.html#example-continued-1",
+    "title": "Derivatives (2/2): Applications",
+    "section": "Example (continued)",
+    "text": "Example (continued)"
+  },
+  {
     "objectID": "02-coordinate-geometry.html#contents",
     "href": "02-coordinate-geometry.html#contents",
     "title": "Coordinate Geometry",
