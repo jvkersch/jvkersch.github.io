@@ -7,7 +7,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.37">
+  <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
   <title>Limits and Continuity (1/2)</title>
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link rel="stylesheet" href="style.css">
@@ -360,12 +365,9 @@
 <h2>Definition of limit</h2>
 <p><img data-src="./images/03-limits-continuity/limit-definition.svg" class="absolute" style="top: 100px; right: -100px; height: 250px; "></p>
 <ul>
-<li>We write:</li>
-</ul>
-<p><span class="math display">\[
-    \lim_{x \to a}f(x) = L
-\]</span></p>
-<ul>
+<li>We write: <span class="math display">\[
+  \lim_{x \to a}f(x) = L
+\]</span></li>
 <li>We say: <em>“The limit of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> goes to <span class="math inline">\(a\)</span> is <span class="math inline">\(L\)</span>”.</em></li>
 <li>We mean:
 <ul>
@@ -412,8 +414,7 @@
 <h2>Definition</h2>
 <div class="columns">
 <div class="column" style="width:46%;">
-<p><strong>Left</strong> Limit:</p>
-<p><span class="math display">\[
+<p><strong>Left</strong> Limit: <span class="math display">\[
     \lim_{x \to a-}f(x) = L
 \]</span></p>
 <ul>
@@ -428,8 +429,7 @@
 </div><div class="column" style="width:6%;">
 
 </div><div class="column" style="width:48%;">
-<p><strong>Right</strong> Limit:</p>
-<p><span class="math display">\[
+<p><strong>Right</strong> Limit: <span class="math display">\[
     \lim_{x \to a+}f(x) = M
 \]</span></p>
 <ul>
@@ -446,12 +446,9 @@
 </section>
 <section id="relation-with-two-sided-limit" class="slide level2">
 <h2>Relation with two-sided limit</h2>
-<p>The two-sided limit exists,</p>
-<p><span class="math display">\[
+<p>The two-sided limit exists, <span class="math display">\[
     \lim_{x \to a} f(x) = L,
-\]</span></p>
-<p>if and only if both one-sided limits exist and are equal:</p>
-<p><span class="math display">\[
+\]</span> if and only if both one-sided limits exist and are equal: <span class="math display">\[
     \lim_{x \to a+} f(x) = L \quad \text{and} \quad \lim_{x \to a-} f(x) = L
 \]</span></p>
 </section>
@@ -508,8 +505,7 @@
 <li><span class="math inline">\(f(x) \le g(x) \le h(x)\)</span> for some <span class="math inline">\(x\)</span> near <span class="math inline">\(a\)</span></li>
 <li><span class="math inline">\(\lim_{x \to a}f(x) = \lim_{x \to a} h(x) = L\)</span>.</li>
 </ol>
-<p>Then</p>
-<p><span class="math display">\[
+<p>Then <span class="math display">\[
 \lim_{x \to a} h(x) = L.
 \]</span></p>
 
@@ -796,7 +792,8 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);

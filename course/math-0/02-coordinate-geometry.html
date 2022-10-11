@@ -7,7 +7,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.37">
+  <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
   <title>Coordinate Geometry</title>
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link rel="stylesheet" href="style.css">
@@ -358,8 +363,7 @@
 <h2>Example: distance between two points</h2>
 <div class="columns v-center-container">
 <div class="column" style="width:50%;">
-<p>Distance between <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>:</p>
-<p><span class="math display">\[
+<p>Distance between <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>: <span class="math display">\[
     d(P, Q) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
 \]</span></p>
 </div><div class="column" style="width:5%;">
@@ -377,8 +381,7 @@
 <h2>Example: midpoint between two points</h2>
 <div class="columns v-center-container">
 <div class="column" style="width:50%;">
-<p>Coordinates of midpoint between <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>:</p>
-<p><span class="math display">\[
+<p>Coordinates of midpoint between <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>: <span class="math display">\[
   M = \left( \frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2} \right).
 \]</span></p>
 </div><div class="column" style="width:45%;">
@@ -423,12 +426,9 @@
 <p>Locus of points <span class="math inline">\(P(x, y)\)</span> at distance <span class="math inline">\(R\)</span> from center <span class="math inline">\(C(h, k)\)</span>.</p>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p>We have <span class="math inline">\(d(P, C) = R\)</span> so that</p>
-<p><span class="math display">\[
+<p>We have <span class="math inline">\(d(P, C) = R\)</span> so that <span class="math display">\[
   \sqrt{(x - h)^2 + (y - k)^2} = R,
-\]</span></p>
-<p>and by squaring</p>
-<p><span class="math display">\[
+\]</span> and by squaring <span class="math display">\[
   \boxed{(x - h)^2 + (y - k)^2 = R^2}
 \]</span></p>
 </div><div class="column" style="width:40%;">
@@ -452,11 +452,9 @@
 <h2>Lines</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p>Line not parallel to the <span class="math inline">\(y\)</span>-axis:</p>
-<p><span class="math display">\[
+<p>Line not parallel to the <span class="math inline">\(y\)</span>-axis: <span class="math display">\[
   \boxed{y = mx + q}
-\]</span></p>
-<p>with</p>
+\]</span> with</p>
 <ul>
 <li><span class="math inline">\(m\)</span>: the <strong>slope</strong></li>
 <li><span class="math inline">\(q\)</span>: the <strong>intercept</strong></li>
@@ -474,11 +472,9 @@
 <h2>Lines</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p>Line parallel to the <span class="math inline">\(y\)</span>-axis:</p>
-<p><span class="math display">\[
+<p>Line parallel to the <span class="math inline">\(y\)</span>-axis: <span class="math display">\[
   \boxed{x = a}
-\]</span></p>
-<p>with</p>
+\]</span> with</p>
 <ul>
 <li><span class="math inline">\(a\)</span>: where the line intersects the <span class="math inline">\(x\)</span>-axis</li>
 </ul>
@@ -500,8 +496,7 @@
 <li><span class="math inline">\(\Delta x = x_2 - x_1\)</span></li>
 <li><span class="math inline">\(\Delta y = y_2 - y_1\)</span></li>
 </ul>
-<p>Then</p>
-<p><span class="math display">\[
+<p>Then <span class="math display">\[
   \boxed{m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}}
 \]</span></p>
 <p>“<span class="math inline">\(\Delta x\)</span> steps to the right, <span class="math inline">\(\Delta y\)</span> steps up/down.”</p>
@@ -520,12 +515,10 @@
 </section>
 <section id="properties" class="slide level2">
 <h2>Properties</h2>
-<p>Equation for the line through <span class="math inline">\((x_0, y_0)\)</span> with slope <span class="math inline">\(m\)</span>:</p>
-<p><span class="math display">\[
+<p>Equation for the line through <span class="math inline">\((x_0, y_0)\)</span> with slope <span class="math inline">\(m\)</span>: <span class="math display">\[
   y - y_0 = m(x - x_0)
 \]</span></p>
-<p>Equation for the line through the points <span class="math inline">\((x_1, y_1)\)</span> and <span class="math inline">\((x_2, y_2)\)</span>:</p>
-<p><span class="math display">\[
+<p>Equation for the line through the points <span class="math inline">\((x_1, y_1)\)</span> and <span class="math inline">\((x_2, y_2)\)</span>: <span class="math display">\[
   y - y_1 = \frac{y_2 - y_1}{x_2 - x_1}(x - x_1).
 \]</span></p>
 </section>
@@ -553,8 +546,7 @@
 <h2>Distance of a point to a line</h2>
 <div class="columns v-center-container">
 <div class="column" style="width:60%;">
-<p>Distance between point <span class="math inline">\(P(x_0, y_0)\)</span> and line <span class="math inline">\(L: ax + by + c = 0\)</span>:</p>
-<p><span class="math display">\[
+<p>Distance between point <span class="math inline">\(P(x_0, y_0)\)</span> and line <span class="math inline">\(L: ax + by + c = 0\)</span>: <span class="math display">\[
   D = \frac{|ax_0 + by_0 + c|}{\sqrt{a^2 + b^2}}.
 \]</span></p>
 </div><div class="column" style="width:40%;">
@@ -575,11 +567,10 @@
 <li><span class="math inline">\(x = a\)</span> (parallel)</li>
 </ul></li>
 <li>Linear representation: <span class="math inline">\(ax + by + c = 0\)</span></li>
-<li>Polar representation:</li>
+<li>Polar representation: <span class="math display">\[
+r = \frac{q}{\sin \theta - m \cos \theta}
+\]</span></li>
 </ol>
-<p><span class="math display">\[
-   r = \frac{q}{\sin \theta - m \cos \theta}
-\]</span></p>
 </section>
 <section id="exercise" class="slide level2">
 <h2>Exercise</h2>
@@ -871,7 +862,8 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);

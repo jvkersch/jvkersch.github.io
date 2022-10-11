@@ -7,7 +7,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.37">
+  <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
   <title>Limits and Continuity (2/2)</title>
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link rel="stylesheet" href="style.css">
@@ -337,11 +342,9 @@
 <section id="infinite-limits" class="slide level2">
 <h2>Infinite limits</h2>
 <p>We say that <span class="math inline">\(f(x)\)</span> has an <strong>infinite limit</strong> for <span class="math inline">\(x \to a\)</span> if the values of <span class="math inline">\(f(x)\)</span> become <strong>arbitrarily large</strong> when <span class="math inline">\(x \to a\)</span>.</p>
-<p>We note</p>
-<p><span class="math display">\[
+<p>We note <span class="math display">\[
   \lim_{x \to a} f(x) = \infty \quad \text{or} \quad \lim_{x \to a}f(x) = -\infty,
-\]</span></p>
-<p>depending on the sign of <span class="math inline">\(f(x)\)</span> near <span class="math inline">\(x = a\)</span>.</p>
+\]</span> depending on the sign of <span class="math inline">\(f(x)\)</span> near <span class="math inline">\(x = a\)</span>.</p>
 <p>Examples:</p>
 <ul>
 <li><span class="math inline">\(\displaystyle \lim_{x\to 0}\frac{1}{x^2}\)</span></li>
@@ -350,8 +353,7 @@
 </section>
 <section id="vertical-asymptotes" class="slide level2">
 <h2>Vertical asymptotes</h2>
-<p>The line <span class="math inline">\(x = a\)</span> is a <strong>vertical asymptote</strong> of <span class="math inline">\(f(x)\)</span> if <em>at least one</em> of the following is true:</p>
-<p><span class="math display">\[
+<p>The line <span class="math inline">\(x = a\)</span> is a <strong>vertical asymptote</strong> of <span class="math inline">\(f(x)\)</span> if <em>at least one</em> of the following is true: <span class="math display">\[
   \lim_{x \to a+} f(x) = \pm\infty \quad \text{or} \quad \lim_{x \to a-}f(x) = \pm\infty.
 \]</span></p>
 <p>Example: find the vertical asymptotes of</p>
@@ -362,8 +364,7 @@
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
-<p>Find all vertical asymptotes of the function</p>
-<p><span class="math display">\[
+<p>Find all vertical asymptotes of the function <span class="math display">\[
   f(x) = \frac{|x-1|}{x^2-3x+2}.
 \]</span></p>
 <p>Hint: <em>Look for zeros of the denominator that are not zeros of the numerator.</em></p>
@@ -412,8 +413,7 @@
 </section>
 <section id="horizontal-asymptotes" class="slide level2">
 <h2>Horizontal asymptotes</h2>
-<p>The line <span class="math inline">\(y = L\)</span> is a <strong>horizontal asymptote</strong> of <span class="math inline">\(f(x)\)</span> if <em>at least one</em> of the following is true:</p>
-<p><span class="math display">\[
+<p>The line <span class="math inline">\(y = L\)</span> is a <strong>horizontal asymptote</strong> of <span class="math inline">\(f(x)\)</span> if <em>at least one</em> of the following is true: <span class="math display">\[
     \lim_{x \to +\infty}f(x) = L \quad \text{or} \lim_{x \to -\infty}f(x) = L.
 \]</span></p>
 <p>Examples: Find the horizontal asymptotes of</p>
@@ -503,11 +503,10 @@
 <h2>Continuity</h2>
 <ul>
 <li>Intuitively, continuity <span class="math inline">\(=\)</span> “no jumps”</li>
-<li>Mathematically, <span class="math inline">\(f(x)\)</span> is <strong>continuous</strong> at an interior point <span class="math inline">\(x = a\)</span> of its domain if</li>
+<li>Mathematically, <span class="math inline">\(f(x)\)</span> is <strong>continuous</strong> at an interior point <span class="math inline">\(x = a\)</span> of its domain if <span class="math display">\[
+\lim_{x \to a} f(x) = f(a).
+\]</span></li>
 </ul>
-<p><span class="math display">\[
-  \lim_{x \to a} f(x) = f(a).
-\]</span></p>
 <p>Example: <span class="math inline">\(\displaystyle f(x) = \frac{x^2 - x - 3}{x - 2}\)</span> is not continuous at <span class="math inline">\(x = 2\)</span>.</p>
 </section>
 <section id="examples-6" class="slide level2">
@@ -562,8 +561,7 @@
 </section>
 <section id="composition-of-functions" class="slide level2">
 <h2>Composition of functions</h2>
-<p>If <span class="math inline">\(f(x)\)</span> is continuous and <span class="math inline">\(\lim_{x \to a} g(x) = b\)</span>, then</p>
-<p><span class="math display">\[
+<p>If <span class="math inline">\(f(x)\)</span> is continuous and <span class="math inline">\(\lim_{x \to a} g(x) = b\)</span>, then <span class="math display">\[
     \lim_{x \to a} f(g(x)) = f(b) = f\left( \lim_{x \to b} g(x) \right).
 \]</span></p>
 <p>Example: <span class="math inline">\(\displaystyle \lim_{x \to 2} \sin\left( \frac{2-x}{4-x^2}\pi\right)\)</span></p>
@@ -860,7 +858,8 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);

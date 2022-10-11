@@ -1,5 +1,131 @@
 [
   {
+    "objectID": "05-complex-numbers.html#overview",
+    "href": "05-complex-numbers.html#overview",
+    "title": "Complex Numbers",
+    "section": "Overview",
+    "text": "Overview\n\nMotivation\nNumber systems\nGraphical representation of complex numbers\nModules, argument, complex conjugate\nComplex arithmetic"
+  },
+  {
+    "objectID": "05-complex-numbers.html#motivation-solving-quadratic-equations",
+    "href": "05-complex-numbers.html#motivation-solving-quadratic-equations",
+    "title": "Complex Numbers",
+    "section": "Motivation: solving quadratic equations",
+    "text": "Motivation: solving quadratic equations\nFind \\(x\\) so that \\(x^2 - 2x + 2 = 0\\).\n\nAs \\(D = - 4 < 0\\), there are no real solutions\nIf we set \\(i = \\sqrt{-1}\\), then we find two solutions.\n\nOK to calculate with \\(i\\), as long as we remember \\[\n    \\boxed{i^2 = -1.}\n\\]"
+  },
+  {
+    "objectID": "05-complex-numbers.html#number-systems",
+    "href": "05-complex-numbers.html#number-systems",
+    "title": "Complex Numbers",
+    "section": "Number systems",
+    "text": "Number systems\n\n\n\n\n\n\n\n\nSymbol\nElements\nUsed for\n\n\n\n\n\\(\\mathbb{N}\\)\n0, 1, 2, …\nCounting\n\n\n\\(\\mathbb{Z}\\)\n…, -1, 0, 1, 2, …\nAdding/subtracting\n\n\n\\(\\mathbb{Q}\\)\nFractions \\(n/m\\)\nDividing\n\n\n\\(\\mathbb{R}\\)\n\\(\\mathbb{Q}\\) and irrational numbers: \\(e\\), \\(\\pi\\), …\nLimits\n\n\n\\(\\mathbb{C}\\)\n\\(a + ib\\), with \\(a, b \\in \\mathbb{R}\\)\nSolving equations"
+  },
+  {
+    "objectID": "05-complex-numbers.html#graphical-representation-of-complex-numbers",
+    "href": "05-complex-numbers.html#graphical-representation-of-complex-numbers",
+    "title": "Complex Numbers",
+    "section": "Graphical representation of complex numbers",
+    "text": "Graphical representation of complex numbers\n\n\nIf \\(z = x + iy\\) is a complex number, then\n\n\\(\\operatorname{Re}(z) = x\\) (the real part)\n\\(\\operatorname{Im}(z) = y\\) (the imaginary part)\n\nare both real numbers and \\((x, y)\\) determines a point in the plane.\n\n\n\n\n\n\nArgand plane:\n\n\\(x\\)-axis: Real axis\n\\(y\\)-axis: Imaginary axis"
+  },
+  {
+    "objectID": "05-complex-numbers.html#example",
+    "href": "05-complex-numbers.html#example",
+    "title": "Complex Numbers",
+    "section": "Example",
+    "text": "Example\nIn the complex plane, find the location of:\n\n\\(z_1 = 1\\)\n\\(z_2 = 2 + 3i\\)\n\\(z_3 = -2i\\)\n\\(S = \\{ z\\in\\mathbb{C}: \\operatorname{Re}(z) \\le 1\\}\\)"
+  },
+  {
+    "objectID": "05-complex-numbers.html#modulus-and-argument",
+    "href": "05-complex-numbers.html#modulus-and-argument",
+    "title": "Complex Numbers",
+    "section": "Modulus and argument",
+    "text": "Modulus and argument\n\n\n\nModulus (absolute value) of \\(z\\): distance to the origin. \\[\n  |z| = d(z, O) = \\sqrt{x^2 + y^2}.\n\\]\nArgument of \\(z\\): angle with positive \\(x\\)-axis. \\(\\operatorname{Arg}(z) = \\theta \\in (-\\pi, \\pi]\\) if \\[\n\\tan \\theta = \\frac{y}{x}.\n\\]"
+  },
+  {
+    "objectID": "05-complex-numbers.html#polar-representation-of-complex-numbers",
+    "href": "05-complex-numbers.html#polar-representation-of-complex-numbers",
+    "title": "Complex Numbers",
+    "section": "Polar representation of complex numbers",
+    "text": "Polar representation of complex numbers\nIf \\(r\\) is the modulus and \\(\\theta\\) the argument of \\(z = x + iy\\), then \\[\n    \\left\\{\n        \\begin{array}{l}\n        x = r \\cos \\theta \\\\\n        y = r \\sin\\theta\n        \\end{array}\n    \\right.\n\\]\nThis gives us the polar representation of \\(z\\): \\[\\begin{align*}\n    z & = x + iy \\\\\n      & = \\boxed{r( \\cos \\theta + i \\sin \\theta) }\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "05-complex-numbers.html#example-1",
+    "href": "05-complex-numbers.html#example-1",
+    "title": "Complex Numbers",
+    "section": "Example",
+    "text": "Example\nFind the polar representation of\n\n\\(z_1 = i\\)\n\\(z_2 = 1 + i\\)\n\\(z_3 = - \\sqrt{3} - i\\)"
+  },
+  {
+    "objectID": "05-complex-numbers.html#complex-conjugate",
+    "href": "05-complex-numbers.html#complex-conjugate",
+    "title": "Complex Numbers",
+    "section": "Complex conjugate",
+    "text": "Complex conjugate\n\n\nIf \\(z = x + iy\\), then the complex conjugate \\(\\bar{z}\\) is given by \\[\n    \\bar{z} = x - iy.\n\\]\nProperties:\n\n\\(\\operatorname{Re}(\\bar{z}) = \\operatorname{Re}(z)\\)\n\\(\\operatorname{Im}(\\bar{z}) = -\\operatorname{Im}(z)\\)\n\\(|\\bar{z}| = |z|\\)\n\\(\\operatorname{Arg}(\\bar{z}) = - \\operatorname{Arg}(z)\\)"
+  },
+  {
+    "objectID": "05-complex-numbers.html#adding-and-subtracting-complex-numbers",
+    "href": "05-complex-numbers.html#adding-and-subtracting-complex-numbers",
+    "title": "Complex Numbers",
+    "section": "Adding and subtracting complex numbers",
+    "text": "Adding and subtracting complex numbers\nComplex numbers can be added/subtracted component-wise: if \\(z = x + iy\\) and \\(w = a + ib\\), then \\[\\begin{align*}\n    z \\pm w & = (x + iy) \\pm (a + ib) \\\\\n          & = (x \\pm a) + i(y \\pm b)\n\\end{align*}\\]\nThis has a nice geometric interpretation via the parallellogram rule:\n\n\n\nDraw a parallellogram with sides \\(z\\) and \\(w\\)\n\\(z+w\\) is at the end of the diagonal"
+  },
+  {
+    "objectID": "05-complex-numbers.html#multiplying-complex-numbers",
+    "href": "05-complex-numbers.html#multiplying-complex-numbers",
+    "title": "Complex Numbers",
+    "section": "Multiplying complex numbers",
+    "text": "Multiplying complex numbers\nIf \\(z = x + iy\\) and \\(w = a + ib\\), then (using \\(i^2 = -1\\)) \\[\\begin{align*}\n    z w & = (x + iy) \\cdot (a + ib) \\\\\n          &= (xa - yb) + i(ya + xb)\n\\end{align*}\\]\nProperties:\n\n\\(z \\bar{z} = |z|^2\\)\n\\(\\overline{zw} = \\bar{z} \\cdot \\bar{w}\\)"
+  },
+  {
+    "objectID": "05-complex-numbers.html#product-of-complex-numbers-in-polar-form",
+    "href": "05-complex-numbers.html#product-of-complex-numbers-in-polar-form",
+    "title": "Complex Numbers",
+    "section": "Product of complex numbers in polar form",
+    "text": "Product of complex numbers in polar form\nWrite \\[\\begin{align*}\n    w & = r(\\cos \\theta + i\\sin\\theta) \\\\\n    z & = s(\\cos \\phi + i \\sin \\phi)\n\\end{align*}\\]\nThen we get the following nice form for the complex product: \\[\n    wz = \\underbrace{rs}_{|wz|}( \\cos(\\underbrace{\\theta + \\phi}_{\\operatorname{Arg}(wz)}) + i\\sin(\\theta + \\phi))\n\\]\nIn particular, we get\n\n\\(|wz| = rs = |w||z|\\)\n\\(\\operatorname{Arg}(wz) = \\theta + \\phi = \\operatorname{Arg}(w) + \\operatorname{Arg}(z)\\)"
+  },
+  {
+    "objectID": "05-complex-numbers.html#de-moivres-theorem",
+    "href": "05-complex-numbers.html#de-moivres-theorem",
+    "title": "Complex Numbers",
+    "section": "De Moivre’s theorem",
+    "text": "De Moivre’s theorem\nFrom the product rule, we get \\[\\begin{align*}\n    |z_1 z_2 \\cdots z_n| & = |z_1||z_2|\\cdots |z_n| \\\\\n    \\operatorname{Arg}(z_1 z_2 \\cdots z_n) & = \\operatorname{Arg}(z_1) + \\cdots + \\operatorname{Arg}(z_n).\n\\end{align*}\\] Substituting \\(z_1 = \\ldots = z_n = \\cos \\theta + i \\sin\\theta\\) gives us De Moivre’s theorem: \\[\n    \\boxed{(\\cos \\theta + i \\sin \\theta)^n = \\cos(n\\theta) + i\\sin(n \\theta).}\n\\]"
+  },
+  {
+    "objectID": "05-complex-numbers.html#division-of-complex-numbers",
+    "href": "05-complex-numbers.html#division-of-complex-numbers",
+    "title": "Complex Numbers",
+    "section": "Division of complex numbers",
+    "text": "Division of complex numbers\nWe put \\[\n    \\frac{z}{w} = \\frac{x + iy}{a + ib}.\n\\]\n\nHow can we make sense of this complex number?\nMultiply by the conjugate: \\[\n  \\frac{z}{w} = \\frac{x + iy}{a + ib} \\frac{a - ib}{a - ib} =\n      \\frac{ax + by}{a^2 + b^2} + i \\frac{ay - bx}{a^2 + b^2}.\n\\]\n\nProperties: \\[\n    |z/w| = |z|/|w|\n    \\quad \\text{and} \\quad\n    \\operatorname{Arg}(z/w) = \\operatorname{Arg}(z) - \\operatorname{Arg}(w).\n\\]"
+  },
+  {
+    "objectID": "05-complex-numbers.html#useful-properties-of-complex-numbers",
+    "href": "05-complex-numbers.html#useful-properties-of-complex-numbers",
+    "title": "Complex Numbers",
+    "section": "Useful properties of complex numbers",
+    "text": "Useful properties of complex numbers\n\n\\(\\overline{z + w} = \\bar{z} + \\bar{w}\\)\n\\(\\overline{zw} = \\bar{z} \\bar{w}\\)\n\\(\\bar{\\bar{z}} = z\\)\n\\(zw = 0\\) iff \\(z = 0\\) or \\(w = 0\\)\n\nProperty: to take the conjugate of a complicated expression, it suffices to take the conjugate of every term.\nExample: Given \\(\\displaystyle z = i \\frac{Z- 1}{Z+1}\\), compute \\(\\bar{z}\\)."
+  },
+  {
+    "objectID": "05-complex-numbers.html#examples",
+    "href": "05-complex-numbers.html#examples",
+    "title": "Complex Numbers",
+    "section": "Examples",
+    "text": "Examples\n\nFind the modulus and argument of \\(z = (3+5i)(4-2i)\\).\nSimplify the complex number \\(z = \\frac{7 + 3i}{4i}\\)."
+  },
+  {
+    "objectID": "05-complex-numbers.html#examples-1",
+    "href": "05-complex-numbers.html#examples-1",
+    "title": "Complex Numbers",
+    "section": "Examples",
+    "text": "Examples\nSimplify the following complex numbers as much as possible:\n\n\\(z = \\frac{1+i}{1-i}\\)\n\\(z = i^{2022}\\)"
+  },
+  {
+    "objectID": "05-complex-numbers.html#caveat",
+    "href": "05-complex-numbers.html#caveat",
+    "title": "Complex Numbers",
+    "section": "Caveat",
+    "text": "Caveat\nKeep in mind that, for complex numbers, \\[\n  \\sqrt{ab} \\ne \\sqrt{a}\\sqrt{b}.\n\\]"
+  },
+  {
     "objectID": "03b-limits-continuity.html#contents",
     "href": "03b-limits-continuity.html#contents",
     "title": "Limits and Continuity (2/2)",
@@ -11,21 +137,21 @@
     "href": "03b-limits-continuity.html#infinite-limits",
     "title": "Limits and Continuity (2/2)",
     "section": "Infinite limits",
-    "text": "Infinite limits\nWe say that \\(f(x)\\) has an infinite limit for \\(x \\to a\\) if the values of \\(f(x)\\) become arbitrarily large when \\(x \\to a\\).\nWe note\n\\[\n  \\lim_{x \\to a} f(x) = \\infty \\quad \\text{or} \\quad \\lim_{x \\to a}f(x) = -\\infty,\n\\]\ndepending on the sign of \\(f(x)\\) near \\(x = a\\).\nExamples:\n\n\\(\\displaystyle \\lim_{x\\to 0}\\frac{1}{x^2}\\)\n\\(\\displaystyle \\lim_{x\\to 0+} \\ln x\\)"
+    "text": "Infinite limits\nWe say that \\(f(x)\\) has an infinite limit for \\(x \\to a\\) if the values of \\(f(x)\\) become arbitrarily large when \\(x \\to a\\).\nWe note \\[\n  \\lim_{x \\to a} f(x) = \\infty \\quad \\text{or} \\quad \\lim_{x \\to a}f(x) = -\\infty,\n\\] depending on the sign of \\(f(x)\\) near \\(x = a\\).\nExamples:\n\n\\(\\displaystyle \\lim_{x\\to 0}\\frac{1}{x^2}\\)\n\\(\\displaystyle \\lim_{x\\to 0+} \\ln x\\)"
   },
   {
     "objectID": "03b-limits-continuity.html#vertical-asymptotes",
     "href": "03b-limits-continuity.html#vertical-asymptotes",
     "title": "Limits and Continuity (2/2)",
     "section": "Vertical asymptotes",
-    "text": "Vertical asymptotes\nThe line \\(x = a\\) is a vertical asymptote of \\(f(x)\\) if at least one of the following is true:\n\\[\n  \\lim_{x \\to a+} f(x) = \\pm\\infty \\quad \\text{or} \\quad \\lim_{x \\to a-}f(x) = \\pm\\infty.\n\\]\nExample: find the vertical asymptotes of\n\n\\(\\displaystyle y = \\ln x\\)\n\\(\\displaystyle y = \\tan x\\)"
+    "text": "Vertical asymptotes\nThe line \\(x = a\\) is a vertical asymptote of \\(f(x)\\) if at least one of the following is true: \\[\n  \\lim_{x \\to a+} f(x) = \\pm\\infty \\quad \\text{or} \\quad \\lim_{x \\to a-}f(x) = \\pm\\infty.\n\\]\nExample: find the vertical asymptotes of\n\n\\(\\displaystyle y = \\ln x\\)\n\\(\\displaystyle y = \\tan x\\)"
   },
   {
     "objectID": "03b-limits-continuity.html#example",
     "href": "03b-limits-continuity.html#example",
     "title": "Limits and Continuity (2/2)",
     "section": "Example",
-    "text": "Example\nFind all vertical asymptotes of the function\n\\[\n  f(x) = \\frac{|x-1|}{x^2-3x+2}.\n\\]\nHint: Look for zeros of the denominator that are not zeros of the numerator."
+    "text": "Example\nFind all vertical asymptotes of the function \\[\n  f(x) = \\frac{|x-1|}{x^2-3x+2}.\n\\]\nHint: Look for zeros of the denominator that are not zeros of the numerator."
   },
   {
     "objectID": "03b-limits-continuity.html#limits-at-infinity-intuition",
@@ -46,7 +172,7 @@
     "href": "03b-limits-continuity.html#horizontal-asymptotes",
     "title": "Limits and Continuity (2/2)",
     "section": "Horizontal asymptotes",
-    "text": "Horizontal asymptotes\nThe line \\(y = L\\) is a horizontal asymptote of \\(f(x)\\) if at least one of the following is true:\n\\[\n    \\lim_{x \\to +\\infty}f(x) = L \\quad \\text{or} \\lim_{x \\to -\\infty}f(x) = L.\n\\]\nExamples: Find the horizontal asymptotes of\n\n\\(\\displaystyle y = \\frac{x^2 - 1}{x^2 + 1}\\)\n\\(\\displaystyle y = e^{-x}\\)\n\\(\\displaystyle y = \\frac{e^x - e^{-x}}{e^x + e^{-x}}\\)"
+    "text": "Horizontal asymptotes\nThe line \\(y = L\\) is a horizontal asymptote of \\(f(x)\\) if at least one of the following is true: \\[\n    \\lim_{x \\to +\\infty}f(x) = L \\quad \\text{or} \\lim_{x \\to -\\infty}f(x) = L.\n\\]\nExamples: Find the horizontal asymptotes of\n\n\\(\\displaystyle y = \\frac{x^2 - 1}{x^2 + 1}\\)\n\\(\\displaystyle y = e^{-x}\\)\n\\(\\displaystyle y = \\frac{e^x - e^{-x}}{e^x + e^{-x}}\\)"
   },
   {
     "objectID": "03b-limits-continuity.html#limit-laws",
@@ -130,7 +256,7 @@
     "href": "03b-limits-continuity.html#continuity",
     "title": "Limits and Continuity (2/2)",
     "section": "Continuity",
-    "text": "Continuity\n\nIntuitively, continuity \\(=\\) “no jumps”\nMathematically, \\(f(x)\\) is continuous at an interior point \\(x = a\\) of its domain if\n\n\\[\n  \\lim_{x \\to a} f(x) = f(a).\n\\]\nExample: \\(\\displaystyle f(x) = \\frac{x^2 - x - 3}{x - 2}\\) is not continuous at \\(x = 2\\)."
+    "text": "Continuity\n\nIntuitively, continuity \\(=\\) “no jumps”\nMathematically, \\(f(x)\\) is continuous at an interior point \\(x = a\\) of its domain if \\[\n\\lim_{x \\to a} f(x) = f(a).\n\\]\n\nExample: \\(\\displaystyle f(x) = \\frac{x^2 - x - 3}{x - 2}\\) is not continuous at \\(x = 2\\)."
   },
   {
     "objectID": "03b-limits-continuity.html#examples-6",
@@ -172,7 +298,7 @@
     "href": "03b-limits-continuity.html#composition-of-functions",
     "title": "Limits and Continuity (2/2)",
     "section": "Composition of functions",
-    "text": "Composition of functions\nIf \\(f(x)\\) is continuous and \\(\\lim_{x \\to a} g(x) = b\\), then\n\\[\n    \\lim_{x \\to a} f(g(x)) = f(b) = f\\left( \\lim_{x \\to b} g(x) \\right).\n\\]\nExample: \\(\\displaystyle \\lim_{x \\to 2} \\sin\\left( \\frac{2-x}{4-x^2}\\pi\\right)\\)"
+    "text": "Composition of functions\nIf \\(f(x)\\) is continuous and \\(\\lim_{x \\to a} g(x) = b\\), then \\[\n    \\lim_{x \\to a} f(g(x)) = f(b) = f\\left( \\lim_{x \\to b} g(x) \\right).\n\\]\nExample: \\(\\displaystyle \\lim_{x \\to 2} \\sin\\left( \\frac{2-x}{4-x^2}\\pi\\right)\\)"
   },
   {
     "objectID": "03b-limits-continuity.html#corollary",
@@ -180,83 +306,6 @@
     "title": "Limits and Continuity (2/2)",
     "section": "Corollary",
     "text": "Corollary\nIf \\(g\\) is continuous at \\(x = a\\) and \\(f\\) is continuous at \\(y = g(a)\\), then \\(f \\circ g\\) is continuous at \\(x = a\\).\nExamples: Where are the following functions continuous?\n\n\\(\\displaystyle h(x) = \\sin x^2\\)\n\\(\\displaystyle h(x) = \\ln(1 + \\cos x)\\)"
-  },
-  {
-    "objectID": "04b-derivatives.html#contents",
-    "href": "04b-derivatives.html#contents",
-    "title": "Derivatives (2/2): Applications",
-    "section": "Contents",
-    "text": "Contents\n\nImplicit differentiation\nVelocity and acceleration"
-  },
-  {
-    "objectID": "04b-derivatives.html#implicit-differentiation",
-    "href": "04b-derivatives.html#implicit-differentiation",
-    "title": "Derivatives (2/2): Applications",
-    "section": "Implicit differentiation",
-    "text": "Implicit differentiation\n\nWe now know how to compute the derivative of a function \\(y = f(x)\\).\nBut what if we can’t write \\(y\\) as a function of \\(x\\)?\n\nExample: Find \\(y'(x)\\) if \\(x\\) and \\(y\\) are related by \\(x^2 + y^2 = 1\\).\nTwo ways of solving:\n\nThe direct way (hard): find \\(y(x)\\) and differentiate\nVia implicit differentiation (easy): differentiate both sides"
-  },
-  {
-    "objectID": "04b-derivatives.html#example",
-    "href": "04b-derivatives.html#example",
-    "title": "Derivatives (2/2): Applications",
-    "section": "Example",
-    "text": "Example\nFind an equation for the tangent line to the curve defined by \\(x^2 + xy + 2y^3 = 4\\) at the point \\(P(-2, 1)\\)."
-  },
-  {
-    "objectID": "04b-derivatives.html#section",
-    "href": "04b-derivatives.html#section",
-    "title": "Derivatives (2/2): Applications",
-    "section": "",
-    "text": "Figure made with Wolfram Alpha."
-  },
-  {
-    "objectID": "04b-derivatives.html#velocity-and-acceleration",
-    "href": "04b-derivatives.html#velocity-and-acceleration",
-    "title": "Derivatives (2/2): Applications",
-    "section": "Velocity and acceleration",
-    "text": "Velocity and acceleration\nWe will consider only objects moving along a straight line (one-dimensional motion)\n\nPosition \\(x(t)\\)\nVelocity \\(v(t)\\)\n\nRecall from physics 1: \\(v(t)\\) is the first derivative of \\(x(t)\\). Why?"
-  },
-  {
-    "objectID": "04b-derivatives.html#average-and-instantaneous-velocity-speed",
-    "href": "04b-derivatives.html#average-and-instantaneous-velocity-speed",
-    "title": "Derivatives (2/2): Applications",
-    "section": "Average and instantaneous velocity, speed",
-    "text": "Average and instantaneous velocity, speed\n\nThe average velocity \\(v_\\text{avg}(t)\\) over an interval \\([t, t+h]\\) is the change in distance divided by the change in time:\n\n\\[\n    v_{\\text{avg}}(t) = \\frac{\\Delta x}{\\Delta t} = \\frac{x(t+h) - x(t)}{h}.\n\\]\n\nThe instantaneous velocity \\(v(t)\\) is the limit as \\(h \\to 0\\):\n\n\\[\n    v(t) = \\lim_{h \\to 0} \\frac{x(t+h) - x(t)}{h} = \\frac{dx}{dt} = \\dot{x}(t).\n\\]\n\nThe speed \\(s(t)\\) is the magnitude of the velocity: \\(s(t) = |v(t)|\\)."
-  },
-  {
-    "objectID": "04b-derivatives.html#characteristics-of-velocity",
-    "href": "04b-derivatives.html#characteristics-of-velocity",
-    "title": "Derivatives (2/2): Applications",
-    "section": "Characteristics of velocity",
-    "text": "Characteristics of velocity\n\n\\(v(t) > 0\\): moving to the right (\\(x(t)\\) increases)\n\\(v(t) < 0\\): moving to the left (\\(x(t)\\) decreases)\n\\(v(t) = 0\\): instantaneously at rest"
-  },
-  {
-    "objectID": "04b-derivatives.html#acceleration",
-    "href": "04b-derivatives.html#acceleration",
-    "title": "Derivatives (2/2): Applications",
-    "section": "Acceleration",
-    "text": "Acceleration\nThe acceleration \\(a(t)\\) is the rate of change of the velocity:\n\\[\n    a(t) = \\dot{v}(t) = \\ddot{x}(t).\n\\]\nCharacteristics:\n\n\\(a(t) > 0\\): \\(v(t)\\) increases\n\\(a(t) < 0\\): \\(v(t)\\) decreases\n\nSpeeding up and slowing down:\n\n\\(a(t) \\cdot v(t) > 0\\): speeding up\n\\(a(t) \\cdot v(t) < 0\\): slowing down"
-  },
-  {
-    "objectID": "04b-derivatives.html#example-1",
-    "href": "04b-derivatives.html#example-1",
-    "title": "Derivatives (2/2): Applications",
-    "section": "Example",
-    "text": "Example\nA particle \\(P\\) moves along the \\(x\\)-axis with position given by \\(x(t) = 2 t^3 - 15 t^2 + 24t\\).\n\nFind \\(v(t)\\) and \\(a(t)\\).\nIn which direction is \\(P\\) moving at \\(t = 2\\)? Is \\(P\\) speeding up or slowing down?\nWhen is \\(P\\) instantaneously at rest? When does its velocity instantaneously not change?"
-  },
-  {
-    "objectID": "04b-derivatives.html#example-continued",
-    "href": "04b-derivatives.html#example-continued",
-    "title": "Derivatives (2/2): Applications",
-    "section": "Example (continued)",
-    "text": "Example (continued)\n\nWhen is \\(P\\) moving to the left/right?\nWhen is \\(P\\) speeding up/slowing down?"
-  },
-  {
-    "objectID": "04b-derivatives.html#example-continued-1",
-    "href": "04b-derivatives.html#example-continued-1",
-    "title": "Derivatives (2/2): Applications",
-    "section": "Example (continued)",
-    "text": "Example (continued)"
   },
   {
     "objectID": "02-coordinate-geometry.html#contents",
@@ -277,14 +326,14 @@
     "href": "02-coordinate-geometry.html#example-distance-between-two-points",
     "title": "Coordinate Geometry",
     "section": "Example: distance between two points",
-    "text": "Example: distance between two points\n\n\nDistance between \\(P\\) and \\(Q\\):\n\\[\n    d(P, Q) = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\n\\]"
+    "text": "Example: distance between two points\n\n\nDistance between \\(P\\) and \\(Q\\): \\[\n    d(P, Q) = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\n\\]"
   },
   {
     "objectID": "02-coordinate-geometry.html#example-midpoint-between-two-points",
     "href": "02-coordinate-geometry.html#example-midpoint-between-two-points",
     "title": "Coordinate Geometry",
     "section": "Example: midpoint between two points",
-    "text": "Example: midpoint between two points\n\n\nCoordinates of midpoint between \\(P\\) and \\(Q\\):\n\\[\n  M = \\left( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2} \\right).\n\\]"
+    "text": "Example: midpoint between two points\n\n\nCoordinates of midpoint between \\(P\\) and \\(Q\\): \\[\n  M = \\left( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2} \\right).\n\\]"
   },
   {
     "objectID": "02-coordinate-geometry.html#locus-of-points",
@@ -305,7 +354,7 @@
     "href": "02-coordinate-geometry.html#circles",
     "title": "Coordinate Geometry",
     "section": "Circles",
-    "text": "Circles\nLocus of points \\(P(x, y)\\) at distance \\(R\\) from center \\(C(h, k)\\).\n\n\nWe have \\(d(P, C) = R\\) so that\n\\[\n  \\sqrt{(x - h)^2 + (y - k)^2} = R,\n\\]\nand by squaring\n\\[\n  \\boxed{(x - h)^2 + (y - k)^2 = R^2}\n\\]"
+    "text": "Circles\nLocus of points \\(P(x, y)\\) at distance \\(R\\) from center \\(C(h, k)\\).\n\n\nWe have \\(d(P, C) = R\\) so that \\[\n  \\sqrt{(x - h)^2 + (y - k)^2} = R,\n\\] and by squaring \\[\n  \\boxed{(x - h)^2 + (y - k)^2 = R^2}\n\\]"
   },
   {
     "objectID": "02-coordinate-geometry.html#example-1",
@@ -326,21 +375,21 @@
     "href": "02-coordinate-geometry.html#lines",
     "title": "Coordinate Geometry",
     "section": "Lines",
-    "text": "Lines\n\n\nLine not parallel to the \\(y\\)-axis:\n\\[\n  \\boxed{y = mx + q}\n\\]\nwith\n\n\\(m\\): the slope\n\\(q\\): the intercept"
+    "text": "Lines\n\n\nLine not parallel to the \\(y\\)-axis: \\[\n  \\boxed{y = mx + q}\n\\] with\n\n\\(m\\): the slope\n\\(q\\): the intercept"
   },
   {
     "objectID": "02-coordinate-geometry.html#lines-1",
     "href": "02-coordinate-geometry.html#lines-1",
     "title": "Coordinate Geometry",
     "section": "Lines",
-    "text": "Lines\n\n\nLine parallel to the \\(y\\)-axis:\n\\[\n  \\boxed{x = a}\n\\]\nwith\n\n\\(a\\): where the line intersects the \\(x\\)-axis"
+    "text": "Lines\n\n\nLine parallel to the \\(y\\)-axis: \\[\n  \\boxed{x = a}\n\\] with\n\n\\(a\\): where the line intersects the \\(x\\)-axis"
   },
   {
     "objectID": "02-coordinate-geometry.html#finding-the-slope-of-a-line",
     "href": "02-coordinate-geometry.html#finding-the-slope-of-a-line",
     "title": "Coordinate Geometry",
     "section": "Finding the slope of a line",
-    "text": "Finding the slope of a line\n\n\nTake\n\n\\(\\Delta x = x_2 - x_1\\)\n\\(\\Delta y = y_2 - y_1\\)\n\nThen\n\\[\n  \\boxed{m = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2 - y_1}{x_2 - x_1}}\n\\]\n“\\(\\Delta x\\) steps to the right, \\(\\Delta y\\) steps up/down.”"
+    "text": "Finding the slope of a line\n\n\nTake\n\n\\(\\Delta x = x_2 - x_1\\)\n\\(\\Delta y = y_2 - y_1\\)\n\nThen \\[\n  \\boxed{m = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2 - y_1}{x_2 - x_1}}\n\\]\n“\\(\\Delta x\\) steps to the right, \\(\\Delta y\\) steps up/down.”"
   },
   {
     "objectID": "02-coordinate-geometry.html#example-3",
@@ -354,7 +403,7 @@
     "href": "02-coordinate-geometry.html#properties",
     "title": "Coordinate Geometry",
     "section": "Properties",
-    "text": "Properties\nEquation for the line through \\((x_0, y_0)\\) with slope \\(m\\):\n\\[\n  y - y_0 = m(x - x_0)\n\\]\nEquation for the line through the points \\((x_1, y_1)\\) and \\((x_2, y_2)\\):\n\\[\n  y - y_1 = \\frac{y_2 - y_1}{x_2 - x_1}(x - x_1).\n\\]"
+    "text": "Properties\nEquation for the line through \\((x_0, y_0)\\) with slope \\(m\\): \\[\n  y - y_0 = m(x - x_0)\n\\]\nEquation for the line through the points \\((x_1, y_1)\\) and \\((x_2, y_2)\\): \\[\n  y - y_1 = \\frac{y_2 - y_1}{x_2 - x_1}(x - x_1).\n\\]"
   },
   {
     "objectID": "02-coordinate-geometry.html#parallelperpendicular-lines",
@@ -375,14 +424,14 @@
     "href": "02-coordinate-geometry.html#distance-of-a-point-to-a-line",
     "title": "Coordinate Geometry",
     "section": "Distance of a point to a line",
-    "text": "Distance of a point to a line\n\n\nDistance between point \\(P(x_0, y_0)\\) and line \\(L: ax + by + c = 0\\):\n\\[\n  D = \\frac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}}.\n\\]"
+    "text": "Distance of a point to a line\n\n\nDistance between point \\(P(x_0, y_0)\\) and line \\(L: ax + by + c = 0\\): \\[\n  D = \\frac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}}.\n\\]"
   },
   {
     "objectID": "02-coordinate-geometry.html#different-representations-of-lines",
     "href": "02-coordinate-geometry.html#different-representations-of-lines",
     "title": "Coordinate Geometry",
     "section": "Different representations of lines",
-    "text": "Different representations of lines\n\nSlope/intercept:\n\n\\(y = mx + q\\) (not parallel to \\(y\\)-axis)\n\\(x = a\\) (parallel)\n\nLinear representation: \\(ax + by + c = 0\\)\nPolar representation:\n\n\\[\n   r = \\frac{q}{\\sin \\theta - m \\cos \\theta}\n\\]"
+    "text": "Different representations of lines\n\nSlope/intercept:\n\n\\(y = mx + q\\) (not parallel to \\(y\\)-axis)\n\\(x = a\\) (parallel)\n\nLinear representation: \\(ax + by + c = 0\\)\nPolar representation: \\[\nr = \\frac{q}{\\sin \\theta - m \\cos \\theta}\n\\]"
   },
   {
     "objectID": "02-coordinate-geometry.html#exercise",
@@ -403,14 +452,14 @@
     "href": "04a-derivatives.html#motivation-tangent-lines",
     "title": "Derivatives (1/2)",
     "section": "Motivation: tangent lines",
-    "text": "Motivation: tangent lines\nIn the previous class, we managed to compute the slope of the tangent line to the parabola \\(y = x^2\\) by computing the limit\n\\[\n    m = \\lim_{x \\to 1} \\frac{x^2 - 1}{x - 1} = 2.\n\\]\nHow would we do this for an arbitrary curve \\(y = f(x)\\)?"
+    "text": "Motivation: tangent lines\nIn the previous class, we managed to compute the slope of the tangent line to the parabola \\(y = x^2\\) by computing the limit \\[\n    m = \\lim_{x \\to 1} \\frac{x^2 - 1}{x - 1} = 2.\n\\]\nHow would we do this for an arbitrary curve \\(y = f(x)\\)?"
   },
   {
     "objectID": "04a-derivatives.html#derivative-of-a-function",
     "href": "04a-derivatives.html#derivative-of-a-function",
     "title": "Derivatives (1/2)",
     "section": "Derivative of a function",
-    "text": "Derivative of a function\nWe define the derivative of \\(f(x)\\) at \\(x = a\\) (“f prime”) as\n\\[\n    f'(a) = \\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a} \\quad \\text{(if the limit exists)}.\n\\]\nIf we put \\(h = x - a\\), we can rewrite this as\n\\[\n    f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}.\n\\]\nThis is sometimes easier to compute.\nIf \\(f'(a)\\) exists, we say that \\(f(x)\\) is differentiable at \\(x = a\\)."
+    "text": "Derivative of a function\nWe define the derivative of \\(f(x)\\) at \\(x = a\\) (“f prime”) as \\[\n    f'(a) = \\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a} \\quad \\text{(if the limit exists)}.\n\\]\nIf we put \\(h = x - a\\), we can rewrite this as \\[\n    f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}.\n\\] This is sometimes easier to compute.\nIf \\(f'(a)\\) exists, we say that \\(f(x)\\) is differentiable at \\(x = a\\)."
   },
   {
     "objectID": "04a-derivatives.html#examples",
@@ -431,7 +480,7 @@
     "href": "04a-derivatives.html#the-derivative-as-a-function",
     "title": "Derivatives (1/2)",
     "section": "The derivative as a function",
-    "text": "The derivative as a function\nBy letting \\(a\\) vary in \\(f'(a)\\), we obtain a function given by\n\\[\n    f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h} \\quad \\text{(if the limit exists)}.\n\\]\nThere are many notations for the derivative function: for \\(y = f(x)\\),\n\\[\n    f'(x) = y' = \\frac{d f}{d x} = \\frac{d y}{d x} = \\frac{d}{dx} f(x).\n\\]\nall mean the same thing."
+    "text": "The derivative as a function\nBy letting \\(a\\) vary in \\(f'(a)\\), we obtain a function given by \\[\n    f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h} \\quad \\text{(if the limit exists)}.\n\\]\nThere are many notations for the derivative function: for \\(y = f(x)\\), \\[\n    f'(x) = y' = \\frac{d f}{d x} = \\frac{d y}{d x} = \\frac{d}{dx} f(x).\n\\] all mean the same thing."
   },
   {
     "objectID": "04a-derivatives.html#example",
@@ -508,7 +557,7 @@
     "href": "04a-derivatives.html#examples-3",
     "title": "Derivatives (1/2)",
     "section": "Examples",
-    "text": "Examples\nUsing the rules from the previous slide, show that\n\\[\\begin{align*}\n    \\frac{d}{dx} \\csc x & = - \\cot x \\csc x \\\\\n    \\frac{d}{dx} \\sec x & = \\tan x \\sec x \\\\\n    \\frac{d}{dx} \\cot x & = - \\csc^2 x\n\\end{align*}\\]\nExample solution:\n\\[\n    \\frac{d}{dx} \\csc x = \\frac{d}{dx} \\frac{1}{\\sin x} = \\frac{1'\\cdot \\sin x - \\sin'(x) \\cdot 1}{\\sin^2 x} = - \\frac{\\cos x}{\\sin^2 x}.\n\\]\n(This will be easier once we cover the chain rule)"
+    "text": "Examples\nUsing the rules from the previous slide, show that\n\\[\\begin{align*}\n    \\frac{d}{dx} \\csc x & = - \\cot x \\csc x \\\\\n    \\frac{d}{dx} \\sec x & = \\tan x \\sec x \\\\\n    \\frac{d}{dx} \\cot x & = - \\csc^2 x\n\\end{align*}\\]\nExample solution: \\[\n    \\frac{d}{dx} \\csc x = \\frac{d}{dx} \\frac{1}{\\sin x} = \\frac{1'\\cdot \\sin x - \\sin'(x) \\cdot 1}{\\sin^2 x} = - \\frac{\\cos x}{\\sin^2 x}.\n\\] (This will be easier once we cover the chain rule)"
   },
   {
     "objectID": "04a-derivatives.html#derivatives-of-inverse-trigonometric-functions",
@@ -522,7 +571,7 @@
     "href": "04a-derivatives.html#the-chain-rule",
     "title": "Derivatives (1/2)",
     "section": "The chain rule",
-    "text": "The chain rule\n\nUseful for composite functions \\(F = \\color{red}{f} \\circ \\color{blue}{g}\\) (“\\(\\color{red}{f}\\) after \\(\\color{blue}{g}\\)”)\nIf \\(\\color{red}{f}(x)\\) and \\(\\color{blue}{g}(x)\\) are differentiable, then the composite function \\(F(x)\\) is also differentiable and\n\n\\[\n    F'(x) = \\color{red}{f'}(\\color{blue}{g}(x)) \\cdot \\color{blue}{g'}(x).\n\\]"
+    "text": "The chain rule\n\nUseful for composite functions \\(F = \\color{red}{f} \\circ \\color{blue}{g}\\) (“\\(\\color{red}{f}\\) after \\(\\color{blue}{g}\\)”)\nIf \\(\\color{red}{f}(x)\\) and \\(\\color{blue}{g}(x)\\) are differentiable, then the composite function \\(F(x)\\) is also differentiable and \\[\n  F'(x) = \\color{red}{f'}(\\color{blue}{g}(x)) \\cdot \\color{blue}{g'}(x).\n\\]"
   },
   {
     "objectID": "04a-derivatives.html#example-1",
@@ -557,7 +606,7 @@
     "href": "03a-limits-continuity.html#definition-of-limit",
     "title": "Limits and Continuity (1/2)",
     "section": "Definition of limit",
-    "text": "Definition of limit\n\n\nWe write:\n\n\\[\n    \\lim_{x \\to a}f(x) = L\n\\]\n\nWe say: “The limit of \\(f(x)\\) as \\(x\\) goes to \\(a\\) is \\(L\\)”.\nWe mean:\n\n\\(f(x)\\) is defined for all \\(x\\) near \\(a\\) (possibly not \\(a\\) itself)\nAs \\(x\\) gets closer to \\(a\\), \\(f(x)\\) gets closer and closer to \\(L\\)"
+    "text": "Definition of limit\n\n\nWe write: \\[\n  \\lim_{x \\to a}f(x) = L\n\\]\nWe say: “The limit of \\(f(x)\\) as \\(x\\) goes to \\(a\\) is \\(L\\)”.\nWe mean:\n\n\\(f(x)\\) is defined for all \\(x\\) near \\(a\\) (possibly not \\(a\\) itself)\nAs \\(x\\) gets closer to \\(a\\), \\(f(x)\\) gets closer and closer to \\(L\\)"
   },
   {
     "objectID": "03a-limits-continuity.html#examples",
@@ -585,14 +634,14 @@
     "href": "03a-limits-continuity.html#definition",
     "title": "Limits and Continuity (1/2)",
     "section": "Definition",
-    "text": "Definition\n\n\nLeft Limit:\n\\[\n    \\lim_{x \\to a-}f(x) = L\n\\]\n\n\\(f(x)\\) defined to the left of \\(a\\)\n\\(f(x) \\to L\\) as \\(x \\to a\\) from the left\n\n\n\n\n\n\n\n\n\nRight Limit:\n\\[\n    \\lim_{x \\to a+}f(x) = M\n\\]\n\n\\(f(x)\\) defined to the right of \\(a\\)\n\\(f(x) \\to M\\) as \\(x \\to a\\) from the right"
+    "text": "Definition\n\n\nLeft Limit: \\[\n    \\lim_{x \\to a-}f(x) = L\n\\]\n\n\\(f(x)\\) defined to the left of \\(a\\)\n\\(f(x) \\to L\\) as \\(x \\to a\\) from the left\n\n\n\n\n\n\n\n\n\nRight Limit: \\[\n    \\lim_{x \\to a+}f(x) = M\n\\]\n\n\\(f(x)\\) defined to the right of \\(a\\)\n\\(f(x) \\to M\\) as \\(x \\to a\\) from the right"
   },
   {
     "objectID": "03a-limits-continuity.html#relation-with-two-sided-limit",
     "href": "03a-limits-continuity.html#relation-with-two-sided-limit",
     "title": "Limits and Continuity (1/2)",
     "section": "Relation with two-sided limit",
-    "text": "Relation with two-sided limit\nThe two-sided limit exists,\n\\[\n    \\lim_{x \\to a} f(x) = L,\n\\]\nif and only if both one-sided limits exist and are equal:\n\\[\n    \\lim_{x \\to a+} f(x) = L \\quad \\text{and} \\quad \\lim_{x \\to a-} f(x) = L\n\\]"
+    "text": "Relation with two-sided limit\nThe two-sided limit exists, \\[\n    \\lim_{x \\to a} f(x) = L,\n\\] if and only if both one-sided limits exist and are equal: \\[\n    \\lim_{x \\to a+} f(x) = L \\quad \\text{and} \\quad \\lim_{x \\to a-} f(x) = L\n\\]"
   },
   {
     "objectID": "03a-limits-continuity.html#examples-2",
@@ -627,6 +676,6 @@
     "href": "03a-limits-continuity.html#the-squeeze-theorem",
     "title": "Limits and Continuity (1/2)",
     "section": "The squeeze theorem",
-    "text": "The squeeze theorem\nLets you compute the limit of a difficult function \\(g(x)\\) “squeezed” between two simple functions \\(f(x)\\) and \\(h(x)\\).\nSuppose\n\n\\(f(x) \\le g(x) \\le h(x)\\) for some \\(x\\) near \\(a\\)\n\\(\\lim_{x \\to a}f(x) = \\lim_{x \\to a} h(x) = L\\).\n\nThen\n\\[\n\\lim_{x \\to a} h(x) = L.\n\\]"
+    "text": "The squeeze theorem\nLets you compute the limit of a difficult function \\(g(x)\\) “squeezed” between two simple functions \\(f(x)\\) and \\(h(x)\\).\nSuppose\n\n\\(f(x) \\le g(x) \\le h(x)\\) for some \\(x\\) near \\(a\\)\n\\(\\lim_{x \\to a}f(x) = \\lim_{x \\to a} h(x) = L\\).\n\nThen \\[\n\\lim_{x \\to a} h(x) = L.\n\\]"
   }
 ]
