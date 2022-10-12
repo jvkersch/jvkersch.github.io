@@ -7,7 +7,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.37">
+  <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
   <title>Derivatives (2/2): Applications</title>
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link rel="stylesheet" href="style.css">
@@ -366,18 +371,12 @@
 <section id="average-and-instantaneous-velocity-speed" class="slide level2">
 <h2>Average and instantaneous velocity, speed</h2>
 <ul>
-<li>The <em>average velocity</em> <span class="math inline">\(v_\text{avg}(t)\)</span> over an interval <span class="math inline">\([t, t+h]\)</span> is the change in distance divided by the change in time:</li>
-</ul>
-<p><span class="math display">\[
-    v_{\text{avg}}(t) = \frac{\Delta x}{\Delta t} = \frac{x(t+h) - x(t)}{h}.
-\]</span></p>
-<ul>
-<li>The <em>instantaneous velocity</em> <span class="math inline">\(v(t)\)</span> is the limit as <span class="math inline">\(h \to 0\)</span>:</li>
-</ul>
-<p><span class="math display">\[
-    v(t) = \lim_{h \to 0} \frac{x(t+h) - x(t)}{h} = \frac{dx}{dt} = \dot{x}(t).
-\]</span></p>
-<ul>
+<li>The <em>average velocity</em> <span class="math inline">\(v_\text{avg}(t)\)</span> over an interval <span class="math inline">\([t, t+h]\)</span> is the change in distance divided by the change in time: <span class="math display">\[
+  v_{\text{avg}}(t) = \frac{\Delta x}{\Delta t} = \frac{x(t+h) - x(t)}{h}.
+\]</span></li>
+<li>The <em>instantaneous velocity</em> <span class="math inline">\(v(t)\)</span> is the limit as <span class="math inline">\(h \to 0\)</span>: <span class="math display">\[
+  v(t) = \lim_{h \to 0} \frac{x(t+h) - x(t)}{h} = \frac{dx}{dt} = \dot{x}(t).
+\]</span></li>
 <li>The <em>speed</em> <span class="math inline">\(s(t)\)</span> is the magnitude of the velocity: <span class="math inline">\(s(t) = |v(t)|\)</span>.</li>
 </ul>
 </section>
@@ -391,8 +390,7 @@
 </section>
 <section id="acceleration" class="slide level2">
 <h2>Acceleration</h2>
-<p>The <strong>acceleration</strong> <span class="math inline">\(a(t)\)</span> is the rate of change of the velocity:</p>
-<p><span class="math display">\[
+<p>The <strong>acceleration</strong> <span class="math inline">\(a(t)\)</span> is the rate of change of the velocity: <span class="math display">\[
     a(t) = \dot{v}(t) = \ddot{x}(t).
 \]</span></p>
 <p>Characteristics:</p>
@@ -717,7 +715,8 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
