@@ -385,83 +385,6 @@
     "text": "Example (continued)"
   },
   {
-    "objectID": "06-polynomials.html#overview",
-    "href": "06-polynomials.html#overview",
-    "title": "Theory of equations (1/2): Working with polynomials",
-    "section": "Overview",
-    "text": "Overview\n\nPolynomial long division\nSynthetic division of polynomials"
-  },
-  {
-    "objectID": "06-polynomials.html#reminder-what-is-a-polynomial",
-    "href": "06-polynomials.html#reminder-what-is-a-polynomial",
-    "title": "Theory of equations (1/2): Working with polynomials",
-    "section": "Reminder: what is a polynomial?",
-    "text": "Reminder: what is a polynomial?\nPolynomial of degree \\(n\\): \\[\n    P(x) = a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_1 x + a_0\n\\] with\n\n\\(x\\): the unknown\n\\(a_0, \\ldots, a_n\\): the coefficients (in \\(\\mathbb{C}\\) or \\(\\mathbb{R}\\))"
-  },
-  {
-    "objectID": "06-polynomials.html#reminder-euclidian-division-of-numbers",
-    "href": "06-polynomials.html#reminder-euclidian-division-of-numbers",
-    "title": "Theory of equations (1/2): Working with polynomials",
-    "section": "Reminder: Euclidian division of numbers",
-    "text": "Reminder: Euclidian division of numbers\nFor every two integers \\(p\\) and \\(d\\), we can write the fraction \\(p/d\\) as \\[\n    \\frac{p}{d} = q + \\frac{r}{d},\n\\] with \\(q\\) the quotient and \\(r\\) the remainder. In other words \\[\n    p = q d + r.\n\\] The numbers \\(q\\) and \\(r\\) can be found by long division.\nProperties:\n\nThe remainder \\(r\\) is always smaller than \\(d\\).\nThe quotient \\(q\\) and remainder \\(r\\) are unique."
-  },
-  {
-    "objectID": "06-polynomials.html#example",
-    "href": "06-polynomials.html#example",
-    "title": "Theory of equations (1/2): Working with polynomials",
-    "section": "Example",
-    "text": "Example\nIf we divide 20 by 7, we get \\[\n    \\frac{20}{7} = 2 + \\frac{6}{7},\n\\] or \\(20 = 2 \\times 7 + 6\\).\nTherefore:\n\nQuotient: \\(q = 20\\)\nRemainder: \\(r = 6\\)."
-  },
-  {
-    "objectID": "06-polynomials.html#euclidian-division-of-polynomials",
-    "href": "06-polynomials.html#euclidian-division-of-polynomials",
-    "title": "Theory of equations (1/2): Working with polynomials",
-    "section": "Euclidian division of polynomials",
-    "text": "Euclidian division of polynomials\nFor every two polynomials \\(P(x)\\) and \\(D(x)\\), we can write the rational function \\(P(x)/D(x)\\) as \\[\n    \\frac{P(x)}{D(x)} = Q(x) + \\frac{R(x)}{D(x)},\n\\] with \\(P(x)\\) the quotient and \\(R(x)\\) the remainder. In other words \\[\n    P(x) = Q(x) D(x) + R(x).\n\\] The polynomials \\(Q(x)\\) and \\(R(x)\\) can be found by long division.\nProperties:\n\nThe degree of \\(R(x)\\) is always smaller than the degree of \\(D(x)\\).\nThe quotient \\(Q(x)\\) and remainder \\(R(x)\\) are unique."
-  },
-  {
-    "objectID": "06-polynomials.html#example-1",
-    "href": "06-polynomials.html#example-1",
-    "title": "Theory of equations (1/2): Working with polynomials",
-    "section": "Example",
-    "text": "Example\nIf we divide \\(x^2 + 1\\) by \\(x - 1\\), we get:\n\\[\\begin{align*}\n    \\frac{x^2 + 1}{x - 1}\n        & = \\frac{x^2 -1 + 2}{x - 1} \\\\\n        & = \\frac{x^2 - 1}{x - 1} + \\frac{2}{x - 1} \\\\\n        & = x + 1 + \\frac{2}{x - 1}\n\\end{align*}\\]\nTherefore, the quotient is \\(Q(x) = x + 1\\) and the remainder is \\(R(x) = 2\\)."
-  },
-  {
-    "objectID": "06-polynomials.html#polynomial-long-division",
-    "href": "06-polynomials.html#polynomial-long-division",
-    "title": "Theory of equations (1/2): Working with polynomials",
-    "section": "Polynomial long division",
-    "text": "Polynomial long division\nIf \\(P(x) = 3x^4 - x^3 + 2x^2 - 2x - 1\\) and \\(D(x) = x+2\\), find the quotient and the remainder after dividing \\(P(x)\\) by \\(D(x)\\).\nAlgorithm:\n\nDivide leading term by leading term and write down result\nMultiply result by divisor and transfer the result to the left\nSubtract\nDrop next term\nRepeat steps 1-4."
-  },
-  {
-    "objectID": "06-polynomials.html#synthetic-division",
-    "href": "06-polynomials.html#synthetic-division",
-    "title": "Theory of equations (1/2): Working with polynomials",
-    "section": "Synthetic division",
-    "text": "Synthetic division\nAlgorithm:\n\nWrite down coefficients of \\(P(x)\\) on top\nWrite down coefficients of \\(-D(x)\\) (except the first) on left\nLower first coefficient\nMultiply and put result back in the table\nAdd coefficients in next column\nRepeat step 4-5 until done\nDetermine quotient and remainder"
-  },
-  {
-    "objectID": "06-polynomials.html#example-2",
-    "href": "06-polynomials.html#example-2",
-    "title": "Theory of equations (1/2): Working with polynomials",
-    "section": "Example",
-    "text": "Example\nIf \\(P(x) = x^3 - 12x^2 - 42\\) and \\(D(x) = x-3\\), find the quotient and the remainder after dividing \\(P(x)\\) by \\(D(x)\\)."
-  },
-  {
-    "objectID": "06-polynomials.html#special-case",
-    "href": "06-polynomials.html#special-case",
-    "title": "Theory of equations (1/2): Working with polynomials",
-    "section": "Special case",
-    "text": "Special case\n\\[\n    \\frac{x^n - 1}{x - 1} = x^{n-1} + x^{n-2} + \\cdots + x + 1.\n\\]"
-  },
-  {
-    "objectID": "06-polynomials.html#resources",
-    "href": "06-polynomials.html#resources",
-    "title": "Theory of equations (1/2): Working with polynomials",
-    "section": "Resources",
-    "text": "Resources\nStep-by-step walkthroughs of both algorithms (from the 2021-22 version of this course):\n\nPolynomial long division\nSynthetic division"
-  },
-  {
     "objectID": "02-coordinate-geometry.html#contents",
     "href": "02-coordinate-geometry.html#contents",
     "title": "Coordinate Geometry",
@@ -593,6 +516,83 @@
     "title": "Coordinate Geometry",
     "section": "Exercise",
     "text": "Exercise\nFind the equation of the common tangent line between two touching circles given by \\[\\begin{align*}\n  C_1: & \\  x^2 + y^2 - 6x - 12y + 37 = 0 \\\\\n  C_2: & \\  x^2 + y^2 - 6y + 7 = 0.\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "06a-polynomials.html#overview",
+    "href": "06a-polynomials.html#overview",
+    "title": "Theory of equations (1/2): Working with polynomials",
+    "section": "Overview",
+    "text": "Overview\n\nPolynomial long division\nSynthetic division of polynomials"
+  },
+  {
+    "objectID": "06a-polynomials.html#reminder-what-is-a-polynomial",
+    "href": "06a-polynomials.html#reminder-what-is-a-polynomial",
+    "title": "Theory of equations (1/2): Working with polynomials",
+    "section": "Reminder: what is a polynomial?",
+    "text": "Reminder: what is a polynomial?\nPolynomial of degree \\(n\\): \\[\n    P(x) = a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_1 x + a_0\n\\] with\n\n\\(x\\): the unknown\n\\(a_0, \\ldots, a_n\\): the coefficients (in \\(\\mathbb{C}\\) or \\(\\mathbb{R}\\))"
+  },
+  {
+    "objectID": "06a-polynomials.html#reminder-euclidian-division-of-numbers",
+    "href": "06a-polynomials.html#reminder-euclidian-division-of-numbers",
+    "title": "Theory of equations (1/2): Working with polynomials",
+    "section": "Reminder: Euclidian division of numbers",
+    "text": "Reminder: Euclidian division of numbers\nFor every two integers \\(p\\) and \\(d\\), we can write the fraction \\(p/d\\) as \\[\n    \\frac{p}{d} = q + \\frac{r}{d},\n\\] with \\(q\\) the quotient and \\(r\\) the remainder. In other words \\[\n    p = q d + r.\n\\] The numbers \\(q\\) and \\(r\\) can be found by long division.\nProperties:\n\nThe remainder \\(r\\) is always smaller than \\(d\\).\nThe quotient \\(q\\) and remainder \\(r\\) are unique."
+  },
+  {
+    "objectID": "06a-polynomials.html#example",
+    "href": "06a-polynomials.html#example",
+    "title": "Theory of equations (1/2): Working with polynomials",
+    "section": "Example",
+    "text": "Example\nIf we divide 20 by 7, we get \\[\n    \\frac{20}{7} = 2 + \\frac{6}{7},\n\\] or \\(20 = 2 \\times 7 + 6\\).\nTherefore:\n\nQuotient: \\(q = 20\\)\nRemainder: \\(r = 6\\)."
+  },
+  {
+    "objectID": "06a-polynomials.html#euclidian-division-of-polynomials",
+    "href": "06a-polynomials.html#euclidian-division-of-polynomials",
+    "title": "Theory of equations (1/2): Working with polynomials",
+    "section": "Euclidian division of polynomials",
+    "text": "Euclidian division of polynomials\nFor every two polynomials \\(P(x)\\) and \\(D(x)\\), we can write the rational function \\(P(x)/D(x)\\) as \\[\n    \\frac{P(x)}{D(x)} = Q(x) + \\frac{R(x)}{D(x)},\n\\] with \\(P(x)\\) the quotient and \\(R(x)\\) the remainder. In other words \\[\n    P(x) = Q(x) D(x) + R(x).\n\\] The polynomials \\(Q(x)\\) and \\(R(x)\\) can be found by long division.\nProperties:\n\nThe degree of \\(R(x)\\) is always smaller than the degree of \\(D(x)\\).\nThe quotient \\(Q(x)\\) and remainder \\(R(x)\\) are unique."
+  },
+  {
+    "objectID": "06a-polynomials.html#example-1",
+    "href": "06a-polynomials.html#example-1",
+    "title": "Theory of equations (1/2): Working with polynomials",
+    "section": "Example",
+    "text": "Example\nIf we divide \\(x^2 + 1\\) by \\(x - 1\\), we get:\n\\[\\begin{align*}\n    \\frac{x^2 + 1}{x - 1}\n        & = \\frac{x^2 -1 + 2}{x - 1} \\\\\n        & = \\frac{x^2 - 1}{x - 1} + \\frac{2}{x - 1} \\\\\n        & = x + 1 + \\frac{2}{x - 1}\n\\end{align*}\\]\nTherefore, the quotient is \\(Q(x) = x + 1\\) and the remainder is \\(R(x) = 2\\)."
+  },
+  {
+    "objectID": "06a-polynomials.html#polynomial-long-division",
+    "href": "06a-polynomials.html#polynomial-long-division",
+    "title": "Theory of equations (1/2): Working with polynomials",
+    "section": "Polynomial long division",
+    "text": "Polynomial long division\nIf \\(P(x) = 3x^4 - x^3 + 2x^2 - 2x - 1\\) and \\(D(x) = x+2\\), find the quotient and the remainder after dividing \\(P(x)\\) by \\(D(x)\\).\nAlgorithm:\n\nDivide leading term by leading term and write down result\nMultiply result by divisor and transfer the result to the left\nSubtract\nDrop next term\nRepeat steps 1-4."
+  },
+  {
+    "objectID": "06a-polynomials.html#synthetic-division",
+    "href": "06a-polynomials.html#synthetic-division",
+    "title": "Theory of equations (1/2): Working with polynomials",
+    "section": "Synthetic division",
+    "text": "Synthetic division\nAlgorithm:\n\nWrite down coefficients of \\(P(x)\\) on top\nWrite down coefficients of \\(-D(x)\\) (except the first) on left\nLower first coefficient\nMultiply and put result back in the table\nAdd coefficients in next column\nRepeat step 4-5 until done\nDetermine quotient and remainder"
+  },
+  {
+    "objectID": "06a-polynomials.html#example-2",
+    "href": "06a-polynomials.html#example-2",
+    "title": "Theory of equations (1/2): Working with polynomials",
+    "section": "Example",
+    "text": "Example\nIf \\(P(x) = x^3 - 12x^2 - 42\\) and \\(D(x) = x-3\\), find the quotient and the remainder after dividing \\(P(x)\\) by \\(D(x)\\)."
+  },
+  {
+    "objectID": "06a-polynomials.html#special-case",
+    "href": "06a-polynomials.html#special-case",
+    "title": "Theory of equations (1/2): Working with polynomials",
+    "section": "Special case",
+    "text": "Special case\n\\[\n    \\frac{x^n - 1}{x - 1} = x^{n-1} + x^{n-2} + \\cdots + x + 1.\n\\]"
+  },
+  {
+    "objectID": "06a-polynomials.html#resources",
+    "href": "06a-polynomials.html#resources",
+    "title": "Theory of equations (1/2): Working with polynomials",
+    "section": "Resources",
+    "text": "Resources\nStep-by-step walkthroughs of both algorithms (from the 2021-22 version of this course):\n\nPolynomial long division\nSynthetic division"
   },
   {
     "objectID": "04a-derivatives.html#contents",
