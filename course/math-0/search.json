@@ -385,6 +385,118 @@
     "text": "Example (continued)"
   },
   {
+    "objectID": "06b-polynomials.html#contents",
+    "href": "06b-polynomials.html#contents",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Contents",
+    "text": "Contents\n\nRemainder theorems\nRestrictions on the number of roots\nFundamental theorem of algebra\nComplete factorization theorem\nConjugate zeros theorem"
+  },
+  {
+    "objectID": "06b-polynomials.html#overview",
+    "href": "06b-polynomials.html#overview",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Overview",
+    "text": "Overview\n\nEvery polynomial of degree \\(N\\) has \\(N\\) roots\n\nSome of these roots may be complex (e.g. \\(x^2 + 1\\))\nSome of these roots may be the same (e.g. \\(x^2 + 2x + 1\\))\n\nRoots correspond to factors of the polynomial\nThere is no algorithm for finding all roots of a polynomial\nIf a real polynomial has a complex root \\(z\\), then the complex conjugate \\(\\bar{z}\\) is also a root (e.g. \\(x^3 - x^2 + x - 1\\))"
+  },
+  {
+    "objectID": "06b-polynomials.html#recall",
+    "href": "06b-polynomials.html#recall",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Recall",
+    "text": "Recall\nPolynomial of degree \\(n\\): \\[\n    P(x) = a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_1 x + a_0\n\\]\n\nThe number \\(n\\) is called the degree of \\(P(x)\\).\nA root or zero is a number \\(\\alpha\\) such that \\(P(\\alpha) = 0\\).\nRoots can be real (\\(\\alpha \\in \\mathbb{R}\\)) or complex (\\(\\alpha \\in \\mathbb{C}\\)).\nA factor is a linear polynomial \\(x - \\alpha\\) such that \\(P(x) = (x - \\alpha) Q(x)\\) for some other polynomial \\(Q(x)\\)."
+  },
+  {
+    "objectID": "06b-polynomials.html#remainder-theorem-special-case",
+    "href": "06b-polynomials.html#remainder-theorem-special-case",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Remainder theorem (special case)",
+    "text": "Remainder theorem (special case)\nIf \\(P(x)\\) is a polynomial, then \\(P(h)\\) is the remainder of \\(P(x)\\) divided by \\(x - h\\)."
+  },
+  {
+    "objectID": "06b-polynomials.html#corollary",
+    "href": "06b-polynomials.html#corollary",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Corollary",
+    "text": "Corollary\nNote: “Corollary” means “consequence”.\nIf \\(P(x)\\) is a polynomial with zero \\(\\alpha \\in \\mathbb{C}\\) (in other words, \\(P(\\alpha) = 0\\)), then \\(x - \\alpha\\) is a factor of \\(P(x)\\): \\[\n    P(x) = (x - \\alpha) Q(x).\n\\]"
+  },
+  {
+    "objectID": "06b-polynomials.html#example",
+    "href": "06b-polynomials.html#example",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Example",
+    "text": "Example\nFind all the factors of \\(P(x) = 2x^3 + 3x^2 - 1\\)."
+  },
+  {
+    "objectID": "06b-polynomials.html#remainder-theorem-general-version",
+    "href": "06b-polynomials.html#remainder-theorem-general-version",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Remainder theorem (general version)",
+    "text": "Remainder theorem (general version)\nIf \\(P(x)\\) is a polynomial with distinct zeros \\(\\alpha_1, \\alpha_2, \\ldots, \\alpha_k \\in \\mathbb{C}\\), then \\((x - \\alpha_1)(x - \\alpha_2) \\cdots (x - \\alpha_k)\\) is a factor of \\(P(x)\\): \\[\n    P(x) = (x - \\alpha_1)(x - \\alpha_2) \\cdots (x - \\alpha_k) Q(x).\n\\]\nNotes:\n\nThere are at most \\(n\\) distinct zeros, where \\(n\\) is the degree of \\(P(x)\\) (see later)."
+  },
+  {
+    "objectID": "06b-polynomials.html#examples",
+    "href": "06b-polynomials.html#examples",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Examples",
+    "text": "Examples\nFind a polynomial of degree \\(4\\) with roots \\(\\pm i\\), \\(\\pm 2\\), and such that \\(P(3) = 25\\)."
+  },
+  {
+    "objectID": "06b-polynomials.html#examples-1",
+    "href": "06b-polynomials.html#examples-1",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Examples",
+    "text": "Examples\nFind a polynomial of degree \\(4\\) with roots \\(0\\) and \\(-2\\), and where the root \\(-2\\) has multiplicity \\(3\\)."
+  },
+  {
+    "objectID": "06b-polynomials.html#how-many-roots-can-a-polynomial-have",
+    "href": "06b-polynomials.html#how-many-roots-can-a-polynomial-have",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "How many roots can a polynomial have?",
+    "text": "How many roots can a polynomial have?\nTheorem: A polynomial \\(P(x) \\ne 0\\) cannot have more than \\(n\\) distinct roots, where \\(n = \\deg P(x)\\).\nProof: Assume that there are \\(m\\) distinct roots \\(\\alpha_1, \\ldots, \\alpha_m\\) , with \\(m > \\deg P(x)\\). Then by the remainder theorem, \\[\n    P(x) = (x - \\alpha_1) \\cdots (x - \\alpha_m) Q(x).\n\\]\nThe left-hand side has degree \\(n\\), whereas the right-hand side has degree at least \\(m > n\\). This is a contradiction."
+  },
+  {
+    "objectID": "06b-polynomials.html#relation-between-roots-and-coefficients",
+    "href": "06b-polynomials.html#relation-between-roots-and-coefficients",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Relation between roots and coefficients",
+    "text": "Relation between roots and coefficients\nDefine the symmetric polynomials:\n\n\\(S_1 = a_1 + \\cdots + a_n\\)\n\\(S_2 = a_1 a_2 + a_1 a_3 + \\cdots + a_1 a_n + a_2 a_3 + \\cdots + a_{n-1}a_n\\)\n\\(S_3 = a_1 a_2 a_3 + \\cdots + a_{n-2}a_{n-1}a_n\\)\n…\n\\(S_n = a_1 a_2 \\cdots a_n\\)\n\nThen: \\[\\begin{multline}\n    (x - a_1)(x - a_2) \\cdots (x - a_n) = \\\\\n    x^n - S_1 x^{n-1} + S_2 x^{n-2} - S_3 x^{n-3} + \\cdots + (-1)^n S_n.\n\\end{multline}\\]"
+  },
+  {
+    "objectID": "06b-polynomials.html#example-1",
+    "href": "06b-polynomials.html#example-1",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Example",
+    "text": "Example\nGiven \\(P(x) = x^3 + 2x^2 - 3x - 1\\) with roots \\(\\alpha\\), \\(\\beta\\), and \\(\\gamma\\), find the value of \\(\\alpha^2 + \\beta^2 + \\gamma^2\\)."
+  },
+  {
+    "objectID": "06b-polynomials.html#the-fundamental-theorem-of-algebra",
+    "href": "06b-polynomials.html#the-fundamental-theorem-of-algebra",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "The fundamental theorem of algebra",
+    "text": "The fundamental theorem of algebra\nTheorem: Each polynomial has at least one root (which may be complex).\nProof: Difficult.\nConsequence: Each polynomial of degree \\(n\\) has exactly \\(n\\) roots (which may be same)."
+  },
+  {
+    "objectID": "06b-polynomials.html#how-to-find-roots",
+    "href": "06b-polynomials.html#how-to-find-roots",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "How to find roots?",
+    "text": "How to find roots?\n\nDegree 2: formula for quadratic equation\nDegree 3, 4: formulas exist, but they are very complicated\nDegree 5 and up: no general formula exists\n\nIn general, proceed via trial and error, or numerically."
+  },
+  {
+    "objectID": "06b-polynomials.html#example-2",
+    "href": "06b-polynomials.html#example-2",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Example",
+    "text": "Example\nFactorize \\(P(x) = x^4 + 2x^3 + 2x^2 + 2x + 1\\)."
+  },
+  {
+    "objectID": "06b-polynomials.html#complex-conjugates-theorem",
+    "href": "06b-polynomials.html#complex-conjugates-theorem",
+    "title": "Theory of equations (2/2): Polynomial equations",
+    "section": "Complex conjugates theorem",
+    "text": "Complex conjugates theorem\nTheorem: If \\(P(x)\\) is a polynomial with real coefficients, then complex roots appear in conjugates.\nIn other words, if \\(z = \\alpha +i \\beta\\) is a root with multiplicity \\(p\\), then \\(\\bar{z} = \\alpha - i \\beta\\) is also a root with multiplicity \\(p\\)."
+  },
+  {
     "objectID": "02-coordinate-geometry.html#contents",
     "href": "02-coordinate-geometry.html#contents",
     "title": "Coordinate Geometry",
