@@ -707,6 +707,76 @@
     "text": "Resources\nStep-by-step walkthroughs of both algorithms (from the 2021-22 version of this course):\n\nPolynomial long division: https://youtu.be/RyRqUg5oycE?t=499\nSynthetic division: https://youtu.be/NqQeMfGEzk4\n\nThese videos can be found on Ufora as well."
   },
   {
+    "objectID": "07-binomial-theorem.html#overview",
+    "href": "07-binomial-theorem.html#overview",
+    "title": "The binomial theorem",
+    "section": "Overview",
+    "text": "Overview\n\nPascal’s triangle\nBinomial coefficients\nBinomial theorem"
+  },
+  {
+    "objectID": "07-binomial-theorem.html#pascals-triangle",
+    "href": "07-binomial-theorem.html#pascals-triangle",
+    "title": "The binomial theorem",
+    "section": "Pascal’s triangle",
+    "text": "Pascal’s triangle\nExpand the following expressions and look at the coefficients.\n\n\\((a + b)^0 = 1\\)\n\\((a + b)^1 = a + b\\)\n\\((a + b)^2 = a^2 + 2ab + b^2\\)\n\\((a + b)^3 = a^3 + 3a^2 b + 3ab^2 + b^3\\)\n\\((a + b)^4 = a^4 + 4a^3 b + 6a^2 b^2 + 4ab^3 + b^4\\)\n\\((a + b)^5 = a^5 + 5a^4b + 10a^3b^2 + 10a^2 b^3 + 5ab^4 + b^5\\)\n\nWhat do you notice?\nBased on this pattern, what is \\((a + b)^7\\)?\nWould you be able to write down \\((a + b)^{27}\\)?"
+  },
+  {
+    "objectID": "07-binomial-theorem.html#section",
+    "href": "07-binomial-theorem.html#section",
+    "title": "The binomial theorem",
+    "section": "",
+    "text": "Figure credit: https://en.wikipedia.org/wiki/Jia_Xian"
+  },
+  {
+    "objectID": "07-binomial-theorem.html#example",
+    "href": "07-binomial-theorem.html#example",
+    "title": "The binomial theorem",
+    "section": "Example",
+    "text": "Example\nUse Pascal’s triangle to expand \\(\\displaystyle \\left(2x + \\frac{1}{x}\\right)^5\\)."
+  },
+  {
+    "objectID": "07-binomial-theorem.html#binomial-coefficients",
+    "href": "07-binomial-theorem.html#binomial-coefficients",
+    "title": "The binomial theorem",
+    "section": "Binomial coefficients",
+    "text": "Binomial coefficients\n\nFactorial: \\(n! = n(n-1)(n-2) \\cdots 2 \\cdot 1\\).\nBinomial coefficient (also called “n-choose-k”): \\[\n  {n \\choose k} = C^k_n = \\frac{n!}{k!(n-k)!}.\n\\]\nMeasures the number of ways of choosing \\(k\\) objects from among \\(n\\) choices."
+  },
+  {
+    "objectID": "07-binomial-theorem.html#properties",
+    "href": "07-binomial-theorem.html#properties",
+    "title": "The binomial theorem",
+    "section": "Properties",
+    "text": "Properties\nFor all \\(n\\) and \\(k \\le n\\):\n\n\\(\\displaystyle {n \\choose 0} = {n \\choose n} = 1\\).\n\\(\\displaystyle {n \\choose 1} = {n \\choose n - 1} = n\\).\n\\(\\displaystyle {n \\choose k} = {n \\choose n - k}\\)."
+  },
+  {
+    "objectID": "07-binomial-theorem.html#rewriting-pascals-triangle-using-binomial-coefficients",
+    "href": "07-binomial-theorem.html#rewriting-pascals-triangle-using-binomial-coefficients",
+    "title": "The binomial theorem",
+    "section": "Rewriting Pascal’s triangle using binomial coefficients",
+    "text": "Rewriting Pascal’s triangle using binomial coefficients"
+  },
+  {
+    "objectID": "07-binomial-theorem.html#the-binomial-expansion",
+    "href": "07-binomial-theorem.html#the-binomial-expansion",
+    "title": "The binomial theorem",
+    "section": "The binomial expansion",
+    "text": "The binomial expansion\nPutting everything we’ve learned together, we get \\[\n    (a + b)^n = {n \\choose 0} a^n b^0 + {n \\choose 1} a^{n-1}b^1 + \\cdots + {n \\choose n-1} a^1 b^{n-1} + {n \\choose n} a^0 b^n.\n\\] This can be written more compactly as \\[\n    (a + b)^n = \\sum_{k = 0}^n {n \\choose k} a^{n - k} b^k.\n\\]"
+  },
+  {
+    "objectID": "07-binomial-theorem.html#example-1",
+    "href": "07-binomial-theorem.html#example-1",
+    "title": "The binomial theorem",
+    "section": "Example",
+    "text": "Example\nUse the binomial expansion to expand \\(\\displaystyle (\\sqrt{x} - 1)^7\\)."
+  },
+  {
+    "objectID": "07-binomial-theorem.html#visual-proof-of-the-binomial-expansion-optional",
+    "href": "07-binomial-theorem.html#visual-proof-of-the-binomial-expansion-optional",
+    "title": "The binomial theorem",
+    "section": "Visual proof of the binomial expansion (optional)",
+    "text": "Visual proof of the binomial expansion (optional)"
+  },
+  {
     "objectID": "04a-derivatives.html#contents",
     "href": "04a-derivatives.html#contents",
     "title": "Derivatives (1/2)",

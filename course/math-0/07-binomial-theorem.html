@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
-  <title>Theory of equations (1/2): Working with polynomials</title>
+  <title>The binomial theorem</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -325,7 +325,7 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Theory of equations (1/2): Working with polynomials</h1>
+  <h1 class="title">The binomial theorem</h1>
   <p class="subtitle">Introduction to Engineering Mathematics</p>
   <p class="author">Prof.&nbsp;Joris Vankerschaver</p>
 </section>
@@ -333,112 +333,74 @@
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ul>
-<li>Polynomial long division</li>
-<li>Synthetic division of polynomials</li>
+<li>Pascal’s triangle</li>
+<li>Binomial coefficients</li>
+<li>Binomial theorem</li>
 </ul>
 </section>
-<section id="reminder-what-is-a-polynomial" class="slide level2">
-<h2>Reminder: what is a polynomial?</h2>
-<p>Polynomial of degree <span class="math inline">\(n\)</span>: <span class="math display">\[
-    P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
-\]</span> with</p>
+<section id="pascals-triangle" class="slide level2">
+<h2>Pascal’s triangle</h2>
+<p>Expand the following expressions and look at the coefficients.</p>
 <ul>
-<li><span class="math inline">\(x\)</span>: the unknown</li>
-<li><span class="math inline">\(a_0, \ldots, a_n\)</span>: the coefficients (in <span class="math inline">\(\mathbb{C}\)</span> or <span class="math inline">\(\mathbb{R}\)</span>)</li>
+<li><span class="math inline">\((a + b)^0 = 1\)</span></li>
+<li><span class="math inline">\((a + b)^1 = a + b\)</span></li>
+<li><span class="math inline">\((a + b)^2 = a^2 + 2ab + b^2\)</span></li>
+<li><span class="math inline">\((a + b)^3 = a^3 + 3a^2 b + 3ab^2 + b^3\)</span></li>
+<li><span class="math inline">\((a + b)^4 = a^4 + 4a^3 b + 6a^2 b^2 + 4ab^3 + b^4\)</span></li>
+<li><span class="math inline">\((a + b)^5 = a^5 + 5a^4b + 10a^3b^2 + 10a^2 b^3 + 5ab^4 + b^5\)</span></li>
 </ul>
+<p>What do you notice?</p>
+<p>Based on this pattern, what is <span class="math inline">\((a + b)^7\)</span>?</p>
+<p>Would you be able to write down <span class="math inline">\((a + b)^{27}\)</span>?</p>
 </section>
-<section id="reminder-euclidian-division-of-numbers" class="slide level2">
-<h2>Reminder: Euclidian division of numbers</h2>
-<p>For every two integers <span class="math inline">\(p\)</span> and <span class="math inline">\(d\)</span>, we can write the fraction <span class="math inline">\(p/d\)</span> as <span class="math display">\[
-    \frac{p}{d} = q + \frac{r}{d},
-\]</span> with <span class="math inline">\(q\)</span> the <strong>quotient</strong> and <span class="math inline">\(r\)</span> the <strong>remainder</strong>. In other words <span class="math display">\[
-    p = q d + r.
-\]</span> The numbers <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> can be found by <em>long division</em>.</p>
-<p>Properties:</p>
-<ul>
-<li>The remainder <span class="math inline">\(r\)</span> is always smaller than <span class="math inline">\(d\)</span>.</li>
-<li>The quotient <span class="math inline">\(q\)</span> and remainder <span class="math inline">\(r\)</span> are unique.</li>
-</ul>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="./images/07-binomial/Yanghui_triangle.png" class="r-stretch quarto-figure-center"><p>Figure credit: https://en.wikipedia.org/wiki/Jia_Xian</p>
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
-<p>If we divide 20 by 7, we get <span class="math display">\[
-    \frac{20}{7} = 2 + \frac{6}{7},
-\]</span> or <span class="math inline">\(20 = 2 \times 7 + 6\)</span>.</p>
-<p>Therefore:</p>
+<p>Use Pascal’s triangle to expand <span class="math inline">\(\displaystyle \left(2x + \frac{1}{x}\right)^5\)</span>.</p>
+</section>
+<section id="binomial-coefficients" class="slide level2">
+<h2>Binomial coefficients</h2>
 <ul>
-<li>Quotient: <span class="math inline">\(q = 20\)</span></li>
-<li>Remainder: <span class="math inline">\(r = 6\)</span>.</li>
+<li>Factorial: <span class="math inline">\(n! = n(n-1)(n-2) \cdots 2 \cdot 1\)</span>.</li>
+<li>Binomial coefficient (also called “n-choose-k”): <span class="math display">\[
+  {n \choose k} = C^k_n = \frac{n!}{k!(n-k)!}.
+\]</span></li>
+<li>Measures the number of ways of choosing <span class="math inline">\(k\)</span> objects from among <span class="math inline">\(n\)</span> choices.</li>
 </ul>
 </section>
-<section id="euclidian-division-of-polynomials" class="slide level2">
-<h2>Euclidian division of polynomials</h2>
-<p>For every two polynomials <span class="math inline">\(P(x)\)</span> and <span class="math inline">\(D(x)\)</span>, we can write the rational function <span class="math inline">\(P(x)/D(x)\)</span> as <span class="math display">\[
-    \frac{P(x)}{D(x)} = Q(x) + \frac{R(x)}{D(x)},
-\]</span> with <span class="math inline">\(P(x)\)</span> the <strong>quotient</strong> and <span class="math inline">\(R(x)\)</span> the <strong>remainder</strong>. In other words <span class="math display">\[
-    P(x) = Q(x) D(x) + R(x).
-\]</span> The polynomials <span class="math inline">\(Q(x)\)</span> and <span class="math inline">\(R(x)\)</span> can be found by <em>long division</em>.</p>
-<p>Properties:</p>
-<ul>
-<li>The degree of <span class="math inline">\(R(x)\)</span> is always smaller than the degree of <span class="math inline">\(D(x)\)</span>.</li>
-<li>The quotient <span class="math inline">\(Q(x)\)</span> and remainder <span class="math inline">\(R(x)\)</span> are unique.</li>
-</ul>
+<section id="properties" class="slide level2">
+<h2>Properties</h2>
+<p>For all <span class="math inline">\(n\)</span> and <span class="math inline">\(k \le n\)</span>:</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle {n \choose 0} = {n \choose n} = 1\)</span>.</li>
+<li><span class="math inline">\(\displaystyle {n \choose 1} = {n \choose n - 1} = n\)</span>.</li>
+<li><span class="math inline">\(\displaystyle {n \choose k} = {n \choose n - k}\)</span>.</li>
+</ol>
+</section>
+<section id="rewriting-pascals-triangle-using-binomial-coefficients" class="slide level2">
+<h2>Rewriting Pascal’s triangle using binomial coefficients</h2>
+</section>
+<section id="the-binomial-expansion" class="slide level2">
+<h2>The binomial expansion</h2>
+<p>Putting everything we’ve learned together, we get <span class="math display">\[
+    (a + b)^n = {n \choose 0} a^n b^0 + {n \choose 1} a^{n-1}b^1 + \cdots + {n \choose n-1} a^1 b^{n-1} + {n \choose n} a^0 b^n.
+\]</span> This can be written more compactly as <span class="math display">\[
+    (a + b)^n = \sum_{k = 0}^n {n \choose k} a^{n - k} b^k.
+\]</span></p>
 </section>
 <section id="example-1" class="slide level2">
 <h2>Example</h2>
-<p>If we divide <span class="math inline">\(x^2 + 1\)</span> by <span class="math inline">\(x - 1\)</span>, we get:</p>
-<p><span class="math display">\[\begin{align*}
-    \frac{x^2 + 1}{x - 1}
-        &amp; = \frac{x^2 -1 + 2}{x - 1} \\
-        &amp; = \frac{x^2 - 1}{x - 1} + \frac{2}{x - 1} \\
-        &amp; = x + 1 + \frac{2}{x - 1}
-\end{align*}\]</span></p>
-<p>Therefore, the quotient is <span class="math inline">\(Q(x) = x + 1\)</span> and the remainder is <span class="math inline">\(R(x) = 2\)</span>.</p>
+<p>Use the binomial expansion to expand <span class="math inline">\(\displaystyle (\sqrt{x} - 1)^7\)</span>.</p>
 </section>
-<section id="polynomial-long-division" class="slide level2">
-<h2>Polynomial long division</h2>
-<p>If <span class="math inline">\(P(x) = 3x^4 - x^3 + 2x^2 - 2x - 1\)</span> and <span class="math inline">\(D(x) = x+2\)</span>, find the quotient and the remainder after dividing <span class="math inline">\(P(x)\)</span> by <span class="math inline">\(D(x)\)</span>.</p>
-<p>Algorithm:</p>
-<ol type="1">
-<li>Divide leading term by leading term and write down result</li>
-<li>Multiply result by divisor and transfer the result to the left</li>
-<li>Subtract</li>
-<li>Drop next term</li>
-<li>Repeat steps 1-4.</li>
-</ol>
-</section>
-<section id="synthetic-division" class="slide level2">
-<h2>Synthetic division</h2>
-<p>Algorithm:</p>
-<ol type="1">
-<li>Write down coefficients of <span class="math inline">\(P(x)\)</span> on top</li>
-<li>Write down coefficients of <span class="math inline">\(-D(x)\)</span> (except the first) on left</li>
-<li>Lower first coefficient</li>
-<li>Multiply and put result back in the table</li>
-<li>Add coefficients in next column</li>
-<li>Repeat step 4-5 until done</li>
-<li>Determine quotient and remainder</li>
-</ol>
-</section>
-<section id="example-2" class="slide level2">
-<h2>Example</h2>
-<p>If <span class="math inline">\(P(x) = x^3 - 12x^2 - 42\)</span> and <span class="math inline">\(D(x) = x-3\)</span>, find the quotient and the remainder after dividing <span class="math inline">\(P(x)\)</span> by <span class="math inline">\(D(x)\)</span>.</p>
-</section>
-<section id="special-case" class="slide level2">
-<h2>Special case</h2>
-<p><span class="math display">\[
-    \frac{x^n - 1}{x - 1} = x^{n-1} + x^{n-2} + \cdots + x + 1.
-\]</span></p>
-</section>
-<section id="resources" class="slide level2">
-<h2>Resources</h2>
-<p>Step-by-step walkthroughs of both algorithms (from the 2021-22 version of this course):</p>
-<ul>
-<li><a href="https://youtu.be/RyRqUg5oycE?t=499">Polynomial long division</a></li>
-<li><a href="https://youtu.be/NqQeMfGEzk4">Synthetic division</a></li>
-</ul>
+<section id="visual-proof-of-the-binomial-expansion-optional" class="slide level2">
+<h2>Visual proof of the binomial expansion (optional)</h2>
 
-<div class="footer footer-default">
+
+<img data-src="./images/07-binomial/binomial-proof.png" class="r-stretch quarto-figure-center"><div class="footer footer-default">
 
 </div>
 </section>
