@@ -497,6 +497,118 @@
     "text": "Complex conjugates theorem\nTheorem: If \\(P(x)\\) is a polynomial with real coefficients, then complex roots appear in conjugates.\nIn other words, if \\(z = \\alpha +i \\beta\\) is a root with multiplicity \\(p\\), then \\(\\bar{z} = \\alpha - i \\beta\\) is also a root with multiplicity \\(p\\)."
   },
   {
+    "objectID": "09a-integration-definitions.html#contents",
+    "href": "09a-integration-definitions.html#contents",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Contents",
+    "text": "Contents\n\nDefinite/indefinite integral\nRelation with area\nProperties\nExamples"
+  },
+  {
+    "objectID": "09a-integration-definitions.html#indefinite-integrals-as-antiderivatives",
+    "href": "09a-integration-definitions.html#indefinite-integrals-as-antiderivatives",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Indefinite integrals as antiderivatives",
+    "text": "Indefinite integrals as antiderivatives\n\nAntiderivative: the opposite (inverse operation) of a derivative.\nThe indefinite integral is an antiderivative.\n\nExamples:\n\n\\(\\displaystyle \\frac{d}{dx} \\frac{x^3}{3} = x^2\\), so \\(\\displaystyle \\int x^2 dx = \\frac{x^3}{3} + C\\)\n\n\n\n\\(\\displaystyle \\frac{d}{dx} \\arcsin(x) = \\frac{1}{\\sqrt{1 - x^2}}\\), so \\(\\displaystyle \\int \\frac{dx}{\\sqrt{1-x^2}} = \\arcsin(x) + C\\).\n\n\n\nIn these examples, \\(C\\) is an arbitrary constant."
+  },
+  {
+    "objectID": "09a-integration-definitions.html#anatomy-of-an-indefinite-integral",
+    "href": "09a-integration-definitions.html#anatomy-of-an-indefinite-integral",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Anatomy of an indefinite integral",
+    "text": "Anatomy of an indefinite integral"
+  },
+  {
+    "objectID": "09a-integration-definitions.html#examples",
+    "href": "09a-integration-definitions.html#examples",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Examples",
+    "text": "Examples\nPolynomials:\n\n\\(\\displaystyle \\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C\\) for \\(n \\ne -1\\)\n\\(\\displaystyle \\int \\frac{dx}{x} = \\ln |x| + C\\)\n\nTrigonometric functions:\n\n\n\n\\(\\displaystyle \\int \\sin x \\, dx = - \\cos x + C\\)\n\\(\\displaystyle \\int \\cos x \\, dx = \\sin x + C\\)\n\n\n\n\\(\\displaystyle \\int \\tan x \\, dx = - \\ln |\\cos x| + C\\)     😱\nNot an obvious antiderivative; we will see how to derive this integral later."
+  },
+  {
+    "objectID": "09a-integration-definitions.html#examples-1",
+    "href": "09a-integration-definitions.html#examples-1",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Examples",
+    "text": "Examples\nExponential/logarithmic functions:\n\n\\(\\displaystyle \\int e^x = e^x + C\\)\n\\(\\displaystyle \\int \\frac{dx}{x} = \\ln |x| + C\\)\n\nInverse trigonometric functions:\n\n\\(\\displaystyle \\int \\frac{dx}{\\sqrt{1 - x^2}} = \\arcsin(x) + C\\)\n\\(\\displaystyle \\int \\frac{dx}{1 + x^2} = \\arctan(x) + C\\)"
+  },
+  {
+    "objectID": "09a-integration-definitions.html#examples-2",
+    "href": "09a-integration-definitions.html#examples-2",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Examples",
+    "text": "Examples\nSpecial cases:\n\n\\(\\displaystyle \\int \\sec^2 x \\, dx = \\tan x + C\\)\n\\(\\displaystyle \\int \\csc^2 x \\, dx = - \\cot x + C\\)\n\\(\\displaystyle \\int \\sec x \\tan x \\, dx = \\sec x + C\\)\n\\(\\displaystyle \\int \\csc x \\cot x \\, dx = - \\csc x + C\\)"
+  },
+  {
+    "objectID": "09a-integration-definitions.html#the-definite-integral",
+    "href": "09a-integration-definitions.html#the-definite-integral",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "The definite integral",
+    "text": "The definite integral\nDefinite integral: integral with “bounds”\n\n\n\n\n\nHow to compute:\n\nFind primitive function \\(F(x)\\): \\(\\displaystyle \\int f(x) \\, dx = F(x) + C\\)\nSubstitute bounds into \\(F(x)\\): \\(\\displaystyle \\int_a^b f(x) dx = F(b) - F(a) = F(x) \\Big|_a^b\\)."
+  },
+  {
+    "objectID": "09a-integration-definitions.html#examples-3",
+    "href": "09a-integration-definitions.html#examples-3",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Examples",
+    "text": "Examples\nCompute:\n\n\\(\\displaystyle \\int_0^{\\pi/2} \\sin x \\, dx\\)\n\\(\\displaystyle \\int_{-1}^2 (x^2 + 2x -1) \\, dx\\)"
+  },
+  {
+    "objectID": "09a-integration-definitions.html#properties-of-the-definite-integral",
+    "href": "09a-integration-definitions.html#properties-of-the-definite-integral",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Properties of the definite integral",
+    "text": "Properties of the definite integral\n\n\n\\(\\displaystyle \\int_a^a f(x) dx = F(a) - F(a) = 0\\)\n\\(\\displaystyle \\int_a^b f(x) dx = - \\displaystyle \\int_b^a f(x) dx\\)\nLinearity: \\(\\displaystyle \\int_a^b (Af(x) + Bg(x) ) dx = A\\int_a^b f(x)dx + B\\int_a^b g(x)dx\\)\n\\(\\displaystyle \\int_a^b f(x) dx + \\int_b^c f(x)dx = \\int_a^c f(x)dx\\)"
+  },
+  {
+    "objectID": "09a-integration-definitions.html#definite-integrals-correspond-to-signed-areas",
+    "href": "09a-integration-definitions.html#definite-integrals-correspond-to-signed-areas",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Definite integrals correspond to signed areas",
+    "text": "Definite integrals correspond to signed areas\n\n\nIf \\(f(x) \\ge 0\\): \\(A = \\int_a^b f(x) \\, dx\\).\n\n\n\n\n\n\nIf \\(f(x) \\le 0\\): \\(A = - \\int_a^b f(x) \\, dx\\).\n\n\n\n\n\n\n\nIf \\(f(x)\\) changes sign: break up into parts above/below \\(x\\)-axis."
+  },
+  {
+    "objectID": "09a-integration-definitions.html#examples-4",
+    "href": "09a-integration-definitions.html#examples-4",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Examples",
+    "text": "Examples\nFind the area…\n\nBetween the graph of \\(y = \\sin x\\) and the \\(x\\)-axis, from \\(0\\) to \\(2\\pi\\).\nBelow the graph of \\(y = 3x - x^2\\) and above the \\(x\\)-axis."
+  },
+  {
+    "objectID": "09a-integration-definitions.html#properties-continued",
+    "href": "09a-integration-definitions.html#properties-continued",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Properties (continued)",
+    "text": "Properties (continued)\n\n\nFor an even function, \\(\\displaystyle \\int_{-a}^a f(x) dx = 2 \\int_0^a f(x) dx\\)\nFor an odd function, \\(\\displaystyle \\int_{-a}^a f(x) = 0\\).\n“King’s rule”: \\(\\displaystyle \\int_0^a f(x) dx = \\int_0^a f(a - x)dx\\)."
+  },
+  {
+    "objectID": "09a-integration-definitions.html#continuity-and-integration",
+    "href": "09a-integration-definitions.html#continuity-and-integration",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Continuity and integration",
+    "text": "Continuity and integration\n\nSo far, we have silently assumed \\(f(x)\\) is continuous on \\([a, b]\\) to define the integral \\(\\int_a^b f(x) dx\\).\nThe integral can also be defined if \\(f(x)\\) is piecewise continuous."
+  },
+  {
+    "objectID": "09a-integration-definitions.html#examples-5",
+    "href": "09a-integration-definitions.html#examples-5",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Examples",
+    "text": "Examples\nCompute the following integrals:\n\n\\(\\displaystyle \\int \\left( 10x^4 - \\frac{2}{\\sqrt{1 - x^2}} \\right) \\, dx\\)\n\\(\\displaystyle \\int_0^1 x^{5/2}(1 - x) \\, dx\\)\n\\(\\displaystyle \\int \\frac{x^2}{1 + x^2} \\, dx\\)"
+  },
+  {
+    "objectID": "09a-integration-definitions.html#examples-6",
+    "href": "09a-integration-definitions.html#examples-6",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Examples",
+    "text": "Examples\nShow that \\(\\displaystyle \\int_0^{\\pi/2} \\frac{\\sin x}{\\sin x + \\cos x} dx = \\frac{\\pi}{4}\\).\nDifficult, uses King’s rule."
+  },
+  {
+    "objectID": "09a-integration-definitions.html#integrals-and-derivatives-are-each-others-inverse",
+    "href": "09a-integration-definitions.html#integrals-and-derivatives-are-each-others-inverse",
+    "title": "Integration: Definitions and basic concepts",
+    "section": "Integrals and derivatives are each other’s inverse",
+    "text": "Integrals and derivatives are each other’s inverse\n\nIf \\(\\displaystyle G(x) = \\int_1^x \\ln y \\, dy\\), find \\(G'(x)\\).\nIf \\(\\displaystyle H(x) = \\int_1^{x^2} \\ln y \\, dy\\), find \\(H'(x)\\)."
+  },
+  {
     "objectID": "08-proof-techniques.html#overview",
     "href": "08-proof-techniques.html#overview",
     "title": "Proof Techniques",
