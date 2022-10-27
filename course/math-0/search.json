@@ -648,7 +648,7 @@
     "href": "08-proof-techniques.html#caveat-negating-a-logical-statement",
     "title": "Proof Techniques",
     "section": "Caveat: negating a logical statement",
-    "text": "Caveat: negating a logical statement\nDe Morgan’s laws:\n\nnot (\\(p\\) and \\(q\\)) = (not \\(p\\)) or (not \\(q\\))\nnot (\\(p\\) or \\(q\\)) = (not \\(p\\)) and (not \\(q\\))\n\nExample: Show that if \\(x^2 \\ne 1\\), then \\(x \\ne 1\\)."
+    "text": "Caveat: negating a logical statement\nDe Morgan’s laws:\n\nnot (\\(p\\) and \\(q\\)) = (not \\(p\\)) or (not \\(q\\))\nnot (\\(p\\) or \\(q\\)) = (not \\(p\\)) and (not \\(q\\))\n\nExample: Show that if \\(x^2 \\ne 1\\), then \\(x \\ne \\pm 1\\)."
   },
   {
     "objectID": "08-proof-techniques.html#technique-3-proof-by-contradiction",
