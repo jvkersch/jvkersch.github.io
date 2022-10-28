@@ -683,7 +683,7 @@
     "href": "08-proof-techniques.html#technique-5-proof-by-induction",
     "title": "Proof Techniques",
     "section": "Technique 5: Proof by induction",
-    "text": "Technique 5: Proof by induction\n\nProve that a statement \\(P(n)\\) holds for every natural number \\(n\\).\nProceeds in two steps:\n\nProve a base case, usually \\(P(1)\\).\nProve the induction step: if \\(P(k)\\) holds, then \\(P(k+1)\\) holds too.\n\n\nExample: Show that the sum of the first \\(n\\) numbers is equal to \\(n^2\\): \\[\n    1 + 2 + 3 + \\cdots + n = n^2.\n\\]"
+    "text": "Technique 5: Proof by induction\n\nProve that a statement \\(P(n)\\) holds for every natural number \\(n\\).\nProceeds in two steps:\n\nProve a base case, usually \\(P(1)\\).\nProve the induction step: if \\(P(k)\\) holds, then \\(P(k+1)\\) holds too.\n\n\nExample: Show that the sum of the first \\(n\\) numbers is equal to \\(\\frac{n(n+1)}{2}\\): \\[\n    1 + 2 + 3 + \\cdots + n = \\frac{n(n+1)}{2}.\n\\]"
   },
   {
     "objectID": "08-proof-techniques.html#example",
