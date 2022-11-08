@@ -1281,6 +1281,118 @@
     "text": "Example\nCompute \\(\\displaystyle \\frac{d}{dx} x^{\\sin(x)}\\)."
   },
   {
+    "objectID": "09c-integration-partial-fractions.html#what-are-partial-fractions",
+    "href": "09c-integration-partial-fractions.html#what-are-partial-fractions",
+    "title": "Integration: Partial Fractions",
+    "section": "What are partial fractions?",
+    "text": "What are partial fractions?\nEvery rational function can be written as a sum of “simple” partial fractions. For example \\[\n    \\frac{x+2}{x^3-x} = \\frac{-2}{x} + \\frac{3}{2(x-1)} + \\frac{1}{2(x + 1)}.\n\\] In this lecture, we will find a recipe for the coefficients and terms in the partial fraction expansion."
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#why-are-partial-fractions-useful",
+    "href": "09c-integration-partial-fractions.html#why-are-partial-fractions-useful",
+    "title": "Integration: Partial Fractions",
+    "section": "Why are partial fractions useful?",
+    "text": "Why are partial fractions useful?\nThe advantage is that the partial fractions are much easier to integrate: \\[\\begin{align*}\n    \\int \\frac{x+2}{x^3-x} dx & = - 2\\int \\frac{dx}{x} + \\frac{3}{2} \\int \\frac{dx}{x-1} dx + \\frac{1}{2} \\int \\frac{dx}{x + 1} dx \\\\\n        & = -2 \\ln |x| + \\frac{3}{2} \\ln |x-1| + \\frac{1}{2} \\ln |x+1| + C.\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#goal",
+    "href": "09c-integration-partial-fractions.html#goal",
+    "title": "Integration: Partial Fractions",
+    "section": "Goal",
+    "text": "Goal\nTo integrate any rational function: determine \\[\n    \\int \\frac{P(x)}{Q(x)} dx = ???\n\\] where \\(P(x)\\) and \\(Q(x)\\) are polynomials."
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#step-1-divide-if-necessary",
+    "href": "09c-integration-partial-fractions.html#step-1-divide-if-necessary",
+    "title": "Integration: Partial Fractions",
+    "section": "Step 1: Divide if necessary",
+    "text": "Step 1: Divide if necessary\nIf the degree of \\(P(x)\\) is greater than or equal to the degree of \\(Q(x)\\), do a polynomial division: \\[\n    \\int \\frac{P(x)}{Q(x)} dx = \\int S(x) dx + \\int \\frac{R(x)}{Q(x)} dx,\n\\] with \\(S(x)\\) the quotient and \\(R(x)\\) the remainder.\n\nRecall: \\(\\deg R(x) < \\deg Q(x)\\).\nFrom now on, we will suppose that this division has already been done, so that \\(\\deg P(x) < \\deg Q(x)\\)."
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#special-case-1-linear-denominator",
+    "href": "09c-integration-partial-fractions.html#special-case-1-linear-denominator",
+    "title": "Integration: Partial Fractions",
+    "section": "Special case 1: Linear denominator",
+    "text": "Special case 1: Linear denominator\nIf \\(Q(x)\\) is a linear polynomial, i.e. \\(Q(x) = Ax + B\\), then our integral takes the form \\[\\begin{align*}\n    \\int \\frac{P(x)}{Q(x)} dx & = \\int \\frac{K}{Ax + B} dx \\\\\n        & = \\cdots\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#special-case-2-quadratic-denominator",
+    "href": "09c-integration-partial-fractions.html#special-case-2-quadratic-denominator",
+    "title": "Integration: Partial Fractions",
+    "section": "Special case 2: Quadratic denominator",
+    "text": "Special case 2: Quadratic denominator\nIf \\(Q(x)\\) is a quadratic polynomial, then several cases are possible. After completing the square, we can have one of the following forms:\nIf \\(\\deg P(x) = 0\\):\n\n\\(\\displaystyle \\int \\frac{dx}{x^2 - a^2}\\)\n\\(\\displaystyle \\int \\frac{dx}{x^2 + a^2}\\)"
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#section",
+    "href": "09c-integration-partial-fractions.html#section",
+    "title": "Integration: Partial Fractions",
+    "section": "",
+    "text": "If \\(\\deg P(x) = 1\\):\n\n\\(\\displaystyle \\int \\frac{x \\, dx}{x^2 - a^2}\\)\n\\(\\displaystyle \\int \\frac{x \\, dx}{x^2 + a^2}\\)"
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#step-2-find-the-roots-of-the-denominator",
+    "href": "09c-integration-partial-fractions.html#step-2-find-the-roots-of-the-denominator",
+    "title": "Integration: Partial Fractions",
+    "section": "Step 2: Find the roots of the denominator",
+    "text": "Step 2: Find the roots of the denominator\nDo a factorization of the denominator \\(Q(x)\\) into factors with real coefficients.\nYou will find:\n\nSome linear factors \\((x - \\alpha)\\), with \\(\\alpha\\) roots of \\(Q(x)\\)\nSome quadratic factors \\((Ax^2 + Bx + C)\\) that cannot be further reduced.\n\n\nImportant: Do not split into complex factors. For example: \\[\n    x^3 + x = x(x^2 + 1).\n\\] Stop here, don’t factor into \\(x(x+i)(x-i)\\)."
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#case-2.1-distinct-roots",
+    "href": "09c-integration-partial-fractions.html#case-2.1-distinct-roots",
+    "title": "Integration: Partial Fractions",
+    "section": "Case 2.1: Distinct roots",
+    "text": "Case 2.1: Distinct roots\nAssume that \\(Q(x) = (x - \\alpha_1) \\cdots (x - \\alpha_k)\\), with all \\(\\alpha_i\\) distinct and real.\nThen the partial fraction expansion becomes \\[\n    \\frac{P(x)}{Q(x)} = \\frac{A_1}{x - \\alpha_1} + \\frac{A_2}{x - \\alpha_2} + \\cdots + \\frac{A_k}{x - \\alpha_k},\n\\] where the coefficients \\(A_1, \\ldots, A_k\\) can be determined by adding the terms together and comparing with the left-hand side."
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#example",
+    "href": "09c-integration-partial-fractions.html#example",
+    "title": "Integration: Partial Fractions",
+    "section": "Example",
+    "text": "Example\nFind \\(\\displaystyle \\int \\frac{x+2}{x^3-x} dx\\)"
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#case-2.2-irreducible-quadratic-factors",
+    "href": "09c-integration-partial-fractions.html#case-2.2-irreducible-quadratic-factors",
+    "title": "Integration: Partial Fractions",
+    "section": "Case 2.2: Irreducible quadratic factors",
+    "text": "Case 2.2: Irreducible quadratic factors\n\nFor each quadratic factor, put a linear term in the denominator of the partial fraction.\nDeal with the linear factors as before."
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#example-1",
+    "href": "09c-integration-partial-fractions.html#example-1",
+    "title": "Integration: Partial Fractions",
+    "section": "Example",
+    "text": "Example\n\\[\\begin{align*}\n    \\frac{x+2}{x^3+x} & = \\frac{x + 2}{x(x^2 + 1)} \\\\\n        & = \\frac{A}{x} + \\frac{Bx + C}{x^2 + 1} \\\\\n        & = \\cdots\n\\end{align*}\\]\nTherefore \\(\\displaystyle \\int \\frac{x+2}{x^3+x} dx = \\cdots\\)"
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#case-2.3-repeated-linear-factors",
+    "href": "09c-integration-partial-fractions.html#case-2.3-repeated-linear-factors",
+    "title": "Integration: Partial Fractions",
+    "section": "Case 2.3: Repeated linear factors",
+    "text": "Case 2.3: Repeated linear factors\n\nIf \\(Q(x)\\) has a repeated factor \\((x - \\alpha)^p\\), then add \\(p\\) terms to the partial fraction expansion: \\[\n  \\frac{P(x)}{Q(x)} = \\frac{A_1}{x - \\alpha} + \\frac{A_2}{(x-\\alpha)^2} + \\cdots + \\frac{A_p}{(x - \\alpha)^p} + \\text{[other PFE]}\n\\]\nDeal with other linear and quadratic factors as before."
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#example-2",
+    "href": "09c-integration-partial-fractions.html#example-2",
+    "title": "Integration: Partial Fractions",
+    "section": "Example",
+    "text": "Example\nDetermine the partial fraction expansion of \\(\\displaystyle \\frac{1}{x^2(x-1)^3}\\)."
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#example-3",
+    "href": "09c-integration-partial-fractions.html#example-3",
+    "title": "Integration: Partial Fractions",
+    "section": "Example",
+    "text": "Example\nFind \\(\\displaystyle \\int \\frac{dx}{x^3 - 5x^2 + 8x - 4}\\)."
+  },
+  {
+    "objectID": "09c-integration-partial-fractions.html#summary",
+    "href": "09c-integration-partial-fractions.html#summary",
+    "title": "Integration: Partial Fractions",
+    "section": "Summary",
+    "text": "Summary\n\nIf \\(\\deg P(x) \\ge \\deg Q(x)\\), do polynomial division.\nFactor the denominator \\(Q(x)\\):\n\nAll distinct roots: \\[\n   \\frac{P(x)}{Q(x)} = \\cdots + \\frac{A_1}{x - \\alpha_1} + \\cdots + \\frac{A_k}{x - \\alpha_k}.\n\\]\nIrreducible quadratic factors: \\[\n   \\frac{P(x)}{Q(x)} = \\cdots + \\frac{Ax+B}{x^2 + \\cdots}\n\\]\nRepeated linear factors: \\[\n   \\frac{P(x)}{Q(x)} = \\cdots + \\frac{A_1}{x - \\alpha} + \\cdots + \\frac{A_p}{(x - \\alpha)^p}\n\\]\n\n\nThese three cases can happen at the same time!!"
+  },
+  {
     "objectID": "03a-limits-continuity.html#contents",
     "href": "03a-limits-continuity.html#contents",
     "title": "Limits and Continuity (1/2)",
