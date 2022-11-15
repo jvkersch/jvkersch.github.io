@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
-  <title>Integration: Partial Fractions</title>
+  <title>Integration: Inverse trigonometric substitution</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -325,145 +325,120 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Integration: Partial Fractions</h1>
+  <h1 class="title">Integration: Inverse trigonometric substitution</h1>
   <p class="subtitle">Introduction to Engineering Mathematics</p>
   <p class="author">Prof.&nbsp;Joris Vankerschaver</p>
 </section>
 
-<section id="what-are-partial-fractions" class="slide level2">
-<h2>What are partial fractions?</h2>
-<p>Every rational function can be written as a sum of “simple” partial fractions. For example <span class="math display">\[
-    \frac{x+2}{x^3-x} = \frac{-2}{x} + \frac{3}{2(x-1)} + \frac{1}{2(x + 1)}.
-\]</span> In this lecture, we will find a recipe for the coefficients and terms in the partial fraction expansion.</p>
-</section>
-<section id="why-are-partial-fractions-useful" class="slide level2">
-<h2>Why are partial fractions useful?</h2>
-<p>The advantage is that the partial fractions are <em>much</em> easier to integrate: <span class="math display">\[\begin{align*}
-    \int \frac{x+2}{x^3-x} dx &amp; = - 2\int \frac{dx}{x} + \frac{3}{2} \int \frac{dx}{x-1} + \frac{1}{2} \int \frac{dx}{x + 1} \\
-        &amp; = -2 \ln |x| + \frac{3}{2} \ln |x-1| + \frac{1}{2} \ln |x+1| + C.
-\end{align*}\]</span></p>
+<section id="overview" class="slide level2">
+<h2>Overview</h2>
+<ul>
+<li>Inverse trigonometric substitution</li>
+<li>Other substitutions
+<ul>
+<li>Higher order roots</li>
+<li><span class="math inline">\(\tan\frac{\theta}{2}\)</span>-substitution</li>
+</ul></li>
+</ul>
 </section>
 <section>
-<section id="how-to-find-the-partial-fraction-expansion" class="title-slide slide level1 center">
-<h1>How to find the partial fraction expansion</h1>
+<section id="inverse-trigonometric-substitution" class="title-slide slide level1 center">
+<h1>Inverse trigonometric substitution</h1>
 
 </section>
-<section id="goal" class="slide level2">
-<h2>Goal</h2>
-<p>To integrate <strong>any rational function</strong>: determine <span class="math display">\[
-    \int \frac{P(x)}{Q(x)} dx = ???
-\]</span> where <span class="math inline">\(P(x)\)</span> and <span class="math inline">\(Q(x)\)</span> are polynomials.</p>
-</section>
-<section id="step-1-divide-if-necessary" class="slide level2">
-<h2>Step 1: Divide if necessary</h2>
-<p>If the degree of <span class="math inline">\(P(x)\)</span> is greater than or equal to the degree of <span class="math inline">\(Q(x)\)</span>, do a polynomial division: <span class="math display">\[
-    \int \frac{P(x)}{Q(x)} dx = \int S(x) dx + \int \frac{R(x)}{Q(x)} dx,
-\]</span> with <span class="math inline">\(S(x)\)</span> the quotient and <span class="math inline">\(R(x)\)</span> the remainder.</p>
+<section id="what-is-inverse-trigonometric-substitution" class="slide level2">
+<h2>What is inverse trigonometric substitution?</h2>
 <ul>
-<li>Recall: <span class="math inline">\(\deg R(x) &lt; \deg Q(x)\)</span>.</li>
-<li>From now on, we will suppose that this division has already been done, so that <span class="math inline">\(\deg P(x) &lt; \deg Q(x)\)</span>.</li>
+<li>Direct substitution: replace part of the integrand by a new variable</li>
+<li>Inverse substitution: <strong>replace variable by new function</strong>.</li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle \int \sqrt{1 - x^2} dx\)</span> with the substitution <span class="math inline">\(x = \cos \theta\)</span></p>
+</section>
+<section id="why-is-this-useful" class="slide level2">
+<h2>Why is this useful?</h2>
+<p>Inverse trigonometric substitution can solve integrals that have a power of <span class="math inline">\(x^2 \pm a^2\)</span> somewhere in the integrand.</p>
+<p>Example:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{(x^2 - 25)^3}\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \sqrt{1 + x^2} dx\)</span></li>
 </ul>
 </section>
-<section id="special-case-1-linear-denominator" class="slide level2">
-<h2>Special case 1: Linear denominator</h2>
-<p>If <span class="math inline">\(Q(x)\)</span> is a linear polynomial, i.e.&nbsp;<span class="math inline">\(Q(x) = Ax + B\)</span>, then our integral takes the form <span class="math display">\[\begin{align*}
-    \int \frac{P(x)}{Q(x)} dx &amp; = \int \frac{K}{Ax + B} dx \\
-        &amp; = \cdots
-\end{align*}\]</span></p>
+<section id="types-of-substitutions" class="slide level2">
+<h2>Types of substitutions</h2>
+<p>The exact substitution depends on the integrand. We will distinguish the following three cases, depending on factors that occur in the integrand.</p>
+<ol type="1">
+<li>Factor <span class="math inline">\(\sqrt{a^2 - x^2}\)</span>: use <span class="math inline">\(x = a \sin \theta\)</span></li>
+<li>Factor <span class="math inline">\(\sqrt{a^2 + x^2}\)</span>: use <span class="math inline">\(x = a \tan \theta\)</span></li>
+<li>Factor <span class="math inline">\(\sqrt{x^2 - a^2}\)</span>: use <span class="math inline">\(x = a \sec \theta\)</span></li>
+</ol>
+<p>Don’t memorize these substitutions: use your insight into trigonometry to think what substitution would simplify the integrand.</p>
 </section>
-<section id="special-case-2-quadratic-denominator" class="slide level2">
-<h2>Special case 2: Quadratic denominator</h2>
-<p>If <span class="math inline">\(Q(x)\)</span> is a quadratic polynomial, then several cases are possible. After completing the square, we can have one of the following forms:</p>
-<p>If <span class="math inline">\(\deg P(x) = 0\)</span>:</p>
+<section id="remark-completing-the-square" class="slide level2">
+<h2>Remark: completing the square</h2>
+<p>Often the integrand will not exactly be in one of the three previous forms. In that case, <strong>completing the square</strong> may help: <span class="math display">\[
+    \int \frac{dx}{x^2 + 4x + 5} = \int \frac{dx}{(x + 2)^2 + 1} = \int \frac{dt}{t^2 + 1} = \ldots
+\]</span></p>
+</section>
+<section id="case-1-sqrta2---x2" class="slide level2">
+<h2>Case 1: <span class="math inline">\(\sqrt{a^2 - x^2}\)</span></h2>
 <ul>
-<li><span class="math inline">\(\displaystyle \int \frac{dx}{x^2 - a^2}\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \frac{dx}{x^2 + a^2}\)</span></li>
+<li>Substitution: <span class="math inline">\(x = a \sin \theta\)</span></li>
+<li>Differential: <span class="math inline">\(dx = a \cos \theta \, d \theta\)</span></li>
 </ul>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{(5 - x^2)^{3/2}}\)</span></p>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<p>If <span class="math inline">\(\deg P(x) = 1\)</span>:</p>
+<section id="case-2-sqrta2-x2" class="slide level2">
+<h2>Case 2: <span class="math inline">\(\sqrt{a^2 + x^2}\)</span></h2>
 <ul>
-<li><span class="math inline">\(\displaystyle \int \frac{x \, dx}{x^2 - a^2}\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \frac{x \, dx}{x^2 + a^2}\)</span></li>
+<li>Substitution: <span class="math inline">\(x = a \tan \theta\)</span></li>
+<li>Differential: <span class="math inline">\(dx = a \sec^2 \theta \, d \theta\)</span></li>
 </ul>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{\sqrt{1 + 4x^2}}\)</span></p>
 </section>
-<section id="step-2-find-the-roots-of-the-denominator" class="slide level2">
-<h2>Step 2: Find the roots of the denominator</h2>
-<p>Do a factorization of the denominator <span class="math inline">\(Q(x)\)</span> into factors with <strong>real</strong> coefficients.</p>
-<p>You will find:</p>
+<section id="case-3-sqrtx2---a2" class="slide level2">
+<h2>Case 3: <span class="math inline">\(\sqrt{x^2 - a^2}\)</span></h2>
 <ul>
-<li>Some linear factors <span class="math inline">\((x - \alpha)\)</span>, with <span class="math inline">\(\alpha\)</span> roots of <span class="math inline">\(Q(x)\)</span></li>
-<li>Some quadratic factors <span class="math inline">\((Ax^2 + Bx + C)\)</span> that cannot be further reduced.</li>
+<li>Substitution: <span class="math inline">\(x = a \sec \theta\)</span></li>
+<li>Differential: <span class="math inline">\(dx = a \tan \theta \sec \theta \, d \theta\)</span></li>
 </ul>
-<div class="fragment">
-<p><strong>Important:</strong> Do not split into complex factors. For example: <span class="math display">\[
-    x^3 + x = x(x^2 + 1).
-\]</span> Stop here, don’t factor into <span class="math inline">\(x(x+i)(x-i)\)</span>.</p>
-</div>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{\sqrt{x^2 - a^2}}\)</span></p>
+</section></section>
+<section>
+<section id="other-substitutions" class="title-slide slide level1 center">
+<h1>Other substitutions</h1>
+
 </section>
-<section id="case-2.1-distinct-roots" class="slide level2">
-<h2>Case 2.1: Distinct roots</h2>
-<p>Assume that <span class="math inline">\(Q(x) = (x - \alpha_1) \cdots (x - \alpha_k)\)</span>, with all <span class="math inline">\(\alpha_i\)</span> <strong>distinct</strong> and <strong>real</strong>.</p>
-<p>Then the partial fraction expansion becomes <span class="math display">\[
-    \frac{P(x)}{Q(x)} = \frac{A_1}{x - \alpha_1} + \frac{A_2}{x - \alpha_2} + \cdots + \frac{A_k}{x - \alpha_k},
-\]</span> where the coefficients <span class="math inline">\(A_1, \ldots, A_k\)</span> can be determined by adding the terms together and comparing with the left-hand side.</p>
+<section id="higher-roots" class="slide level2">
+<h2>Higher roots</h2>
+<p>Useful when the integrand has a factor <span class="math inline">\(\sqrt[n]{ax + b}\)</span>.</p>
+<ul>
+<li>Substitution: <span class="math inline">\(ax + b = u^n\)</span></li>
+<li>Differential: <span class="math inline">\(a \, dx = n u^{n-1} \, du\)</span></li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle \int_{-1/3}^2 \frac{x\, dx}{\sqrt[3]{3x+2}}\)</span></p>
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
-<p>Find <span class="math inline">\(\displaystyle \int \frac{x+2}{x^3-x} dx\)</span></p>
+<p>Sometimes this rule can be applied to integrands that are somewhat more general than what’s shown on the previous slide.</p>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{x^{1/2}(1 + x^{1/3})} = \ldots\)</span></p>
+<p>(Substitute <span class="math inline">\(x^{1/6} = u\)</span>)</p>
 </section>
-<section id="case-2.2-irreducible-quadratic-factors" class="slide level2">
-<h2>Case 2.2: Irreducible quadratic factors</h2>
+<section id="tan-fractheta2-substitution" class="slide level2">
+<h2><span class="math inline">\(\tan \frac{\theta}{2}\)</span>-substitution</h2>
+<p>Useful when the integrand is a rational function of <span class="math inline">\(\sin \theta\)</span> and <span class="math inline">\(\cos \theta\)</span>.</p>
 <ul>
-<li>For each quadratic factor, put a <em>linear term</em> in the denominator of the partial fraction.</li>
-<li>Deal with the linear factors as before.</li>
+<li>Substitution: <span class="math inline">\(t = \tan \frac{\theta}{2}\)</span>, so that <span class="math inline">\(\theta = \tan^{-1}(2t)\)</span></li>
+<li>Differential: <span class="math display">\[
+d \theta = \frac{2 dt}{1 + t^2}
+\]</span></li>
+<li><span class="math inline">\(t\)</span>-formulas: <span class="math display">\[
+  \sin \theta = \frac{2t}{1+t^2} \quad \text{and} \quad \cos \theta = \frac{1 - t^2}{1 + t^2}.
+\]</span></li>
 </ul>
 </section>
 <section id="example-1" class="slide level2">
 <h2>Example</h2>
-<p><span class="math display">\[\begin{align*}
-    \frac{x+2}{x^3+x} &amp; = \frac{x + 2}{x(x^2 + 1)} \\
-        &amp; = \frac{A}{x} + \frac{Bx + C}{x^2 + 1} \\
-        &amp; = \cdots
-\end{align*}\]</span></p>
-<p>Therefore <span class="math inline">\(\displaystyle \int \frac{x+2}{x^3+x} dx = \cdots\)</span></p>
-</section>
-<section id="case-2.3-repeated-linear-factors" class="slide level2">
-<h2>Case 2.3: Repeated linear factors</h2>
-<ul>
-<li>If <span class="math inline">\(Q(x)\)</span> has a repeated factor <span class="math inline">\((x - \alpha)^p\)</span>, then add <span class="math inline">\(p\)</span> terms to the partial fraction expansion: <span class="math display">\[
-  \frac{P(x)}{Q(x)} = \frac{A_1}{x - \alpha} + \frac{A_2}{(x-\alpha)^2} + \cdots + \frac{A_p}{(x - \alpha)^p} + \text{[other PFE]}
-\]</span></li>
-<li>Deal with other linear and quadratic factors as before.</li>
-</ul>
-</section>
-<section id="example-2" class="slide level2">
-<h2>Example</h2>
-<p>Determine the partial fraction expansion of <span class="math inline">\(\displaystyle \frac{1}{x^2(x-1)^3}\)</span>.</p>
-</section>
-<section id="example-3" class="slide level2">
-<h2>Example</h2>
-<p>Find <span class="math inline">\(\displaystyle \int \frac{dx}{x^3 - 5x^2 + 8x - 4}\)</span>.</p>
-</section>
-<section id="summary" class="slide level2 smaller">
-<h2>Summary</h2>
-<ol type="1">
-<li>If <span class="math inline">\(\deg P(x) \ge \deg Q(x)\)</span>, do polynomial division.</li>
-<li>Factor the denominator <span class="math inline">\(Q(x)\)</span>:
-<ul>
-<li>All distinct roots: <span class="math display">\[
-   \frac{P(x)}{Q(x)} = \cdots + \frac{A_1}{x - \alpha_1} + \cdots + \frac{A_k}{x - \alpha_k}.
-\]</span></li>
-<li>Irreducible quadratic factors: <span class="math display">\[
-   \frac{P(x)}{Q(x)} = \cdots + \frac{Ax+B}{x^2 + \cdots}
-\]</span></li>
-<li>Repeated linear factors: <span class="math display">\[
-   \frac{P(x)}{Q(x)} = \cdots + \frac{A_1}{x - \alpha} + \cdots + \frac{A_p}{(x - \alpha)^p}
-\]</span></li>
-</ul></li>
-</ol>
-<p>These three cases can happen at the same time!!</p>
+<p><span class="math inline">\(\displaystyle \int \frac{d \theta}{2 + \cos \theta} = \ldots\)</span></p>
 
 <div class="footer footer-default">
 

@@ -987,6 +987,90 @@
     "text": "Source: https://xkcd.com/1201/"
   },
   {
+    "objectID": "09d-integration-inverse-trig.html#overview",
+    "href": "09d-integration-inverse-trig.html#overview",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "Overview",
+    "text": "Overview\n\nInverse trigonometric substitution\nOther substitutions\n\nHigher order roots\n\\(\\tan\\frac{\\theta}{2}\\)-substitution"
+  },
+  {
+    "objectID": "09d-integration-inverse-trig.html#what-is-inverse-trigonometric-substitution",
+    "href": "09d-integration-inverse-trig.html#what-is-inverse-trigonometric-substitution",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "What is inverse trigonometric substitution?",
+    "text": "What is inverse trigonometric substitution?\n\nDirect substitution: replace part of the integrand by a new variable\nInverse substitution: replace variable by new function.\n\nExample: \\(\\displaystyle \\int \\sqrt{1 - x^2} dx\\) with the substitution \\(x = \\cos \\theta\\)"
+  },
+  {
+    "objectID": "09d-integration-inverse-trig.html#why-is-this-useful",
+    "href": "09d-integration-inverse-trig.html#why-is-this-useful",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "Why is this useful?",
+    "text": "Why is this useful?\nInverse trigonometric substitution can solve integrals that have a power of \\(x^2 \\pm a^2\\) somewhere in the integrand.\nExample:\n\n\\(\\displaystyle \\int \\frac{dx}{(x^2 - 25)^3}\\)\n\\(\\displaystyle \\int \\sqrt{1 + x^2} dx\\)"
+  },
+  {
+    "objectID": "09d-integration-inverse-trig.html#types-of-substitutions",
+    "href": "09d-integration-inverse-trig.html#types-of-substitutions",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "Types of substitutions",
+    "text": "Types of substitutions\nThe exact substitution depends on the integrand. We will distinguish the following three cases, depending on factors that occur in the integrand.\n\nFactor \\(\\sqrt{a^2 - x^2}\\): use \\(x = a \\sin \\theta\\)\nFactor \\(\\sqrt{a^2 + x^2}\\): use \\(x = a \\tan \\theta\\)\nFactor \\(\\sqrt{x^2 - a^2}\\): use \\(x = a \\sec \\theta\\)\n\nDon’t memorize these substitutions: use your insight into trigonometry to think what substitution would simplify the integrand."
+  },
+  {
+    "objectID": "09d-integration-inverse-trig.html#remark-completing-the-square",
+    "href": "09d-integration-inverse-trig.html#remark-completing-the-square",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "Remark: completing the square",
+    "text": "Remark: completing the square\nOften the integrand will not exactly be in one of the three previous forms. In that case, completing the square may help: \\[\n    \\int \\frac{dx}{x^2 + 4x + 5} = \\int \\frac{dx}{(x + 2)^2 + 1} = \\int \\frac{dt}{t^2 + 1} = \\ldots\n\\]"
+  },
+  {
+    "objectID": "09d-integration-inverse-trig.html#case-1-sqrta2---x2",
+    "href": "09d-integration-inverse-trig.html#case-1-sqrta2---x2",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "Case 1: \\(\\sqrt{a^2 - x^2}\\)",
+    "text": "Case 1: \\(\\sqrt{a^2 - x^2}\\)\n\nSubstitution: \\(x = a \\sin \\theta\\)\nDifferential: \\(dx = a \\cos \\theta \\, d \\theta\\)\n\nExample: \\(\\displaystyle \\int \\frac{dx}{(5 - x^2)^{3/2}}\\)"
+  },
+  {
+    "objectID": "09d-integration-inverse-trig.html#case-2-sqrta2-x2",
+    "href": "09d-integration-inverse-trig.html#case-2-sqrta2-x2",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "Case 2: \\(\\sqrt{a^2 + x^2}\\)",
+    "text": "Case 2: \\(\\sqrt{a^2 + x^2}\\)\n\nSubstitution: \\(x = a \\tan \\theta\\)\nDifferential: \\(dx = a \\sec^2 \\theta \\, d \\theta\\)\n\nExample: \\(\\displaystyle \\int \\frac{dx}{\\sqrt{1 + 4x^2}}\\)"
+  },
+  {
+    "objectID": "09d-integration-inverse-trig.html#case-3-sqrtx2---a2",
+    "href": "09d-integration-inverse-trig.html#case-3-sqrtx2---a2",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "Case 3: \\(\\sqrt{x^2 - a^2}\\)",
+    "text": "Case 3: \\(\\sqrt{x^2 - a^2}\\)\n\nSubstitution: \\(x = a \\sec \\theta\\)\nDifferential: \\(dx = a \\tan \\theta \\sec \\theta \\, d \\theta\\)\n\nExample: \\(\\displaystyle \\int \\frac{dx}{\\sqrt{x^2 - a^2}}\\)"
+  },
+  {
+    "objectID": "09d-integration-inverse-trig.html#higher-roots",
+    "href": "09d-integration-inverse-trig.html#higher-roots",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "Higher roots",
+    "text": "Higher roots\nUseful when the integrand has a factor \\(\\sqrt[n]{ax + b}\\).\n\nSubstitution: \\(ax + b = u^n\\)\nDifferential: \\(a \\, dx = n u^{n-1} \\, du\\)\n\nExample: \\(\\displaystyle \\int_{-1/3}^2 \\frac{x\\, dx}{\\sqrt[3]{3x+2}}\\)"
+  },
+  {
+    "objectID": "09d-integration-inverse-trig.html#example",
+    "href": "09d-integration-inverse-trig.html#example",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "Example",
+    "text": "Example\nSometimes this rule can be applied to integrands that are somewhat more general than what’s shown on the previous slide.\nExample: \\(\\displaystyle \\int \\frac{dx}{x^{1/2}(1 + x^{1/3})} = \\ldots\\)\n(Substitute \\(x^{1/6} = u\\))"
+  },
+  {
+    "objectID": "09d-integration-inverse-trig.html#tan-fractheta2-substitution",
+    "href": "09d-integration-inverse-trig.html#tan-fractheta2-substitution",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "\\(\\tan \\frac{\\theta}{2}\\)-substitution",
+    "text": "\\(\\tan \\frac{\\theta}{2}\\)-substitution\nUseful when the integrand is a rational function of \\(\\sin \\theta\\) and \\(\\cos \\theta\\).\n\nSubstitution: \\(t = \\tan \\frac{\\theta}{2}\\), so that \\(\\theta = \\tan^{-1}(2t)\\)\nDifferential: \\[\nd \\theta = \\frac{2 dt}{1 + t^2}\n\\]\n\\(t\\)-formulas: \\[\n  \\sin \\theta = \\frac{2t}{1+t^2} \\quad \\text{and} \\quad \\cos \\theta = \\frac{1 - t^2}{1 + t^2}.\n\\]"
+  },
+  {
+    "objectID": "09d-integration-inverse-trig.html#example-1",
+    "href": "09d-integration-inverse-trig.html#example-1",
+    "title": "Integration: Inverse trigonometric substitution",
+    "section": "Example",
+    "text": "Example\n\\(\\displaystyle \\int \\frac{d \\theta}{2 + \\cos \\theta} = \\ldots\\)"
+  },
+  {
     "objectID": "06a-polynomials.html#overview",
     "href": "06a-polynomials.html#overview",
     "title": "Theory of equations (1/2): Working with polynomials",
@@ -1292,7 +1376,7 @@
     "href": "09c-integration-partial-fractions.html#why-are-partial-fractions-useful",
     "title": "Integration: Partial Fractions",
     "section": "Why are partial fractions useful?",
-    "text": "Why are partial fractions useful?\nThe advantage is that the partial fractions are much easier to integrate: \\[\\begin{align*}\n    \\int \\frac{x+2}{x^3-x} dx & = - 2\\int \\frac{dx}{x} + \\frac{3}{2} \\int \\frac{dx}{x-1} dx + \\frac{1}{2} \\int \\frac{dx}{x + 1} dx \\\\\n        & = -2 \\ln |x| + \\frac{3}{2} \\ln |x-1| + \\frac{1}{2} \\ln |x+1| + C.\n\\end{align*}\\]"
+    "text": "Why are partial fractions useful?\nThe advantage is that the partial fractions are much easier to integrate: \\[\\begin{align*}\n    \\int \\frac{x+2}{x^3-x} dx & = - 2\\int \\frac{dx}{x} + \\frac{3}{2} \\int \\frac{dx}{x-1} + \\frac{1}{2} \\int \\frac{dx}{x + 1} \\\\\n        & = -2 \\ln |x| + \\frac{3}{2} \\ln |x-1| + \\frac{1}{2} \\ln |x+1| + C.\n\\end{align*}\\]"
   },
   {
     "objectID": "09c-integration-partial-fractions.html#goal",
