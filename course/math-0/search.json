@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "09e-integration-applications.html#reminder-area-under-the-curve",
+    "href": "09e-integration-applications.html#reminder-area-under-the-curve",
+    "title": "Integration: Applications",
+    "section": "Reminder: area under the curve",
+    "text": "Reminder: area under the curve\n \n\n\\[\n    \\text{Area} = \\int_a^{c_1} f(x) dx - \\int_{c_1}^{c_2} f(x) dx + \\int_{c_2}^d f(x) dx.\n\\]"
+  },
+  {
+    "objectID": "09e-integration-applications.html#area-between-two-curves",
+    "href": "09e-integration-applications.html#area-between-two-curves",
+    "title": "Integration: Applications",
+    "section": "Area between two curves",
+    "text": "Area between two curves\n \n\n \n\n\n\\[\n\\phantom{\\int}\\text{Area}\n\\]\n\n\n\\[\n\\phantom{\\int}=\n\\]\n\n\n\n\n\\[\n    \\int_a^c f(x) dx\n\\]\n\n\n\n\n\\[\n\\phantom{\\int}-\n\\]\n\n\n\n\n\\[\n    \\int_a^c g(x) dx\n\\]\n\n\n\n\n\\[\n\\phantom{\\int}=\n\\]\n\n\n\\[\n    \\int_a^c (f(x) - g(x)) dx\n\\]\n\n\n\n\n\nUpper - Lower\n\n\n\n\nUpper\n\n\n\n\nLower\n\n\n\n\nUpper\n\n\n\n\nLower"
+  },
+  {
+    "objectID": "09e-integration-applications.html#recipe-for-finding-the-area",
+    "href": "09e-integration-applications.html#recipe-for-finding-the-area",
+    "title": "Integration: Applications",
+    "section": "Recipe for finding the area",
+    "text": "Recipe for finding the area\n\nMake a figure\nDetermine intersection points\nFigure out which curve is upper/lower\nIntegrate"
+  },
+  {
+    "objectID": "09e-integration-applications.html#example",
+    "href": "09e-integration-applications.html#example",
+    "title": "Integration: Applications",
+    "section": "Example",
+    "text": "Example\nFind the area bounded by \\(y = \\sin x\\), \\(y = 0\\), and \\(\\displaystyle x = \\frac{3\\pi}{2}\\)."
+  },
+  {
+    "objectID": "09e-integration-applications.html#example-1",
+    "href": "09e-integration-applications.html#example-1",
+    "title": "Integration: Applications",
+    "section": "Example",
+    "text": "Example\nFind the area of the region between the curves \\(y = x^2 - 2x\\) and \\(y = 4 - x^2\\)."
+  },
+  {
+    "objectID": "09e-integration-applications.html#example-2",
+    "href": "09e-integration-applications.html#example-2",
+    "title": "Integration: Applications",
+    "section": "Example",
+    "text": "Example\nFind the area of the region between \\(x = 12 - y^2\\) and \\(y = -x\\)."
+  },
+  {
     "objectID": "05-complex-numbers.html#overview",
     "href": "05-complex-numbers.html#overview",
     "title": "Complex Numbers",
