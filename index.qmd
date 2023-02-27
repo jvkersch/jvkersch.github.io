@@ -1,7 +1,13 @@
 ---
-title: "jvkersch.github.io"
+title: "Joris Vankerschaver"
 ---
 
-This is a Quarto website.
+# Research
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+- [Google Scholar](https://scholar.google.com/citations?user=N5vV04AAAAAJ&hl=en&oi=ao)
+
+# Teaching
+
+- [Introduction to Engineering Mathematics](engineering-math/index.html)
+- Probability and Statistics
+- [Introduction to Statistical Modeling](ISM/index.html)
