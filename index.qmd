@@ -11,3 +11,10 @@ title: "Joris Vankerschaver"
 - [Introduction to Engineering Mathematics](engineering-math/index.html)
 - Probability and Statistics
 - [Introduction to Statistical Modeling](ISM/index.html)
+
+# Contact
+
+| Ghent University Global Campus
+| 119-5, Songdomunhwa-ro, Yeonsu-gu, Incheon 21985, Republic of Korea
+
+| 인천광역시 연수구 송도문화로 119-5 겐트대학교 글로벌캠퍼스, 21985
