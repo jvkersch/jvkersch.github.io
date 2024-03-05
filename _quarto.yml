@@ -1,5 +1,7 @@
 project:
   type: website
+  post-render:
+    - "rsync -av static/. _site/"
 
 website:
   navbar:
