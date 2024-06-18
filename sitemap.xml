@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jvkersch.github.io/index.html</loc>
-    <lastmod>2024-05-27T09:02:25.434Z</lastmod>
+    <loc>https://jvkersch.github.io/recommendation_letters.html</loc>
+    <lastmod>2024-06-18T01:08:12.358Z</lastmod>
   </url>
   <url>
     <loc>https://jvkersch.github.io/teaching.html</loc>
-    <lastmod>2024-05-27T09:02:25.446Z</lastmod>
+    <lastmod>2024-06-18T01:08:12.370Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jvkersch.github.io/index.html</loc>
+    <lastmod>2024-06-18T01:08:12.358Z</lastmod>
   </url>
 </urlset>
