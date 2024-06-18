@@ -1,0 +1,40 @@
+---
+title: "On recommendation letters"
+format: html
+---
+
+![](images/john-nash-letter-cropped.png){fig-align="center" width="75%"}
+
+Every year I receive many requests from students for a letter of recommendation. I take this part of my academic responsibilities very seriously, since I know that a good-quality letter can make or break your application. Writing a letter takes me a long time: unlike John Nash's advisor, I typically write one or two pages, detailing your academic achievements but also our interactions over the years. To facilitate this process, I have listed a few things to look out for when you ask me for a letter of recommendation.
+
+## Who should ask for a letter?
+
+The easiest scenario is the one where we have worked together closely, through your bachelor project or via an internship. In this case, the letter practically writes itself and it is more a question of what to leave out. This is also the case if we have built up a good working relation over the years, through interactions in various courses or committees that involve students. Likewise, if you have worked closely with someone in RC4, I usually know enough about you. In all of these cases I can write a well-researched and motivated letter.
+
+It is not a disaster if we have not interacted much but you achieved good to very good grades in RC4 courses. In that case, my letter will focus mostly on your scholarly achievements. It is a problem if you have neither a personal connection nor good grades: in this case it becomes very difficult to write more than a rote letter, and you should maybe rethink whether you want to go ahead with me as your letter writer.
+
+I need at least **4 weeks** of notice to write a good letter.
+
+## What information should you provide?
+
+Regardless of what category you are in, you should provide me with some information about where you are applying:
+
+- Name of the college that you are applying to, and (if applicable) the research group.
+- Deadline to submit the letter of recommendation.
+- (Optionally) Guidelines provided by the college about what information the letter should contain. See [here](https://omscs.gatech.edu/additional-app-guidelines) for an example (under "Tips for Letters of Recommendation").
+
+You should also tell me why you are applying, and why you think you'd make for a good fit. Please provide the following:
+
+- Your motivation for applying at the given college.
+- Your academic CV.
+- Transcripts from your years at GUGC.
+
+You may not have all of these materials available right away. If so, just indicate when you will be able to deliver them. If you are applying to multiple colleges/research groups, please provide the information for each college/group separately.
+
+Lastly, don't be shy about mentioning anything else that you think is relevant, even if it is not strictly academic in nature. If I think it fits with the theme letter I will incorporate it, and if not I will just overlook it.
+
+## Things that you should know
+
+- I need at least **4 weeks** of notice to write a good letter.
+- I will send the letter directly to the admissions office. I will not give you access to the content of the letter. If you need an "open" letter to add to your application package, please let me know and I will draft a short letter commenting on your general standing as a student.
+- I don't use generative AI to write recommendation letters.

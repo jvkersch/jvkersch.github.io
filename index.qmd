@@ -14,6 +14,10 @@ title: "Joris Vankerschaver"
   - [Course notes](ISM/index.html)
   - [Course slides](ISM-slides/index.html)
 
+# Miscellaneous
+
+- [On recommendation letters](recommendation_letters.qmd) -- Useful information if you want to ask me for a letter of recommendation.
+
 # Contact
 
 | Ghent University Global Campus
