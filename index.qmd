@@ -2,6 +2,14 @@
 title: "Joris Vankerschaver"
 ---
 
+I am a professor of statistics at [Ghent University Global Campus](https://ghent.ac.kr) in South Korea, where my research focuses on deep learning, statistics, and scientific computing, particularly their applications in biotech and life sciences. 
+
+Before joining GUGC, I worked for 8 years as a scientific software developer and consulting manager at [Enthought Ltd](https://enthought.com), a digital transformation company based in Cambridge, UK. In this role, I wrote a bunch of code and advised  companies in the life sciences sector on digital transformation and the effective use of AI in their operations.
+
+I obtained my PhD from the now defunct Department of Mathematical Physics and Astronomy at [Ghent University](https://ugent.be) in 2007. I was a [Fulbright](https://www.fulbright.be/) postdoc at [Caltech](https://www.caltech.edu/) (2007-09), a teaching visitor at [UC San Diego](https://math.ucsd.edu/) (2010-12), and a research associate at [Imperial College, London](https://www.imperial.ac.uk/mathematics/) (2012-13).
+
+Over the years, my interests have gradually shifted from applied differential geometry and mathematics physics, first to control theory and numerical integration, and most recently to statistical analysis and scientific computing.
+
 # Research
 
 - [Google Scholar](https://scholar.google.com/citations?hl=en&user=N5vV04AAAAAJ&view_op=list_works&sortby=pubdate)
