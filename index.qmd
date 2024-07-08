@@ -8,23 +8,26 @@ Before joining GUGC, I worked for 8 years as a scientific software developer and
 
 I obtained my PhD from the now defunct Department of Mathematical Physics and Astronomy at [Ghent University](https://ugent.be) in 2007. I was a [Fulbright](https://www.fulbright.be/) postdoc at [Caltech](https://www.caltech.edu/) (2007-09), a teaching visitor at [UC San Diego](https://math.ucsd.edu/) (2010-12), and a research associate at [Imperial College, London](https://www.imperial.ac.uk/mathematics/) (2012-13).
 
-Over the years, my interests have gradually shifted from applied differential geometry and mathematics physics, first to control theory and numerical integration, and most recently to statistical analysis and scientific computing.
-
 # Research
 
-- [Google Scholar](https://scholar.google.com/citations?hl=en&user=N5vV04AAAAAJ&view_op=list_works&sortby=pubdate)
+Over the years, my interests have gradually shifted from applied differential geometry and mathematics physics, first to control theory and numerical integration, and most recently to statistical analysis and scientific computing.
+
+- My publication record is on [Google Scholar](https://scholar.google.com/citations?hl=en&user=N5vV04AAAAAJ&view_op=list_works&sortby=pubdate)
+- Code artifacts find their way to my [GitHub account](https://github.com/jvkersch/)
 
 # Teaching
 
 - [Introduction to Engineering Mathematics](https://ugent-korea.github.io/IEM-slides/)
 - Probability and Statistics
+  - [Shiny apps](https://shiny-stats.fly.dev/)
 - Introduction to Statistical Modeling
   - [Course notes](ISM/index.html)
   - [Course slides](https://ugent-korea.github.io/ISM-slides/)
+  - [Shiny apps](https://shiny-stats.fly.dev/)
 
 # Miscellaneous
 
-- [On recommendation letters](recommendation_letters.qmd) -- Useful information if you want to ask me for a letter of recommendation.
+- [On recommendation letters](recommendation_letters.qmd) (For students). Please read this if you want me to write an effective letter of recommendation.
 
 # Contact
 
