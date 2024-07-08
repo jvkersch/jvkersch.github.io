@@ -8,11 +8,11 @@ title: "Joris Vankerschaver"
 
 # Teaching
 
-- [Introduction to Engineering Mathematics](engineering-math/index.html)
+- [Introduction to Engineering Mathematics](https://ugent-korea.github.io/IEM-slides/)
 - Probability and Statistics
 - Introduction to Statistical Modeling
   - [Course notes](ISM/index.html)
-  - [Course slides](ISM-slides/index.html)
+  - [Course slides](https://ugent-korea.github.io/ISM-slides/)
 
 # Miscellaneous
 
