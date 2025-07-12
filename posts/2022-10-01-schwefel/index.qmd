@@ -1,0 +1,234 @@
+---
+title: The Schwefel function
+image: schwefel.png
+format:
+  html:
+    code-fold: true
+bibliography: schwefel.bib
+jupyter: python3    
+---
+
+## Introduction
+
+Many optimization algorithms, especially in differential evolution and swarm intelligence, test their performance on a bunch of standard objective functions. Most of these functions are either straightforward (such as the spherical function, which is just the distance to the origin) or very well known (such as the Rastrigin function, which has [its own Wikipedia page](https://en.wikipedia.org/wiki/Rastrigin_function)). 
+
+One function that stands out as being both somewhat mysterious and not easy to reason about right away is the Schwefel function. The form that is usually described [in the literature](https://www.sfu.ca/~ssurjano/schwef.html) has these weird constants in it, and the location of the global minimum likewise is also given numerically as $x_1 = \cdots = x_n = 420.9687$), to limited precision. This made me curious: what's up with the Schwefel function? Where did it come from? Can we be more precise about the location of its minima? 
+
+## Mathematical description
+
+The Schwefel function is given by
+$$
+    F(x) = - \sum_{i = 1}^N x_i \sin \sqrt{|x_i|}.
+$$
+Some references add $418.9829N$ to this expression, so that the global minimum has function value roughly equal to zero. I won't do that, but I'll just accept that the function changes with increasing $N$.
+
+Usually, the Schwefel function is enclosed in a box centered on the origin, of 1000 units on each side, i.e. $-500 \le x_i \le 500$ for all $i = 1, \ldots, N$. The function has many local minima, as well as one global minimum at $x_1 = \cdots = x_n = 420.9687$, near the boundary of the domain. This makes it an interesting function to test optimization algorithms on, as it is easy for an algorithm to (a) fail to explore regions near the boundary of the domain, or (b) get stuck in another local minimum.
+
+The Schwefel appears first in a book by (who else) Schwefel from 1977 [see
+@1977-schwefel-NumerischeOptimierungComputerModellen, problem 2.3 in A1.2] but this book is not often cited. In fact, Google Scholar gives me no citations until 1991, when the evolutionary computing community picked up on it [@1991-muhlenbein-ParallelGeneticAlgorithm is the first reference I could find]. Nowadays, it is used without citation, which is somewhat regrettable since it is not a widely known function.
+
+```{python}
+#| fig-align: center
+#| fig-cap: "The Schwefel function in 2D."
+
+import matplotlib.pyplot as plt
+from matplotlib import cm
+import numpy as np
+
+def schwefel(x, y):
+    return -x*np.sin(np.sqrt(np.abs(x))) - y*np.sin(np.sqrt(np.abs(y)))
+
+r = 500
+x = np.linspace(-r, r, 100)
+y = np.linspace(-r, r, 100)
+X, Y = np.meshgrid(x, y)
+Z = schwefel(X, Y)
+
+fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
+surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm,
+                       linewidth=0, antialiased=False)
+
+plt.show()
+
+```
+
+I was interested in finding the exact coordinates of the global minimum, as well as the value of the objective function at that point. To get started, observe that $F(x)$ is the sum of a bunch of univariate functions:
+$$
+    F(x) = f(x_1) + \cdots + f(x_n),
+$$
+where $f(x) = -x \sin\sqrt{|x|}$. Consequently, the gradient of $F$ is given by
+$$
+    \nabla F = \left[
+        \begin{matrix}
+            f'(x_1) \\
+            \vdots \\
+            f'(x_n)
+        \end{matrix}
+    \right],
+$$
+where $f'(x)$ is the derivative of $f(x)$. If we want to find the points where $\nabla F$ vanishes, we therefore have to find the zeros of $f'(x)$, and solving a one-dimensional equation (even if it is nonlinear) is of course much easier than solving a system of nonlinear equations.
+
+## Finding the minima of $f(x)$
+
+To find the zeros of $f'(x)$, we may assume that $x > 0$ (the case $x < 0$ is similar), so that
+$$
+    f'(x) = - \sin\sqrt{x} - \frac{\sqrt{x}}{2} \cos \sqrt{x} = 0.
+$$    
+This equation can be rewritten as 
+$$
+    \tan \sqrt{x} + \frac{\sqrt{x}}{2} = 0,
+$$
+or, by substituting $y = \sqrt{x}$, as
+$$
+    -2\tan y = y.
+$$
+In other words, we are looking for the fixed points of the function $g(y) = - 2\tan y$. There are a few things to keep in mind, though.
+
+By looking at the graph of $-2\tan y$, we see that there are many fixed points, and in particular, there is one inside each period of the tangent function. We can therefore parametrize these fixed points as $y = z + k \pi$, where $k$ is an integer and $z \in (-\pi/2, \pi/2)$. It turns out it will be easier to fix $k$, and look for $z$ inside one fundamental period of the tangent, by solving
+$$
+    \tan z = - \frac{z + k \pi}{2}.
+$$
+
+This equation has a unique fixed point, but it is unstable (since $|g'(y)| > 1$). To work around this, we take the arctan of both sides to get
+$$
+    z = - \arctan\left( \frac{z + k \pi}{2} \right).
+$$
+This gives us a fixed-point equation with a unique fixed point that is stable (attracting), so we can solve this e.g. by fixed-point iteration. Once we have a solution $z = z_\text{ext}$, the corresponding $x$ can then be done by putting
+$$
+    x_\text{ext} = (z_\text{ext} + k \pi)^2.
+$$
+The fixed-point equation has a few interesting properties: 
+
+1. For $k > 0$, the solution $z_\text{ext}$ will be negative: $z_\text{ext} \in (-\pi/2, 0)$. 
+2. As $k$ increases, $z_\text{ext}$ will tend towards $-\pi/2$. 
+
+Both of these properties follow from the graph of the arctan function shifted over $k \pi$ units to the left.
+
+Furthermore, by substituting the expression for the solution back into $f(x)$ and using these sign properties, we get that
+$$
+    f(x_\text{ext}) = (-1)^k x_\text{ext}\sqrt{\frac{x_\text{ext}}{4 + x_\text{ext}}}.
+$$
+In other words, we get an alternating series of minima (for $k$ odd) and maxima (for $k$ even), whose magnitude increases with increasing $k$.
+
+The table below lists the first few zeros of $f'(x)$, together with the value of $f(x)$.
+
+```{python}
+#| label: tbl-zeros
+#| tbl-cap: Extrema and function values for the 1D Schwefel function.
+
+from IPython.display import Markdown
+from tabulate import tabulate
+
+from math import atan, pi
+from scipy.optimize import fixed_point
+
+def schwefel_1d(x):
+    return -x*np.sin(np.abs(x)**0.5)
+
+def solve_fixed_point(k):
+    def fpe(z):
+        return -atan((z + k*pi)/2)
+    z_optim = fixed_point(fpe, 0)[()]
+    x_optim = (z_optim + k*pi)**2
+    return x_optim, schwefel_1d(x_optim)
+
+table = [(k,) + solve_fixed_point(k) for k in range(1, 8)]
+Markdown(tabulate(
+    table, 
+    headers=["Index", "x", "f(x)"],
+    floatfmt=".8f"
+))
+
+```
+
+```{python}
+#| fig-align: center
+#| fig-cap: "Extrema of the 1D Schwefel function."
+
+xs = np.linspace(0, 500, 500)
+ys = schwefel_1d(xs)
+
+plt.plot(xs, ys)
+plt.plot([item[1] for item in table],
+         [item[2] for item in table],
+         "ro")
+
+```
+
+## Extrema of the Schwefel function
+
+This tells us everything we need to know about minima and maxima of $F$. First of all, we can find all (coordinate-wise positive) extrema of $F(x)$ by finding all of the zeros of the aforementioned fixed-point equation (see @tbl-zeros), and then choosing (with replacement) $n$ of these zeros and assembling them into a coordinate vector. Each such $n$-vector is a zero of $\nabla F$. In 2D, this gives the distribution of extrema as shown below.
+
+```{python}
+#| fig-align: center
+#| fig-cap: "Extrema of the 1D Schwefel function."
+
+r = 500
+x = np.linspace(-r, r, 100)
+y = np.linspace(-r, r, 100)
+X, Y = np.meshgrid(x, y)
+Z = schwefel(X, Y)
+    
+plt.figure(figsize=(7, 7))
+plt.contour(X, Y, Z, levels=20, cmap=cm.coolwarm)
+
+extrema = np.asarray([item[1] for item in table])
+Xext, Yext = np.meshgrid(extrema, extrema)
+
+def s(x, y):
+    plt.scatter(x, y, fc='gray', ec='black', zorder=2)
+
+s(Xext, Yext)
+s(Xext, -Yext)
+s(-Xext, Yext)
+s(-Xext, -Yext)
+
+```
+
+The remaining question is which of these extrema provides the *global* minimum. First of all, note that $F$ being the sum of $n$ copies of $f$ tells us that the global minimum must have $x_1 = \cdots = x_n = x_\text{min}$, with $x_\text{min}$ the global minimum of $f(x)$. So we can reduce our $n$-dimensional minimization problem to a one-dimensional one, for which we have the fixed point equation.
+
+Secondly, where is $x_\text{min}$ located? For this, we use the expression for the minima and maxima derived earlier. We need to find the largest odd value for $k$ such that $x_\text{ext}$ is still within our domain. Since our domain is limited by $x = 500$, this gives us $k = 7$.
+
+Now, we either solve the fixed-point equation for $k = 7$, or we consult table @tbl-zeros. Either way, we get
+$$
+    x_\text{ext} = (z_\text{ext} + 7 \pi)^2 \approx 420.96874635998194.
+$$
+This is precisely the value quoted in various sources, to greater accuracy. This approximation is correct to about 8 decimal places (at least), corresponding to the default accuracy of SciPy's [`fixed_point`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fixed_point.html) solver. A higher-accuracy approximation is given in the next section.
+
+## High-precision location of the extremum
+
+*Added 2024-01-03.*
+
+Using the [mpmath](https://mpmath.org) library for arbitrary-precision floating point arithmetic, we can find the value for $x_\text{ext}$ to very high precision, in this case to approximately 50 decimal places. This value can be useful e.g. when calibrating your optimizer.
+
+```{python}
+#| code-fold: false
+from mpmath import mp
+mp.dps = 60
+
+z = mp.mpf(0)
+for _ in range(50):
+    # each iteration gives us 2 decimal places, so a fixed 
+    # number of 50 iterations should be more than enough.
+    z = -mp.atan((z + 7*mp.pi)/2)
+
+x = (z + 7*mp.pi)**2
+print(f"x = {x}")
+```
+
+With this value for $x_\text{ext}$, $f'(x)$ becomes vanishingly small, indicating that we're indeed right at the extremum.
+
+```{python}
+import mpmath
+
+resid = -mp.sin(x**0.5) - x**0.5/2 * mp.cos(x**0.5)
+print(f"f'(x) = {mpmath.nstr(resid)}")
+```
+
+## Approximate locations of the extrema
+
+[@1977-schwefel-NumerischeOptimierungComputerModellen] has the following approximate expression for the extrema:
+$$
+	x_\text{ext} \approx \pm \pi^2\left(\frac{1}{2} + k\right)^2,
+$$
+valid when $k$ is large. This follows easily from the fixed-point equation: for $k$ large, $\arctan\left( \frac{z + k \pi}{2} \right)$ tends to $-\pi/2$, so that $z_\text{ext} \approx \pi/2$, and the approximation for $x_\text{ext}$ follows.
