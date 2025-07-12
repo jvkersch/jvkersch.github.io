@@ -27,7 +27,8 @@ Over the years, my interests have gradually shifted from applied differential ge
 
 # Miscellaneous
 
-- [On recommendation letters](posts/2024-11-18-recommendation-letters/index.qmd) (For students). Please read this if you want me to write an effective letter of recommendation.
+- [On recommendation letters (2024-11-18)](posts/2024-11-18-recommendation-letters/index.qmd) (For students). Please read this if you want me to write an effective letter of recommendation.
+- [Finding the extrema of the Schwefel function (2022-10-10)](posts/2022-10-01-schwefel/index.qmd)
 
 # Contact
 
