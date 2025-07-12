@@ -27,7 +27,7 @@ Over the years, my interests have gradually shifted from applied differential ge
 
 # Miscellaneous
 
-- [On recommendation letters](recommendation_letters.qmd) (For students). Please read this if you want me to write an effective letter of recommendation.
+- [On recommendation letters](posts/2024-11-18-recommendation-letters/index.qmd) (For students). Please read this if you want me to write an effective letter of recommendation.
 
 # Contact
 
