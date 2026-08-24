@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Joris Vankerschaver</title>
+<title>claude</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -85,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
@@ -101,68 +136,56 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Joris Vankerschaver</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>I am a professor of statistics at <a href="https://ghent.ac.kr">Ghent University Global Campus</a> in South Korea, where my research focuses on deep learning, statistics, and scientific computing, particularly their applications in biotech and life sciences.</p>
-<p>Before joining GUGC, I worked for 8 years as a scientific software developer and consulting manager at <a href="https://enthought.com">Enthought Ltd</a>, a digital transformation company based in Cambridge, UK. In this role, I wrote a bunch of code and advised companies in the life sciences sector on digital transformation and the effective use of AI in their operations.</p>
-<p>I obtained my PhD from the now defunct Department of Mathematical Physics and Astronomy at <a href="https://ugent.be">Ghent University</a> in 2007. I was a <a href="https://www.fulbright.be/">Fulbright</a> postdoc at <a href="https://www.caltech.edu/">Caltech</a> (2007-09), a teaching visitor at <a href="https://math.ucsd.edu/">UC San Diego</a> (2010-12), and a research associate at <a href="https://www.imperial.ac.uk/mathematics/">Imperial College, London</a> (2012-13).</p>
-<section id="research" class="level1">
-<h1>Research</h1>
-<p>Over the years, my interests have gradually shifted from applied differential geometry and mathematics physics, first to control theory and numerical integration, and most recently to statistical analysis and scientific computing.</p>
+<section id="claude.md" class="level1">
+<h1>CLAUDE.md</h1>
+<p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>Personal academic blog for Joris Vankerschaver, built with <strong>Quarto</strong> and deployed to <strong>GitHub Pages</strong> at https://jvkersch.github.io/.</p>
+</section>
+<section id="build-commands" class="level2">
+<h2 class="anchored" data-anchor-id="build-commands">Build Commands</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Python dependencies</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview site locally (live reload)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Render full site</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Deployment is automatic via GitHub Actions on push to <code>main</code> (see <code>.github/workflows/publish.yml</code>). Do not manually deploy.</p>
+</section>
+<section id="architecture" class="level2">
+<h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
 <ul>
-<li>My publication record is on <a href="https://scholar.google.com/citations?hl=en&amp;user=N5vV04AAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a></li>
-<li>Code artifacts find their way to my <a href="https://github.com/jvkersch/">GitHub account</a></li>
+<li><strong>Framework</strong>: Quarto website project (<code>_quarto.yml</code>)</li>
+<li><strong>Theme</strong>: Litera (Bootstrap-based)</li>
+<li><strong>Python</strong>: 3.12, managed with <code>uv</code> (lockfile: <code>uv.lock</code>)</li>
+<li><strong>Execution</strong>: Frozen (<code>freeze: true</code>) — Jupyter outputs are cached in <code>_freeze/</code> and committed. Posts with code aren’t re-executed on every build.</li>
+<li><strong>Post-render</strong>: <code>rsync -av static/. _site/</code> copies static assets into the build output.</li>
 </ul>
 </section>
-<section id="teaching" class="level1">
-<h1>Teaching</h1>
+<section id="content-structure" class="level2">
+<h2 class="anchored" data-anchor-id="content-structure">Content Structure</h2>
 <ul>
-<li><a href="https://ugent-korea.github.io/IEM-slides/">Introduction to Engineering Mathematics</a></li>
-<li>Probability and Statistics
-<ul>
-<li><a href="https://shiny-stats.fly.dev/">Shiny apps</a></li>
-</ul></li>
-<li>Introduction to Statistical Modeling
-<ul>
-<li><a href="ISM/index.html">Course notes</a></li>
-<li><a href="https://ugent-korea.github.io/ISM-slides/">Course slides</a></li>
-<li><a href="https://shiny-stats.fly.dev/">Shiny apps</a></li>
-</ul></li>
+<li><strong><code>posts/YYYY-MM-DD-slug/index.qmd</code></strong> — Blog posts (Quarto markdown). Each post is self-contained in its own directory with any images, bib files, etc.</li>
+<li><strong><code>index.qmd</code></strong> — Home page</li>
+<li><strong><code>static/</code></strong> — Files copied verbatim into <code>_site/</code></li>
+<li><strong><code>_freeze/</code></strong> — Cached Jupyter execution outputs (committed to repo)</li>
+<li><strong><code>_site/</code></strong> — Generated HTML output (gitignored)</li>
 </ul>
 </section>
-<section id="miscellaneous" class="level1">
-<h1>Miscellaneous</h1>
-<ul>
-<li><a href="./posts/2024-11-18-recommendation-letters/index.html">On recommendation letters (2024-11-18)</a> (For students). Please read this if you want me to write an effective letter of recommendation.</li>
-<li><a href="./posts/2022-10-01-schwefel/index.html">Finding the extrema of the Schwefel function (2022-10-10)</a></li>
-</ul>
+<section id="key-dependencies" class="level2">
+<h2 class="anchored" data-anchor-id="key-dependencies">Key Dependencies</h2>
+<p>Scientific Python stack: <code>numpy</code>, <code>scipy</code>, <code>matplotlib</code>, <code>mpmath</code>, <code>jupyter</code>, <code>tabulate</code>.</p>
+
+
 </section>
-<section id="contact" class="level1">
-<h1>Contact</h1>
-<div class="line-block">Ghent University Global Campus<br>
-119-5, Songdomunhwa-ro, Yeonsu-gu, Incheon 21985, Republic of Korea</div>
-<div class="line-block">인천광역시 연수구 송도문화로 119-5 겐트대학교 글로벌캠퍼스, 21985</div>
-
-
 </section>
 
 </main> <!-- /main -->

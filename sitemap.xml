@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jvkersch.github.io/teaching.html</loc>
-    <lastmod>2026-08-24T12:52:53.422Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jvkersch.github.io/posts/2024-11-18-recommendation-letters/index.html</loc>
-    <lastmod>2026-08-24T12:52:53.421Z</lastmod>
+    <loc>https://jvkersch.github.io/CLAUDE.html</loc>
+    <lastmod>2026-02-10T22:17:11.238Z</lastmod>
   </url>
   <url>
     <loc>https://jvkersch.github.io/posts/2022-10-01-schwefel/index.html</loc>
-    <lastmod>2026-08-24T12:52:53.419Z</lastmod>
+    <lastmod>2025-11-13T01:13:53.571Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jvkersch.github.io/posts/2024-11-18-recommendation-letters/index.html</loc>
+    <lastmod>2026-02-10T22:08:53.138Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jvkersch.github.io/teaching.html</loc>
+    <lastmod>2024-03-05T18:53:50.968Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jvkersch.github.io/posts/2026-02-11-ai-viewpoint/index.html</loc>
+    <lastmod>2026-02-10T22:46:05.522Z</lastmod>
   </url>
   <url>
     <loc>https://jvkersch.github.io/index.html</loc>
-    <lastmod>2026-08-24T12:52:53.419Z</lastmod>
+    <lastmod>2026-02-10T22:08:53.138Z</lastmod>
   </url>
 </urlset>

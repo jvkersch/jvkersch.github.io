@@ -2,23 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>The Schwefel function</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -65,6 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -96,10 +91,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0f39785e2fd2f38803d35a3bedda0481.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-fc539113232677d296c547e50173fa21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -129,7 +124,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -142,7 +137,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -222,11 +217,11 @@ window.Quarto = {
     F(x) = - \sum_{i = 1}^N x_i \sin \sqrt{|x_i|}.
 \]</span> Some references add <span class="math inline">\(418.9829N\)</span> to this expression, so that the global minimum has function value roughly equal to zero. I won’t do that, but I’ll just accept that the function changes with increasing <span class="math inline">\(N\)</span>.</p>
 <p>Usually, the Schwefel function is enclosed in a box centered on the origin, of 1000 units on each side, i.e.&nbsp;<span class="math inline">\(-500 \le x_i \le 500\)</span> for all <span class="math inline">\(i = 1, \ldots, N\)</span>. The function has many local minima, as well as one global minimum at <span class="math inline">\(x_1 = \cdots = x_n = 420.9687\)</span>, near the boundary of the domain. This makes it an interesting function to test optimization algorithms on, as it is easy for an algorithm to (a) fail to explore regions near the boundary of the domain, or (b) get stuck in another local minimum.</p>
-<p>The Schwefel appears first in a book by (who else) Schwefel from 1977 <span class="citation" data-cites="1977-schwefel-NumerischeOptimierungComputerModellen">(see <a href="#ref-1977-schwefel-NumerischeOptimierungComputerModellen" role="doc-biblioref">Schwefel 1977</a>, problem 2.3 in A1.2)</span> but this book is not often cited. In fact, Google Scholar gives me no citations until 1991, when the evolutionary computing community picked up on it <span class="citation" data-cites="1991-muhlenbein-ParallelGeneticAlgorithm">(<a href="#ref-1991-muhlenbein-ParallelGeneticAlgorithm" role="doc-biblioref">Mühlenbein et al. 1991</a> is the first reference I could find)</span>. Nowadays, it is used without citation, which is somewhat regrettable since it is not a widely known function.</p>
+<p>The Schwefel appears first in a book by (who else) Schwefel from 1977 <span class="citation" data-cites="1977-schwefel-NumerischeOptimierungComputerModellen">(see <a href="#ref-1977-schwefel-NumerischeOptimierungComputerModellen" role="doc-biblioref">Schwefel 1977</a>, problem 2.3 in A1.2)</span> but this book is not often cited. In fact, Google Scholar gives me no citations until 1991, when the evolutionary computing community picked up on it <span class="citation" data-cites="1991-muhlenbein-ParallelGeneticAlgorithm">(<a href="#ref-1991-muhlenbein-ParallelGeneticAlgorithm" role="doc-biblioref">Mühlenbein, Schomisch, and Born 1991</a> is the first reference I could find)</span>. Nowadays, it is used without citation, which is somewhat regrettable since it is not a widely known function.</p>
 <div id="bbad1e3f" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -243,7 +238,7 @@ window.Quarto = {
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>surf <span class="op">=</span> ax.plot_surface(X, Y, Z, cmap<span class="op">=</span>cm.coolwarm,</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                       linewidth<span class="op">=</span><span class="dv">0</span>, antialiased<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -296,7 +291,7 @@ This equation can be rewritten as <span class="math display">\[
 <div class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> atan, pi</span>
@@ -317,7 +312,7 @@ This equation can be rewritten as <span class="math display">\[
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    table, </span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">=</span>[<span class="st">"Index"</span>, <span class="st">"x"</span>, <span class="st">"f(x)"</span>],</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    floatfmt<span class="op">=</span><span class="st">".8f"</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="tbl-zeros" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -326,7 +321,7 @@ Table&nbsp;1: Extrema and function values for the 1D Schwefel function.
 </figcaption>
 <div aria-describedby="tbl-zeros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
-<table class="cell caption-top table table-sm table-striped small">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: right;">Index</th>
@@ -380,13 +375,13 @@ Table&nbsp;1: Extrema and function values for the 1D Schwefel function.
 <div id="fbc3004a" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">500</span>, <span class="dv">500</span>)</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">500</span>, <span class="dv">500</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ys <span class="op">=</span> schwefel_1d(xs)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.plot(xs, ys)</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.plot([item[<span class="dv">1</span>] <span class="cf">for</span> item <span class="kw">in</span> table],</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>         [item[<span class="dv">2</span>] <span class="cf">for</span> item <span class="kw">in</span> table],</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>         <span class="st">"ro"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>         <span class="st">"ro"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -404,7 +399,7 @@ Table&nbsp;1: Extrema and function values for the 1D Schwefel function.
 <div id="6307cda6" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="dv">500</span></span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="dv">500</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span>r, r, <span class="dv">100</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span>r, r, <span class="dv">100</span>)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
@@ -422,7 +417,7 @@ Table&nbsp;1: Extrema and function values for the 1D Schwefel function.
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>s(Xext, Yext)</span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>s(Xext, <span class="op">-</span>Yext)</span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>s(<span class="op">-</span>Xext, Yext)</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>s(<span class="op">-</span>Xext, <span class="op">-</span>Yext)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>s(<span class="op">-</span>Xext, <span class="op">-</span>Yext)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -444,7 +439,7 @@ Table&nbsp;1: Extrema and function values for the 1D Schwefel function.
 <p><em>Added 2024-01-03.</em></p>
 <p>Using the <a href="https://mpmath.org">mpmath</a> library for arbitrary-precision floating point arithmetic, we can find the value for <span class="math inline">\(x_\text{ext}\)</span> to very high precision, in this case to approximately 50 decimal places. This value can be useful e.g.&nbsp;when calibrating your optimizer.</p>
 <div id="aa75b5cb" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpmath <span class="im">import</span> mp</span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpmath <span class="im">import</span> mp</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mp.dps <span class="op">=</span> <span class="dv">60</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> mp.mpf(<span class="dv">0</span>)</span>
@@ -454,7 +449,7 @@ Table&nbsp;1: Extrema and function values for the 1D Schwefel function.
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> <span class="op">-</span>mp.atan((z <span class="op">+</span> <span class="dv">7</span><span class="op">*</span>mp.pi)<span class="op">/</span><span class="dv">2</span>)</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> (z <span class="op">+</span> <span class="dv">7</span><span class="op">*</span>mp.pi)<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"x = </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"x = </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>x = 420.968746359982027311844365018686486001674755877017274182781</code></pre>
 </div>
@@ -463,10 +458,10 @@ Table&nbsp;1: Extrema and function values for the 1D Schwefel function.
 <div id="a960c70c" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> mpmath</span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> mpmath</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>resid <span class="op">=</span> <span class="op">-</span>mp.sin(x<span class="op">**</span><span class="fl">0.5</span>) <span class="op">-</span> x<span class="op">**</span><span class="fl">0.5</span><span class="op">/</span><span class="dv">2</span> <span class="op">*</span> mp.cos(x<span class="op">**</span><span class="fl">0.5</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"f'(x) = </span><span class="sc">{</span>mpmath<span class="sc">.</span>nstr(resid)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"f'(x) = </span><span class="sc">{</span>mpmath<span class="sc">.</span>nstr(resid)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>f'(x) = -7.00089e-61</code></pre>
@@ -483,7 +478,7 @@ Table&nbsp;1: Extrema and function values for the 1D Schwefel function.
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-1991-muhlenbein-ParallelGeneticAlgorithm" class="csl-entry" role="listitem">
 Mühlenbein, H., M. Schomisch, and J. Born. 1991. <span>“The Parallel Genetic Algorithm as Function Optimizer.”</span> <em>Parallel Computing</em> 17 (6): 619–32. <a href="https://doi.org/10.1016/S0167-8191(05)80052-3">https://doi.org/10.1016/S0167-8191(05)80052-3</a>.
 </div>
@@ -542,14 +537,13 @@ Schwefel, Hans-Paul. 1977. <em>Numerische <span>Optimierung</span> von <span>Com
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
