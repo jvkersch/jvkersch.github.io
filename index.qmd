@@ -19,11 +19,11 @@ Over the years, my interests have gradually shifted from applied differential ge
 
 - [Introduction to Engineering Mathematics](https://ugent-korea.github.io/IEM-slides/)
 - Probability and Statistics
-  - [Shiny apps](https://shiny-stats.fly.dev/)
+  - [Statistics apps](https://jvkersch.github.io/statistics-apps/)
 - Introduction to Statistical Modeling
   - [Course notes](ISM/index.html)
   - [Course slides](https://ugent-korea.github.io/ISM-slides/)
-  - [Shiny apps](https://shiny-stats.fly.dev/)
+  - [Statistics apps](https://jvkersch.github.io/statistics-apps/)
 
 # Miscellaneous
 
