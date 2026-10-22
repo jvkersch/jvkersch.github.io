@@ -1,38 +1,67 @@
 ---
-title: "Joris Vankerschaver"
+pagetitle: "Joris Vankerschaver"
+page-layout: article
 ---
 
-I am a professor of statistics at [Ghent University Global Campus](https://ghent.ac.kr) in South Korea, where my research focuses on deep learning, statistics, and scientific computing, particularly their applications in biotech and life sciences. 
+::: {.hero}
+# Joris Vankerschaver {.hero-name}
 
-Before joining GUGC, I worked for 8 years as a scientific software developer and consulting manager at [Enthought Ltd](https://enthought.com), a digital transformation company based in Cambridge, UK. In this role, I wrote a bunch of code and advised  companies in the life sciences sector on digital transformation and the effective use of AI in their operations.
+[Professor of Statistics · [Ghent University Global Campus](https://ghent.ac.kr), Incheon, South Korea]{.hero-role}
+
+My research focuses on deep learning, statistics, and scientific computing, particularly their applications in biotech and life sciences.
+
+[<i class="bi bi-mortarboard"></i> Google Scholar](https://scholar.google.com/citations?hl=en&user=N5vV04AAAAAJ&view_op=list_works&sortby=pubdate){.btn .btn-hero}
+[<i class="bi bi-github"></i> GitHub](https://github.com/jvkersch/){.btn .btn-hero}
+:::
+
+## About
+
+Before joining GUGC, I worked for 8 years as a scientific software developer and consulting manager at [Enthought Ltd](https://enthought.com), a digital transformation company based in Cambridge, UK. In this role, I wrote a bunch of code and advised companies in the life sciences sector on digital transformation and the effective use of AI in their operations.
 
 I obtained my PhD from the now defunct Department of Mathematical Physics and Astronomy at [Ghent University](https://ugent.be) in 2007. I was a [Fulbright](https://www.fulbright.be/) postdoc at [Caltech](https://www.caltech.edu/) (2007-09), a teaching visitor at [UC San Diego](https://math.ucsd.edu/) (2010-12), and a research associate at [Imperial College, London](https://www.imperial.ac.uk/mathematics/) (2012-13).
 
-# Research
+Over the years, my interests have gradually shifted from applied differential geometry and mathematical physics, first to control theory and numerical integration, and most recently to statistical analysis and scientific computing.
 
-Over the years, my interests have gradually shifted from applied differential geometry and mathematics physics, first to control theory and numerical integration, and most recently to statistical analysis and scientific computing.
+## Teaching
 
-- My publication record is on [Google Scholar](https://scholar.google.com/citations?hl=en&user=N5vV04AAAAAJ&view_op=list_works&sortby=pubdate)
-- Code artifacts find their way to my [GitHub account](https://github.com/jvkersch/)
+:::: {.course-grid}
 
-# Teaching
+::: {.course-card}
+### Introduction to Engineering Mathematics
 
-- [Introduction to Engineering Mathematics](https://ugent-korea.github.io/IEM-slides/)
-- Probability and Statistics
-  - [Statistics apps](https://jvkersch.github.io/statistics-apps/)
-- Introduction to Statistical Modeling
-  - [Course notes](ISM/index.html)
-  - [Course slides](https://ugent-korea.github.io/ISM-slides/)
-  - [Statistics apps](https://jvkersch.github.io/statistics-apps/)
+[Course slides](https://ugent-korea.github.io/IEM-slides/)
+:::
 
-# Miscellaneous
+::: {.course-card}
+### Probability and Statistics
 
-- [On recommendation letters (2024-11-18)](posts/2024-11-18-recommendation-letters/index.qmd) (For students). Please read this if you want me to write an effective letter of recommendation.
-- [Finding the extrema of the Schwefel function (2022-10-10)](posts/2022-10-01-schwefel/index.qmd)
+[Statistics apps](https://jvkersch.github.io/statistics-apps/)
+:::
 
-# Contact
+::: {.course-card}
+### Introduction to Statistical Modeling
 
+[Course notes](ISM/index.html)
+[Course slides](https://ugent-korea.github.io/ISM-slides/)
+[Statistics apps](https://jvkersch.github.io/statistics-apps/)
+:::
+
+::::
+
+## Writing
+
+::: {.post-list}
+[2024-11-18]{.post-date} [On recommendation letters](posts/2024-11-18-recommendation-letters/index.qmd)
+[For students: please read this if you want me to write an effective letter of recommendation.]{.post-note}
+
+[2022-10-10]{.post-date} [Finding the extrema of the Schwefel function](posts/2022-10-01-schwefel/index.qmd)
+:::
+
+## Contact
+
+::: {.contact}
 | Ghent University Global Campus
 | 119-5, Songdomunhwa-ro, Yeonsu-gu, Incheon 21985, Republic of Korea
 
 | 인천광역시 연수구 송도문화로 119-5 겐트대학교 글로벌캠퍼스, 21985
+:::
