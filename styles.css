@@ -1,1 +1,150 @@
 /* css styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --accent: #1e64c8; /* Ghent University blue */
+  --accent-soft: #eaf1fb;
+  --ink: #1f2933;
+  --muted: #5f6b7a;
+  --rule: #e3e8ef;
+}
+
+body {
+  font-family: "Source Serif 4", Georgia, serif;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3,
+.navbar,
+.btn,
+.post-date,
+.hero-role {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Section headings: small caps label with a rule */
+h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule) !important;
+  padding-bottom: 0.4rem;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Hero */
+.hero {
+  padding: 2.5rem 0 1rem;
+}
+
+.hero h1.hero-name {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 2.75rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  border: none;
+}
+
+.hero-role {
+  display: block;
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 38em;
+}
+
+.btn-hero {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  margin-right: 0.5rem;
+}
+
+.btn-hero:hover {
+  color: #fff;
+  background: var(--accent);
+  text-decoration: none;
+}
+
+/* Teaching cards */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.course-card {
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+}
+
+.course-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+.course-card p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.95rem;
+}
+
+/* Writing list */
+.post-list p {
+  margin-bottom: 1rem;
+}
+
+.post-date {
+  display: inline-block;
+  min-width: 7rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.post-note {
+  display: block;
+  padding-left: 7rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 576px) {
+  .post-note {
+    padding-left: 0;
+  }
+}
+
+/* Contact */
+.contact {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
