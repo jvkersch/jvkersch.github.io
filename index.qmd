@@ -12,6 +12,7 @@ My research focuses on deep learning, statistics, and scientific computing, part
 
 [<i class="bi bi-mortarboard"></i> Google Scholar](https://scholar.google.com/citations?hl=en&user=N5vV04AAAAAJ&view_op=list_works&sortby=pubdate){.btn .btn-hero}
 [<i class="bi bi-github"></i> GitHub](https://github.com/jvkersch/){.btn .btn-hero}
+[<i class="bi bi-linkedin"></i> LinkedIn](https://www.linkedin.com/in/joris-vankerschaver-1905192){.btn .btn-hero}
 :::
 
 ## About
